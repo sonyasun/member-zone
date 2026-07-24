@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首页 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--home">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link is-active" href="index.html" aria-current="page">首页</a>
+          <a class="nav-list__link" href="#">题库</a>
+          <a class="nav-list__link" href="#">交流社区</a>
+          <a class="nav-list__link" href="cert.html">职业考证</a>
+          <a class="nav-list__link" href="member.html">会员专区</a>
+          <a class="nav-list__link" href="#">下载专区</a>
+          <a class="nav-list__link" href="#">生态合作</a>
+          <a class="nav-list__link" href="#">企业版</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <button type="button" class="btn-login">登录/注册</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero：Banner + 未登录学习卡片 -->
+    <section class="hero hero--home">
+      <div class="page-inner hero__inner hero__inner--home">
+        <div class="hero-banner hero-banner--home">
+          <img
+            src="https://image-resource.mastergo.com/72061466992156/149588298644015/4e765f3e82336b69300233055ea5b0dd.jpg"
+            alt=""
+          />
+        </div>
+        <!-- 登录卡未登录：DSL 登录/学习模块/未登录 320×360 -->
+        <aside class="login-card login-card--guest">
+          <div class="login-card__body">
+            <div class="login-card__head">
+              <h2 class="login-card__title">上午好！</h2>
+              <p class="login-card__welcome">欢迎来到行业终身学习平台</p>
+            </div>
+            <div class="login-card__panel">
+              <div class="login-card__illu-block">
+                <div class="login-card__illu">
+                  <img src="assets/login-guest-illu.png" width="190" height="142" alt="" />
+                </div>
+                <p class="login-card__desc">登录后可查看学习记录哦～</p>
+              </div>
+              <button type="button" class="login-card__cta">登录/注册</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 学习计划 CTA -->
+    <section class="plan-cta" aria-label="学习计划">
+      <div class="page-inner">
+        <a class="plan-cta__card" href="#">
+          <img
+            class="plan-cta__banner"
+            src="assets/plan-cta-banner@2x.png"
+            srcset="assets/plan-cta-banner@2x.png 2x"
+            width="1200"
+            height="108"
+            alt="想提高你的技能水平吗？制定专属自己的学习计划，五步立即获取。立即获取学习计划"
+          />
+        </a>
+      </div>
+    </section>
+
+    <main class="main main--home">
+      <div class="page-inner">
+        <!-- 学习路径 -->
+        <section class="path-section" aria-labelledby="path-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="path-title">学习路径</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">按照技能所需，快速掌握各专业内容</p>
+          </div>
+          <div class="path-grid">
+            <a class="path-card" href="#">
+              <img class="path-card__icon" src="assets/path-icons/path-civil@2x.png" srcset="assets/path-icons/path-civil@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">土建</span>
+              <span class="path-card__meta">45门课程</span>
+            </a>
+            <a class="path-card" href="#">
+              <img class="path-card__icon" src="assets/path-icons/path-mep@2x.png" srcset="assets/path-icons/path-mep@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">安装</span>
+              <span class="path-card__meta">23门课程</span>
+            </a>
+            <a class="path-card" href="#">
+              <img class="path-card__icon" src="assets/path-icons/path-decor@2x.png" srcset="assets/path-icons/path-decor@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">装饰</span>
+              <span class="path-card__meta">16门课程</span>
+            </a>
+            <a class="path-card" href="#">
+              <img class="path-card__icon" src="assets/path-icons/path-muni@2x.png" srcset="assets/path-icons/path-muni@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">市政</span>
+              <span class="path-card__meta">29门课程</span>
+            </a>
+            <a class="path-card" href="#">
+              <img class="path-card__icon" src="assets/path-icons/path-cost@2x.png" srcset="assets/path-icons/path-cost@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">成本</span>
+              <span class="path-card__meta">25门课程</span>
+            </a>
+            <a class="path-card" href="#">
+              <img class="path-card__icon" src="assets/path-icons/path-site@2x.png" srcset="assets/path-icons/path-site@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">施工</span>
+              <span class="path-card__meta">21门课程</span>
+            </a>
+            <a class="path-card" href="cert.html">
+              <img class="path-card__icon" src="assets/path-icons/path-cert@2x.png" srcset="assets/path-icons/path-cert@2x.png 2x" width="24" height="24" alt="" />
+              <span class="path-card__title">考证</span>
+              <span class="path-card__meta">18门课程</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 大咖直播 -->
+        <section class="live-section" aria-labelledby="live-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="live-title">大咖直播</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">直播回放</p>
+          </div>
+          <div class="live-grid">
+            <a class="live-card" href="#">
+              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/843101fdc4bacf8c2b4c3a801434e8f8.png')"></div>
+              <div class="live-card__body">
+                <h3 class="live-card__title">复工后劳务实名制系统常见问题</h3>
+                <div class="live-card__tags">
+                  <span class="tag tag--warm">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="live-card__author">
+                  <span class="live-card__author-main">
+                    <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/9615d64b5927d957d73ea4dcb0208a4a.jpg" width="24" height="24" alt="" />
+                    <span>王芳</span>
+                  </span>
+                  <span class="live-card__short">劳务实名制秘籍大公开</span>
+                </div>
+                <div class="live-card__foot">
+                  <span class="live-card__time">6月30日 18:30</span>
+                  <span class="live-card__action">预约直播</span>
+                </div>
+              </div>
+            </a>
+            <a class="live-card" href="#">
+              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/469813e3912d582a71577bd26d44ed41.png')"></div>
+              <div class="live-card__body">
+                <h3 class="live-card__title">2024新清单发布后造价4大影响-GTJ算量、清单定额</h3>
+                <div class="live-card__tags">
+                  <span class="tag tag--warm">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="live-card__author">
+                  <span class="live-card__author-main">
+                    <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/1940c665359727fe9dee9c100b0ac24a.jpg" width="24" height="24" alt="" />
+                    <span>田茂鑫</span>
+                  </span>
+                  <span class="live-card__short">专家带你探究2024清单影响</span>
+                </div>
+                <div class="live-card__foot">
+                  <span class="live-card__time">6月30日 18:30</span>
+                  <span class="live-card__action is-done">已报名</span>
+                </div>
+              </div>
+            </a>
+            <a class="live-card" href="#">
+              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/77b0a14897aa7c527a342c34017b9a16.png')"></div>
+              <div class="live-card__body">
+                <h3 class="live-card__title">新清单对一造考试的影响-拿证秘籍大公开</h3>
+                <div class="live-card__tags">
+                  <span class="tag tag--warm">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="live-card__author">
+                  <span class="live-card__author-main">
+                    <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/9615d64b5927d957d73ea4dcb0208a4a.jpg" width="24" height="24" alt="" />
+                    <span>刘丹</span>
+                  </span>
+                  <span class="live-card__short">拿证秘籍大公开</span>
+                </div>
+                <div class="live-card__foot">
+                  <span class="live-card__live"><i class="live-card__live-dot" aria-hidden="true"></i>直播中…</span>
+                  <span class="live-card__action is-soft">开始听课</span>
+                </div>
+              </div>
+            </a>
+            <a class="live-card" href="#">
+              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/abe2509dd9f6b1835e8b07a8b6e5ca02.png')">
+                <span class="live-card__limit">限时观看：2025-0-31</span>
+              </div>
+              <div class="live-card__body">
+                <h3 class="live-card__title">两小时听懂市政结算审计争议全解析-攻克管网造价难题</h3>
+                <div class="live-card__tags">
+                  <span class="tag tag--warm">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="live-card__author">
+                  <span class="live-card__author-main">
+                    <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/69dd79abc0381a30a09a3e99b88cb6f8.jpg" width="24" height="24" alt="" />
+                    <span>王海</span>
+                  </span>
+                  <span class="live-card__short">攻克管网造价难题</span>
+                </div>
+                <div class="live-card__foot">
+                  <span class="live-card__time">2月19日14:00</span>
+                  <span class="live-card__action is-outline">观看回放</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="section-more">
+            <button type="button" class="btn-ghost">查看更多</button>
+          </div>
+        </section>
+
+        <!-- 精选好课 -->
+        <section class="featured-section" aria-labelledby="featured-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="featured-title">精选好课</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">系统化课程，掌握核心技能</p>
+          </div>
+          <div class="section-tabs section-tabs--primary" role="tablist" aria-label="精选好课筛选">
+            <button type="button" class="section-tabs__item is-active" aria-selected="true">土建造价实训</button>
+            <button type="button" class="section-tabs__item" aria-selected="false">安装造价实训</button>
+            <button type="button" class="section-tabs__item" aria-selected="false">其他造价实训</button>
+            <button type="button" class="section-tabs__item" aria-selected="false">其他建筑实训</button>
+          </div>
+          <div class="course-grid">
+            <a class="course-card" href="course.html">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')">
+                  <span class="course-card__promo">限时优惠</span>
+                  <div class="course-card__countdown" data-countdown-end="" aria-label="限时优惠倒计时">
+                    <span class="course-card__countdown-label" data-countdown-label>距结束</span>
+                    <span class="course-card__countdown-time">
+                      <b data-unit="d">00</b><i>天</i>
+                      <b data-unit="h">00</b><i>:</i>
+                      <b data-unit="m">00</b><i>:</i>
+                      <b data-unit="s">00</b>
+                    </span>
+                  </div>
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>23</span><span>W人学过</span>
+                <span class="course-card__pricing"><del class="course-card__origin">¥99</del><span class="course-card__price">¥49</span></span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>10</span><span>W人学过</span>
+                <span class="course-card__status">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">从零到一学会装饰算量软件建模【入门篇】</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>25</span><span>W人学过</span>
+                <span class="course-card__status">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/24ff67f929902232aebb2a379a1a3ab4.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">【墙面提效】功能优化新版本讲解</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>23</span><span>W人学过</span>
+                <span class="course-card__status">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">施工方如何积极应对结算审计</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>23</span><span>W人学过</span>
+                <span class="course-card__status">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card" href="course-pack.html">
+              <div class="course-card__cover" style="background-image:url('assets/course-pack-cover.png')">
+                  <span class="course-card__promo">限时优惠</span>
+                  <div class="course-card__countdown" data-countdown-end="" aria-label="限时优惠倒计时">
+                    <span class="course-card__countdown-label" data-countdown-label>距结束</span>
+                    <span class="course-card__countdown-time">
+                      <b data-unit="d">00</b><i>天</i>
+                      <b data-unit="h">00</b><i>:</i>
+                      <b data-unit="m">00</b><i>:</i>
+                      <b data-unit="s">00</b>
+                    </span>
+                  </div>
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">主题定制套餐课程</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>32</span><span>W人学过</span>
+                <span class="course-card__pricing"><del class="course-card__origin">¥99</del><span class="course-card__price">¥49</span></span></div>
+              </div>
+            </a>
+            <a class="course-card" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')">
+                  <span class="course-card__promo">限时优惠</span>
+                  <div class="course-card__countdown" data-countdown-end="" aria-label="限时优惠倒计时">
+                    <span class="course-card__countdown-label" data-countdown-label>距结束</span>
+                    <span class="course-card__countdown-time">
+                      <b data-unit="d">00</b><i>天</i>
+                      <b data-unit="h">00</b><i>:</i>
+                      <b data-unit="m">00</b><i>:</i>
+                      <b data-unit="s">00</b>
+                    </span>
+                  </div>
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>12</span><span>W人学过</span>
+                <span class="course-card__status">限免</span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/24ff67f929902232aebb2a379a1a3ab4.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">【墙面提效】功能优化新版本讲解</h3>
+                <div class="course-card__tags">
+                  <span class="tag">自研</span>
+                  <span class="tag">设计</span>
+                  <span class="tag">实用技能</span>
+                </div>
+                <div class="course-card__author">
+                  <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                  <span class="course-card__teacher">郭红领</span>
+                  <span class="course-card__divider" aria-hidden="true"></span>
+                  <span class="course-card__duration">共<span>2h34m</span></span>
+                </div>
+                <div class="course-card__meta"><span>23</span><span>W人学过</span>
+                <span class="course-card__status">免费</span></div>
+              </div>
+            </a>
+          </div>
+          <div class="section-more">
+            <button type="button" class="btn-ghost">查看更多</button>
+          </div>
+        </section>
+
+        <!-- 训练营：实训 + 考证双区同屏，各左 Banner + 右 2×3 -->
+        <section class="camp-section" aria-labelledby="camp-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="camp-title">训练营</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">小班制 · 名师带学 · 1v1辅导 · 实战项目 · 结业认证</p>
+          </div>
+
+          <div class="camp-zone">
+            <div class="camp-zone__head">
+              <h3 class="camp-zone__title">实训专区</h3>
+              <p class="camp-zone__desc">动手实操 · 项目驱动 · 技能进阶</p>
+            </div>
+            <div class="camp-layout">
+              <div class="camp-layout__banner">
+                <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/ecdabe2e6307408531f17f0d7cfa8751.png" alt="实训专区" />
+              </div>
+              <div class="camp-list camp-list--grid">
+                <a class="camp-item" href="#" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">二级建造师全科通关营</h3>
+                    <p class="camp-item__desc">3个月系统备考 · 不过退费保障</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="#" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">BIM全专业实战训练营</h3>
+                    <p class="camp-item__desc">建筑+结构+机电 · 真实项目实战</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="#" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">一级造价师冲刺训练营</h3>
+                    <p class="camp-item__desc">四科联报 · 案例专项突破</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="#" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">装配式建筑深化设计训练营</h3>
+                    <p class="camp-item__desc">PC构件拆分 · 节点设计 · BIM出图</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="#" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">施工现场管理实战训练营</h3>
+                    <p class="camp-item__desc">进度/质量/安全/成本全流程实战</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="#" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">监理工程师全科冲刺营</h3>
+                    <p class="camp-item__desc">三控+法规+案例 · 考前速成</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="camp-zone">
+            <div class="camp-zone__head">
+              <h3 class="camp-zone__title">考证专区</h3>
+              <p class="camp-zone__desc">官方认证 · 权威背书 · 证书可查</p>
+            </div>
+            <div class="camp-layout">
+              <div class="camp-layout__banner">
+                <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/14732bf7c591cef34fe5b6bb8e2d78cf.png" alt="考证专区" />
+              </div>
+              <div class="camp-list camp-list--grid">
+                <a class="camp-item" href="cert.html" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">广联达BIM技能认证</h3>
+                    <p class="camp-item__desc">初级/中级/高级 · 企业认可</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="cert.html" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">广联达BIM技能认证</h3>
+                    <p class="camp-item__desc">初级/中级/高级 · 企业认可</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="cert.html" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">一级建造师考前冲刺</h3>
+                    <p class="camp-item__desc">四科联报 · 考前密押卷</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="cert.html" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">广联达BIM技能认证</h3>
+                    <p class="camp-item__desc">初级/中级/高级 · 企业认可</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="cert.html" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">广联达BIM技能认证</h3>
+                    <p class="camp-item__desc">初级/中级/高级 · 企业认可</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+                <a class="camp-item" href="cert.html" style="--camp-cover:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e962723d970aceb5b867523ac72aae77.png')">
+                  <div class="camp-item__body">
+                    <h3 class="camp-item__title">一级建造师考前冲刺</h3>
+                    <p class="camp-item__desc">四科联报 · 考前密押卷</p>
+                    <div class="camp-item__meta">
+                      <span>限额80人 · 6.25开营</span>
+                      <span class="camp-item__price"><b>¥890</b><del>¥1850.00</del></span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-more">
+            <button type="button" class="btn-ghost">查看更多</button>
+          </div>
+        </section>
+
+        <!-- 赛事专课 -->
+        <section class="contest-section" aria-labelledby="contest-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="contest-title">赛事专课</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">赛事专题精品课程，竞赛事半功倍</p>
+          </div>
+          <div class="section-tabs section-tabs--primary" role="tablist" aria-label="赛事类型">
+            <button type="button" class="section-tabs__item is-active" aria-selected="true">毕设大赛</button>
+            <button type="button" class="section-tabs__item" aria-selected="false">协赛专题</button>
+          </div>
+          <div class="course-grid course-grid--4">
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/030384e02dca433c24c6135634e04c75.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">BIMFILM3.0入门教程</h3>
+                <div class="course-card__tags"><span class="tag">BIM</span><span class="tag">入门教程</span><span class="tag tag--accent">精品课程</span></div>
+                <div class="course-card__meta"><span>12</span><span>W人学过</span><span class="tag tag--free">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8ccf7dee0975ec9410eac27ee54088ac.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">BIM云计价GCCP6.0产品新增功能介绍</h3>
+                <div class="course-card__tags"><span class="tag">BIM</span><span class="tag tag--accent">精品课程</span></div>
+                <div class="course-card__meta"><span>10</span><span>W人学过</span><span class="tag tag--free">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card course-card--free" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/6ce33484184063d1af11a91f14163172.png')">
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">广联达定额原理与市场化计价</h3>
+                <div class="course-card__tags"><span class="tag tag--accent">精品课程</span></div>
+                <div class="course-card__meta"><span>1</span><span>W人学过</span><span class="tag tag--free">免费</span></div>
+              </div>
+            </a>
+            <a class="course-card" href="#">
+              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9180f761a32c4383284d48e48b5b3397.png')">
+                  <span class="course-card__promo">限时优惠</span>
+                  <div class="course-card__countdown" data-countdown-end="" aria-label="限时优惠倒计时">
+                    <span class="course-card__countdown-label" data-countdown-label>距结束</span>
+                    <span class="course-card__countdown-time">
+                      <b data-unit="d">00</b><i>天</i>
+                      <b data-unit="h">00</b><i>:</i>
+                      <b data-unit="m">00</b><i>:</i>
+                      <b data-unit="s">00</b>
+                    </span>
+                  </div>
+                </div>
+              <div class="course-card__body">
+                <h3 class="course-card__title">工程招投标与合同管理</h3>
+                <div class="course-card__tags"><span class="tag tag--accent">精品课程</span></div>
+                <div class="course-card__meta"><span>2313</span><span>人学过</span></div>
+              </div>
+            </a>
+          </div>
+          <div class="section-more">
+            <button type="button" class="btn-ghost">查看更多</button>
+          </div>
+        </section>
+
+        <!-- 领域名师 -->
+        <section class="teacher-section" aria-labelledby="teacher-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="teacher-title">领域名师</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">行业名家前辈经验、价值分享</p>
+          </div>
+          <div class="teacher-grid">
+            <a class="teacher-card" href="#">
+              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/da23dae40b6faf87eb5057769ff3b065.jpg')"></div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-card__name">付静</h3>
+                <p class="teacher-card__role">造价BIM工程师</p>
+              </div>
+              <div class="teacher-card__stats">
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value">12门</b>
+                  <i class="teacher-card__stat-label">开设课程</i>
+                </span>
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value teacher-card__stat-value--accent">5421人</b>
+                  <i class="teacher-card__stat-label">跟学人数</i>
+                </span>
+              </div>
+              <div class="teacher-card__hover">
+                <p class="teacher-card__bio">造价BIM方向资深讲师，8年项目咨询与教学经验，擅长BIM算量建模、土建量价一体化与软件实操提效。代表课程覆盖一造计量、广联达GTJ/GCCP应用，辅导多名学员通过一级造价工程师考试。</p>
+              </div>
+            </a>
+            <a class="teacher-card" href="#">
+              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/4b4f49e041e7d9fed87827a46cdc08e6.jpeg')"></div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-card__name">金彪</h3>
+                <p class="teacher-card__role">BIM规划工程师</p>
+              </div>
+              <div class="teacher-card__stats">
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value">12门</b>
+                  <i class="teacher-card__stat-label">开设课程</i>
+                </span>
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value teacher-card__stat-value--accent">5421人</b>
+                  <i class="teacher-card__stat-label">跟学人数</i>
+                </span>
+              </div>
+              <div class="teacher-card__hover">
+                <p class="teacher-card__bio">BIM规划与正向设计专家，参与多项大型公建与市政BIM咨询。授课侧重模型规范、协同流程与一建实务中的数字化应用，善于把现场管理场景讲透，帮助学员把证书知识落到项目执行。</p>
+              </div>
+            </a>
+            <a class="teacher-card" href="#">
+              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/da7532c598f60b662b1f91cfc58b167d.png')"></div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-card__name">李桂婷</h3>
+                <p class="teacher-card__role">高级经济师/一级造价工程师</p>
+              </div>
+              <div class="teacher-card__stats">
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value">12门</b>
+                  <i class="teacher-card__stat-label">开设课程</i>
+                </span>
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value teacher-card__stat-value--accent">2221人</b>
+                  <i class="teacher-card__stat-label">跟学人数</i>
+                </span>
+              </div>
+              <div class="teacher-card__hover">
+                <p class="teacher-card__bio">高级经济师、一级造价工程师，长期深耕工程经济与计价管理。擅长一造《建设工程计价》《案例分析》精讲，结合结算审计真实案例拆解采分点，帮助在职学员建立清晰的备考与实战框架。</p>
+              </div>
+            </a>
+            <a class="teacher-card" href="#">
+              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/4906d020824a003982f66f109ced7341.jpg')"></div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-card__name">李英杰</h3>
+                <p class="teacher-card__role">广联达生态合作讲师</p>
+              </div>
+              <div class="teacher-card__stats">
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value">23门</b>
+                  <i class="teacher-card__stat-label">开设课程</i>
+                </span>
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value teacher-card__stat-value--accent">5321人</b>
+                  <i class="teacher-card__stat-label">跟学人数</i>
+                </span>
+              </div>
+              <div class="teacher-card__hover">
+                <p class="teacher-card__bio">广联达生态合作讲师，十余年施工与造价一线经验。主讲二建/一建施工管理与实务案例，课程紧贴考纲与现场工序，善于用项目故事串考点，适合施工员、项目部在职备考人群。</p>
+              </div>
+            </a>
+            <a class="teacher-card" href="#">
+              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/3b170d60cbcdea0aec084edbed5ea086.png')"></div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-card__name">李晓红</h3>
+                <p class="teacher-card__role">行业知名专家</p>
+              </div>
+              <div class="teacher-card__stats">
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value">23门</b>
+                  <i class="teacher-card__stat-label">开设课程</i>
+                </span>
+                <span class="teacher-card__stat">
+                  <b class="teacher-card__stat-value teacher-card__stat-value--accent">5321人</b>
+                  <i class="teacher-card__stat-label">跟学人数</i>
+                </span>
+              </div>
+              <div class="teacher-card__hover">
+                <p class="teacher-card__bio">10年建筑行业工作经验，4年培训经验，擅长土建全过程造价管理、投标、履约、结算策划等方向，代表课程有《土建造价标准化系统实战课》等；曾参与龙湖地产蜀新天街TOD项控、滨江天街TOD结算审核、蓝润地产绵阳春风里施工图预算审核等多个项目。</p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- 学习资料 -->
+        <section class="material-section" aria-labelledby="material-title">
+          <div class="section-heading section-heading--inline">
+            <h2 class="section-heading__title" id="material-title">学习资料</h2>
+            <span class="section-heading__rule" aria-hidden="true"></span>
+            <p class="section-heading__desc">不止于课程，全方位支持你的职业发展</p>
+          </div>
+          <div class="material-grid">
+            <div class="material-col">
+              <div class="material-col__head">
+                <h3 class="material-col__title">实战资料</h3>
+                <a class="material-col__more" href="#">全部</a>
+              </div>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">土建造价全过程实战案例包（建模到结算）</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">GTJ/GCCP 量价一体操作手册（2026版）</span>
+                <span class="material-tag material-tag--premium">精品</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">市政结算审计争议点拆解与应对策略</span>
+                <span class="material-tag material-tag--hot">热门</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">安装造价常见扣减与清单组价模板</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">BIM 正向设计协同流程与出图规范样例</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">施工方应对结算审计的证据链清单</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+            </div>
+            <div class="material-col">
+              <div class="material-col__head">
+                <h3 class="material-col__title">备考资料</h3>
+                <a class="material-col__more" href="#">全部</a>
+              </div>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">一建全科备考资料包（四科合集）</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">一级建造师历年真题合集（2018-2025）</span>
+                <span class="material-tag material-tag--hot">热门</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">二建全科通关宝典</span>
+                <span class="material-tag material-tag--premium">精品</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">一级造价工程师备考资料包</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">注册安全工程师冲刺资料</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <img class="material-link__icon" src="assets/material-doc@2x.png" srcset="assets/material-doc@2x.png 2x" width="13" height="15" alt="" />
+                <span class="material-link__title">监理工程师考点速记手册</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+            </div>
+            <div class="material-col material-col--news">
+              <div class="material-col__head">
+                <h3 class="material-col__title">专业资讯</h3>
+                <a class="material-col__more" href="#">全部</a>
+              </div>
+              <a class="material-link" href="#">
+                <span class="material-link__title">2024新清单发布后造价4大影响：GTJ算量与定额衔接</span>
+                <span class="material-tag material-tag--hot">热门</span>
+              </a>
+              <a class="material-link" href="#">
+                <span class="material-link__title">广联达BIM技能认证考点更新，实操评分细则解读</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <span class="material-link__title">市场化计价趋势下，造价员如何完成角色升级</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <span class="material-link__title">建筑数字化岗位需求升温：BIM+造价复合人才更抢手</span>
+                <span class="material-tag material-tag--premium">精品</span>
+              </a>
+              <a class="material-link" href="#">
+                <span class="material-link__title">施工图预算常见漏项清单，新人入职必看避坑指南</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+              <a class="material-link" href="#">
+                <span class="material-link__title">工程结算争议高发领域盘点：签证变更如何留痕</span>
+                <span class="material-tag material-tag--recommend">推荐</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 合作企业 -->
+        <section class="partner-section" aria-labelledby="partner-title">
+          <div class="section-heading">
+            <h2 class="section-heading__title" id="partner-title">合作企业与机构</h2>
+          </div>
+          <div class="partner-grid">
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/3a2ac7947661e83149760deb45bb508d.png" alt="" />
+              <span class="partner-card__name">中国二十冶集团有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/92ca2db1e1d74223d57641b5da13dbef.png" alt="" />
+              <span class="partner-card__name">中国建筑第八工程局有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/2beae8cb14c9871e645559d49f4c0505.png" alt="" />
+              <span class="partner-card__name">中铁建设集团有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/ea6a7f18cbf55b873fd4ebbbfc7e2ac2.png" alt="" />
+              <span class="partner-card__name">中交第四公路工程局有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/92dd3d62eb733d21822729ff26301393.png" alt="" />
+              <span class="partner-card__name">南通四建集团有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/1d7a14bd122d61c1b2d06f8a66efae6d.png" alt="" />
+              <span class="partner-card__name">上海建工一建集团有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/1f91e965870df5c012de104f3527a050.png" alt="" />
+              <span class="partner-card__name">北京京城招建设工程咨询有限公司</span>
+            </div>
+            <div class="partner-card">
+              <img class="partner-card__logo" src="https://image-resource.mastergo.com/72061466992156/149588298644015/a9efabf6be5bcd4bcbec97978d760b38.png" alt="" />
+              <span class="partner-card__name">中国图学学会</span>
+            </div>
+            <div class="partner-card">
+              <span class="partner-card__name">广东蕉岭建筑工程集团有限公司</span>
+            </div>
+            <div class="partner-card">
+              <span class="partner-card__name">北京筑标建设工程咨询有限公司</span>
+            </div>
+            <div class="partner-card">
+              <span class="partner-card__name">住房和城乡建设部人力资源开发中心</span>
+            </div>
+            <div class="partner-card">
+              <span class="partner-card__name">湖北大有工程咨询有限公司</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="float-rail" aria-label="快捷入口">
+      <button type="button" class="float-rail__btn">微信公众号</button>
+      <button type="button" class="float-rail__btn">APP下载</button>
+      <button type="button" class="float-rail__btn">反馈</button>
+    </div>
+    <div class="ai-fab">
+      <img src="https://image-resource.mastergo.com/72061466992156/136931372500587/c5b97e2dc1f2045d826eab807c2d7926.png" width="48" height="48" alt="" />
+      <span class="ai-fab__label">AI学习助手</span>
+    </div>
+
+    <!-- 公共页脚：DSL 分类[a1]=简 -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/course-countdown.js" defer></script>
+</body>
+</html>

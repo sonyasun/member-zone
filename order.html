@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>确认订单 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--order">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link" href="index.html">首页</a>
+          <a class="nav-list__link" href="#">题库</a>
+          <a class="nav-list__link" href="#">交流社区</a>
+          <a class="nav-list__link" href="cert.html">职业考证</a>
+          <a class="nav-list__link" href="member.html">会员专区</a>
+          <a class="nav-list__link" href="#">下载专区</a>
+          <a class="nav-list__link" href="#">生态合作</a>
+          <a class="nav-list__link" href="#">企业版</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <button type="button" class="btn-login">登录/注册</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main main--order">
+      <div class="page-inner">
+        <nav class="course-crumb" aria-label="面包屑">
+          <a href="index.html">首页</a>
+          <span class="course-crumb__sep" aria-hidden="true"></span>
+          <a href="course.html">精品课程</a>
+          <span class="course-crumb__sep" aria-hidden="true"></span>
+          <span>确认订单</span>
+        </nav>
+
+        <h1 class="order-page__title">确认订单</h1>
+
+        <div class="order-layout">
+          <div class="order-main">
+            <!-- 单课程信息 -->
+            <section class="order-card" aria-labelledby="order-course-heading">
+              <h2 class="order-card__heading" id="order-course-heading">课程信息</h2>
+              <div class="order-course">
+                <a class="order-course__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')" aria-label="查看课程详情"></a>
+                <div class="order-course__body">
+                  <h3 class="order-course__title">
+                    <a href="course.html">建筑施工组织（2020年10月版）</a>
+                  </h3>
+                  <ul class="order-course__meta">
+                    <li>有效期：365天</li>
+                    <li>授课形式：录播</li>
+                    <li>适用地区：全国</li>
+                  </ul>
+                  <div class="order-course__tags">
+                    <span class="course-promo course-promo--gift">购课有赠品</span>
+                  </div>
+                </div>
+                <div class="order-course__price">
+                  <span class="order-course__sale"><i>￥</i>49</span>
+                  <del class="order-course__origin">￥69</del>
+                </div>
+              </div>
+            </section>
+
+            <!-- 优惠券 -->
+            <section class="order-card" aria-labelledby="order-coupon-heading">
+              <div class="order-card__row">
+                <h2 class="order-card__heading" id="order-coupon-heading">优惠券</h2>
+                <button type="button" class="order-coupon-trigger">
+                  暂无可用优惠券
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                    <path d="M4.5 3L7.5 6L4.5 9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- 支付方式 -->
+            <section class="order-card" aria-labelledby="order-pay-heading">
+              <h2 class="order-card__heading" id="order-pay-heading">支付方式</h2>
+              <div class="order-pay" role="radiogroup" aria-labelledby="order-pay-heading">
+                <label class="order-pay__item is-active">
+                  <input type="radio" name="pay-method" value="wechat" checked />
+                  <span class="order-pay__radio" aria-hidden="true"></span>
+                  <img class="order-pay__icon" src="assets/pay-wechat.png" width="24" height="24" alt="" />
+                  <span class="order-pay__name">微信支付</span>
+                </label>
+                <label class="order-pay__item">
+                  <input type="radio" name="pay-method" value="alipay" />
+                  <span class="order-pay__radio" aria-hidden="true"></span>
+                  <img class="order-pay__icon" src="assets/pay-alipay.png" width="24" height="24" alt="" />
+                  <span class="order-pay__name">支付宝</span>
+                </label>
+              </div>
+            </section>
+          </div>
+
+          <!-- 右侧结算 -->
+          <aside class="order-summary" aria-labelledby="order-summary-heading">
+            <h2 class="order-summary__heading" id="order-summary-heading">订单金额</h2>
+            <dl class="order-summary__list">
+              <div class="order-summary__row">
+                <dt>课程价格</dt>
+                <dd>￥69.00</dd>
+              </div>
+              <div class="order-summary__row">
+                <dt>限时优惠</dt>
+                <dd class="is-discount">-￥20.00</dd>
+              </div>
+              <div class="order-summary__row">
+                <dt>优惠券</dt>
+                <dd>￥0.00</dd>
+              </div>
+            </dl>
+            <div class="order-summary__total">
+              <span>应付金额</span>
+              <strong><i>￥</i>49.00</strong>
+            </div>
+            <button type="button" class="order-summary__submit">去支付</button>
+            <p class="order-summary__tip">提交订单即表示同意<a href="#">《购课协议》</a></p>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('.order-pay__item').forEach(function (item) {
+      item.addEventListener('change', function () {
+        document.querySelectorAll('.order-pay__item').forEach(function (el) {
+          el.classList.toggle('is-active', el.querySelector('input').checked);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

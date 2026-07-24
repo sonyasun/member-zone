@@ -1,0 +1,6 @@
+.DS_Store
+.cursor/
+.mastergo/
+*.log
+.idea/
+.vscode/

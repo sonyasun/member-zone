@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人中心 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--profile">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link" href="index.html">首页</a>
+          <a class="nav-list__link" href="#">题库</a>
+          <a class="nav-list__link" href="#">交流社区</a>
+          <a class="nav-list__link" href="cert.html">职业考证</a>
+          <a class="nav-list__link" href="member.html">会员专区</a>
+          <a class="nav-list__link" href="#">下载专区</a>
+          <a class="nav-list__link" href="#">生态合作</a>
+          <a class="nav-list__link" href="#">企业版</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <a class="profile-header-avatar" href="profile.html" aria-label="个人中心">
+            <img src="https://image-resource.mastergo.com/94527030903502/134301271742364/28c7416fdd4c7cc86d1201ca8a05fde5.jpg" width="40" height="40" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="profile-banner" aria-hidden="true">
+      <div
+        class="profile-banner__img"
+        style="background-image:url('https://image-resource.mastergo.com/94527030903502/134301271742364/aee9ea18d04fc87c4ed729ee9aa22dc6.jpg')"
+      ></div>
+      <div class="profile-banner__mask"></div>
+    </div>
+
+    <main class="main main--profile">
+      <div class="page-inner">
+        <div class="profile-top">
+          <section class="profile-panel" aria-labelledby="profile-name">
+            <div class="profile-panel__avatar-wrap">
+              <img
+                class="profile-panel__avatar"
+                src="https://image-resource.mastergo.com/94527030903502/134301271742364/28c7416fdd4c7cc86d1201ca8a05fde5.jpg"
+                width="80"
+                height="80"
+                alt=""
+              />
+            </div>
+            <h1 class="profile-panel__name" id="profile-name">天行者7821</h1>
+            <ul class="profile-panel__stats">
+              <li>
+                <span class="profile-panel__stat-label">今日学习时长</span>
+                <span class="profile-panel__stat-value"><b>8</b>min</span>
+              </li>
+              <li>
+                <span class="profile-panel__stat-label">学习课程</span>
+                <span class="profile-panel__stat-value"><b>6</b>门</span>
+              </li>
+              <li>
+                <span class="profile-panel__stat-label">总学习时长</span>
+                <span class="profile-panel__stat-value"><b>29</b>h</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="profile-layout">
+          <div class="profile-main">
+            <div class="profile-tabs" role="tablist" aria-label="个人中心栏目">
+              <button type="button" class="profile-tabs__item" role="tab" aria-selected="false" data-tab="recent">最近学习</button>
+              <button type="button" class="profile-tabs__item" role="tab" aria-selected="false" data-tab="courses">我的课程</button>
+              <button type="button" class="profile-tabs__item is-active" role="tab" aria-selected="true" data-tab="orders">订单管理</button>
+              <button type="button" class="profile-tabs__item" role="tab" aria-selected="false" data-tab="coupons">优惠券</button>
+            </div>
+            <div class="profile-content">
+              <div class="profile-tab-panel is-hidden" data-panel="recent">
+                <p class="profile-empty">暂无最近学习记录</p>
+              </div>
+              <div class="profile-tab-panel is-hidden" data-panel="courses">
+                <p class="profile-empty">暂无课程</p>
+              </div>
+              <div class="profile-tab-panel" data-panel="orders">
+                <div class="order-manage" id="order-manage">
+                  <div class="order-manage__filters" role="tablist" aria-label="订单状态筛选">
+                    <button type="button" class="order-manage__filter is-active" data-filter="all" aria-selected="true">全部</button>
+                    <button type="button" class="order-manage__filter" data-filter="pending" aria-selected="false">待支付</button>
+                    <button type="button" class="order-manage__filter" data-filter="paid" aria-selected="false">已完成</button>
+                    <button type="button" class="order-manage__filter" data-filter="cancelled" aria-selected="false">已取消</button>
+                  </div>
+
+                  <ul class="order-manage__list">
+                    <li class="order-manage__item" data-status="pending">
+                      <div class="order-manage__head">
+                        <span class="order-manage__no">订单号：YK202607230001</span>
+                        <span class="order-manage__time">2026-07-23 15:42</span>
+                        <span class="order-manage__status is-pending">待支付</span>
+                      </div>
+                      <div class="order-manage__body">
+                        <a class="order-manage__cover" href="course-pack.html" style="background-image:url('assets/course-pack-cover.png')" aria-hidden="true"></a>
+                        <div class="order-manage__info">
+                          <a class="order-manage__title" href="course-pack.html">主题定制套餐课程</a>
+                          <p class="order-manage__meta">课程包 · 含6门课 · 有效期365天</p>
+                        </div>
+                        <div class="order-manage__price">
+                          <span class="order-manage__sale"><i>￥</i>39.00</span>
+                          <del class="order-manage__origin">￥99.00</del>
+                        </div>
+                      </div>
+                      <div class="order-manage__actions">
+                        <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="cancel">取消订单</button>
+                        <a class="order-manage__btn order-manage__btn--primary" href="order-pack.html">去支付</a>
+                      </div>
+                    </li>
+
+                    <li class="order-manage__item" data-status="paid">
+                      <div class="order-manage__head">
+                        <span class="order-manage__no">订单号：YK202607210018</span>
+                        <span class="order-manage__time">2026-07-21 10:16</span>
+                        <span class="order-manage__status is-paid">已完成</span>
+                      </div>
+                      <div class="order-manage__body">
+                        <a class="order-manage__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')" aria-hidden="true"></a>
+                        <div class="order-manage__info">
+                          <a class="order-manage__title" href="course.html">建筑施工组织（2020年10月版）</a>
+                          <p class="order-manage__meta">单课程 · 录播 · 有效期365天</p>
+                        </div>
+                        <div class="order-manage__price">
+                          <span class="order-manage__sale"><i>￥</i>49.00</span>
+                          <del class="order-manage__origin">￥69.00</del>
+                        </div>
+                      </div>
+                      <div class="order-manage__actions">
+                        <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="invoice">申请开票</button>
+                        <a class="order-manage__btn order-manage__btn--ghost" href="course.html">继续学习</a>
+                        <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="detail">订单详情</button>
+                      </div>
+                    </li>
+
+                    <li class="order-manage__item" data-status="paid" data-invoice="applied">
+                      <div class="order-manage__head">
+                        <span class="order-manage__no">订单号：YK202607180007</span>
+                        <span class="order-manage__time">2026-07-18 20:05</span>
+                        <span class="order-manage__status is-paid">已完成</span>
+                      </div>
+                      <div class="order-manage__body">
+                        <a class="order-manage__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')" aria-hidden="true"></a>
+                        <div class="order-manage__info">
+                          <a class="order-manage__title" href="course.html">土建GTJ2025新版本功能讲解合辑</a>
+                          <p class="order-manage__meta">单课程 · 录播 · 有效期365天</p>
+                        </div>
+                        <div class="order-manage__price">
+                          <span class="order-manage__sale"><i>￥</i>49.00</span>
+                          <del class="order-manage__origin">￥99.00</del>
+                        </div>
+                      </div>
+                      <div class="order-manage__actions">
+                        <button type="button" class="order-manage__btn order-manage__btn--ghost is-disabled" data-action="invoice-view" disabled>已申请开票</button>
+                        <a class="order-manage__btn order-manage__btn--ghost" href="course.html">继续学习</a>
+                        <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="detail">订单详情</button>
+                      </div>
+                    </li>
+
+                    <li class="order-manage__item" data-status="cancelled">
+                      <div class="order-manage__head">
+                        <span class="order-manage__no">订单号：YK202607150003</span>
+                        <span class="order-manage__time">2026-07-15 09:28</span>
+                        <span class="order-manage__status is-cancelled">已取消</span>
+                      </div>
+                      <div class="order-manage__body">
+                        <a class="order-manage__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')" aria-hidden="true"></a>
+                        <div class="order-manage__info">
+                          <a class="order-manage__title" href="course.html">【施工】指标神器案例实操应用</a>
+                          <p class="order-manage__meta">单课程 · 录播 · 有效期365天</p>
+                        </div>
+                        <div class="order-manage__price">
+                          <span class="order-manage__sale"><i>￥</i>49.00</span>
+                          <del class="order-manage__origin">￥99.00</del>
+                        </div>
+                      </div>
+                      <div class="order-manage__actions">
+                        <a class="order-manage__btn order-manage__btn--primary" href="order.html">再次购买</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <p class="order-manage__empty is-hidden" id="order-manage-empty">暂无相关订单</p>
+                </div>
+              </div>
+
+              <div class="profile-tab-panel is-hidden" data-panel="coupons">
+                <div class="coupon-manage" id="coupon-manage">
+                  <div class="coupon-manage__toolbar">
+                    <div class="order-manage__filters" role="tablist" aria-label="优惠券状态筛选">
+                      <button type="button" class="order-manage__filter is-active" data-coupon-filter="unused" aria-selected="true">未使用</button>
+                      <button type="button" class="order-manage__filter" data-coupon-filter="used" aria-selected="false">已使用</button>
+                      <button type="button" class="order-manage__filter" data-coupon-filter="expired" aria-selected="false">已过期</button>
+                    </div>
+                    <div class="coupon-manage__tools">
+                      <form class="coupon-redeem" id="coupon-redeem" action="#">
+                        <input class="coupon-redeem__input" type="text" name="code" placeholder="输入优惠码" maxlength="32" aria-label="优惠码" />
+                        <button type="submit" class="order-manage__btn order-manage__btn--primary coupon-redeem__btn">兑换</button>
+                      </form>
+                      <a class="coupon-manage__claim-link" href="coupon-claim.html">去领券</a>
+                    </div>
+                  </div>
+
+                  <ul class="coupon-manage__list">
+                    <li class="coupon-card" data-coupon-status="unused">
+                      <div class="coupon-card__value">
+                        <span class="coupon-card__amount"><i>¥</i>10</span>
+                        <span class="coupon-card__condition">满49可用</span>
+                      </div>
+                      <div class="coupon-card__body">
+                        <h3 class="coupon-card__title">课程满减券</h3>
+                        <p class="coupon-card__desc">适用于单课程及课程包购买</p>
+                        <p class="coupon-card__time">有效期至 2026-08-31</p>
+                      </div>
+                      <div class="coupon-card__action">
+                        <a class="order-manage__btn order-manage__btn--primary" href="index.html">去使用</a>
+                      </div>
+                    </li>
+
+                    <li class="coupon-card" data-coupon-status="unused">
+                      <div class="coupon-card__value">
+                        <span class="coupon-card__amount"><i>¥</i>20</span>
+                        <span class="coupon-card__condition">满99可用</span>
+                      </div>
+                      <div class="coupon-card__body">
+                        <h3 class="coupon-card__title">主题套餐专享券</h3>
+                        <p class="coupon-card__desc">仅限「主题定制套餐课程」使用</p>
+                        <p class="coupon-card__time">有效期至 2026-09-15</p>
+                      </div>
+                      <div class="coupon-card__action">
+                        <a class="order-manage__btn order-manage__btn--primary" href="course-pack.html">去使用</a>
+                      </div>
+                    </li>
+
+                    <li class="coupon-card" data-coupon-status="unused">
+                      <div class="coupon-card__value coupon-card__value--percent">
+                        <span class="coupon-card__amount">8.8<i>折</i></span>
+                        <span class="coupon-card__condition">无门槛</span>
+                      </div>
+                      <div class="coupon-card__body">
+                        <h3 class="coupon-card__title">新学员专享折扣券</h3>
+                        <p class="coupon-card__desc">全场录播课程可用，不可叠加</p>
+                        <p class="coupon-card__time">有效期至 2026-07-31</p>
+                      </div>
+                      <div class="coupon-card__action">
+                        <a class="order-manage__btn order-manage__btn--primary" href="index.html">去使用</a>
+                      </div>
+                    </li>
+
+                    <li class="coupon-card is-used is-hidden" data-coupon-status="used">
+                      <div class="coupon-card__value">
+                        <span class="coupon-card__amount"><i>¥</i>10</span>
+                        <span class="coupon-card__condition">满49可用</span>
+                      </div>
+                      <div class="coupon-card__body">
+                        <h3 class="coupon-card__title">课程满减券</h3>
+                        <p class="coupon-card__desc">已用于订单 YK202607210018</p>
+                        <p class="coupon-card__time">使用时间 2026-07-21</p>
+                      </div>
+                      <div class="coupon-card__action">
+                        <span class="coupon-card__badge">已使用</span>
+                      </div>
+                    </li>
+
+                    <li class="coupon-card is-expired is-hidden" data-coupon-status="expired">
+                      <div class="coupon-card__value">
+                        <span class="coupon-card__amount"><i>¥</i>15</span>
+                        <span class="coupon-card__condition">满69可用</span>
+                      </div>
+                      <div class="coupon-card__body">
+                        <h3 class="coupon-card__title">暑期学习券</h3>
+                        <p class="coupon-card__desc">适用于全部付费课程</p>
+                        <p class="coupon-card__time">已于 2026-06-30 过期</p>
+                      </div>
+                      <div class="coupon-card__action">
+                        <span class="coupon-card__badge">已过期</span>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <p class="order-manage__empty is-hidden" id="coupon-manage-empty">暂无相关优惠券</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="profile-aside">
+            <section class="recommend-card" aria-labelledby="recommend-heading">
+              <h2 class="recommend-card__heading" id="recommend-heading">课程推荐</h2>
+              <ul class="recommend-list">
+                <li>
+                  <a class="recommend-item" href="course.html">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/55ef390b73de3ffab92aec7ef08ca282.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">钢筋精算节流落地实操——用BIMMAKE做好钢筋内控</span>
+                      <span class="recommend-item__meta">王旭 · 2334人学过</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="recommend-item" href="#">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/791588e0c2ee5260d72886aebfcfa283.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">BIM土建计量平台-GTJ2021案例讲解</span>
+                      <span class="recommend-item__meta">王天来 · 2334人学过</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="recommend-item" href="#">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e4c465f81d0002f3133fe9b0e0548782.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">TOP地产成本经理手把手带你成本实操</span>
+                      <span class="recommend-item__meta">鱼丸 · 4334人学过</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="recommend-item" href="#">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/c5255e15a3d9b8201b91d23df83d1f7c.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">新建更新一体化整体解决方案</span>
+                      <span class="recommend-item__meta">韩丹 · 143人学过</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="recommend-item" href="#">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/36e38f5b506f9d0b4201e4b3258c49a7.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">工具数据一体化助力造价编审提质增效</span>
+                      <span class="recommend-item__meta">武翠艳 · 4334人学过</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="recommend-item" href="#">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/79770e2412780b647a8f77a00976303d.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">《建设工程工程量清单计价标准》深度解读</span>
+                      <span class="recommend-item__meta">李桂婷 · 2334人学过</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="recommend-item" href="#">
+                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e8ca9ce0f739df62b7cca744beb9d599.png" width="100" height="56" alt="" />
+                    <span class="recommend-item__body">
+                      <span class="recommend-item__title">专家权威解读24新清单八大变化点</span>
+                      <span class="recommend-item__meta">建筑课堂 · 6434人学过</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <div class="invoice-modal" id="invoice-modal" hidden>
+      <div class="invoice-modal__mask" data-invoice-close></div>
+      <div class="invoice-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="invoice-modal-title">
+        <div class="invoice-modal__head">
+          <h2 class="invoice-modal__title" id="invoice-modal-title">申请开票</h2>
+          <button type="button" class="invoice-modal__close" data-invoice-close aria-label="关闭">×</button>
+        </div>
+        <form class="invoice-modal__form" id="invoice-form">
+          <p class="invoice-modal__order">订单号：<span id="invoice-order-no">—</span></p>
+          <p class="invoice-modal__course" id="invoice-course-name">—</p>
+
+          <div class="invoice-field">
+            <span class="invoice-field__label">发票类型</span>
+            <div class="invoice-field__value">电子普通发票</div>
+          </div>
+
+          <div class="invoice-field">
+            <span class="invoice-field__label">抬头类型</span>
+            <div class="invoice-radios" role="radiogroup" aria-label="抬头类型">
+              <label class="invoice-radio">
+                <input type="radio" name="titleType" value="personal" checked />
+                <span>个人</span>
+              </label>
+              <label class="invoice-radio">
+                <input type="radio" name="titleType" value="company" />
+                <span>企业</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="invoice-field">
+            <span class="invoice-field__label">发票抬头</span>
+            <input class="invoice-field__input" type="text" name="title" id="invoice-title" placeholder="请输入发票抬头" required maxlength="80" />
+          </label>
+
+          <label class="invoice-field" id="invoice-tax-field" hidden>
+            <span class="invoice-field__label">企业税号</span>
+            <input class="invoice-field__input" type="text" name="taxNo" id="invoice-tax" placeholder="请输入纳税人识别号" maxlength="30" />
+          </label>
+
+          <label class="invoice-field">
+            <span class="invoice-field__label">接收邮箱</span>
+            <input class="invoice-field__input" type="email" name="email" id="invoice-email" placeholder="发票将发送至该邮箱" required />
+          </label>
+
+          <p class="invoice-modal__tip">提交后预计 1–3 个工作日开具，发票将发送至您的邮箱。</p>
+
+          <div class="invoice-modal__actions">
+            <button type="button" class="order-manage__btn order-manage__btn--ghost" data-invoice-close>取消</button>
+            <button type="submit" class="order-manage__btn order-manage__btn--primary">提交申请</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="float-rail" aria-label="快捷入口">
+      <button type="button" class="float-rail__btn">微信公众号</button>
+      <button type="button" class="float-rail__btn">APP下载</button>
+      <button type="button" class="float-rail__btn">反馈</button>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.profile-tabs__item[data-tab]');
+      var panels = document.querySelectorAll('.profile-tab-panel[data-panel]');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var id = tab.getAttribute('data-tab');
+          tabs.forEach(function (t) {
+            var on = t === tab;
+            t.classList.toggle('is-active', on);
+            t.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+          panels.forEach(function (p) {
+            p.classList.toggle('is-hidden', p.getAttribute('data-panel') !== id);
+          });
+        });
+      });
+
+      var root = document.getElementById('order-manage');
+      if (root) {
+        var filters = root.querySelectorAll('.order-manage__filter');
+        var items = root.querySelectorAll('.order-manage__item');
+        var empty = document.getElementById('order-manage-empty');
+
+        function applyFilter(status) {
+          var visible = 0;
+          items.forEach(function (item) {
+            var show = status === 'all' || item.getAttribute('data-status') === status;
+            item.classList.toggle('is-hidden', !show);
+            if (show) visible += 1;
+          });
+          if (empty) empty.classList.toggle('is-hidden', visible > 0);
+        }
+
+        filters.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var status = btn.getAttribute('data-filter');
+            filters.forEach(function (f) {
+              var on = f === btn;
+              f.classList.toggle('is-active', on);
+              f.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            applyFilter(status);
+          });
+        });
+
+        root.addEventListener('click', function (e) {
+          var btn = e.target.closest('[data-action]');
+          if (!btn) return;
+          var item = btn.closest('.order-manage__item');
+          if (!item) return;
+          var action = btn.getAttribute('data-action');
+          var no = item.querySelector('.order-manage__no');
+          var title = item.querySelector('.order-manage__title');
+          var orderNo = no ? no.textContent.replace('订单号：', '') : '';
+          var courseName = title ? title.textContent.trim() : '';
+
+          if (action === 'cancel') {
+            if (!window.confirm('确认取消该订单？')) return;
+            item.setAttribute('data-status', 'cancelled');
+            var statusEl = item.querySelector('.order-manage__status');
+            if (statusEl) {
+              statusEl.className = 'order-manage__status is-cancelled';
+              statusEl.textContent = '已取消';
+            }
+            var actions = item.querySelector('.order-manage__actions');
+            if (actions) {
+              actions.innerHTML = '<a class="order-manage__btn order-manage__btn--primary" href="order-pack.html">再次购买</a>';
+            }
+            var activeFilter = root.querySelector('.order-manage__filter.is-active');
+            applyFilter(activeFilter ? activeFilter.getAttribute('data-filter') : 'all');
+            return;
+          }
+
+          if (action === 'detail') {
+            window.alert('订单详情\n订单号：' + orderNo + '\n课程：' + courseName);
+            return;
+          }
+
+          if (action === 'invoice') {
+            openInvoiceModal(item, orderNo, courseName);
+            return;
+          }
+
+          if (action === 'invoice-view') {
+            window.alert('该订单已提交开票申请，电子发票将发送至您填写的邮箱。');
+          }
+        });
+      }
+
+      var couponRoot = document.getElementById('coupon-manage');
+      if (couponRoot) {
+        var couponFilters = couponRoot.querySelectorAll('[data-coupon-filter]');
+        var couponItems = couponRoot.querySelectorAll('.coupon-card');
+        var couponEmpty = document.getElementById('coupon-manage-empty');
+
+        function applyCouponFilter(status) {
+          var visible = 0;
+          couponItems.forEach(function (item) {
+            var show = item.getAttribute('data-coupon-status') === status;
+            item.classList.toggle('is-hidden', !show);
+            if (show) visible += 1;
+          });
+          if (couponEmpty) couponEmpty.classList.toggle('is-hidden', visible > 0);
+        }
+
+        couponFilters.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var status = btn.getAttribute('data-coupon-filter');
+            couponFilters.forEach(function (f) {
+              var on = f === btn;
+              f.classList.toggle('is-active', on);
+              f.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            applyCouponFilter(status);
+          });
+        });
+
+        var redeemForm = document.getElementById('coupon-redeem');
+        if (redeemForm) {
+          redeemForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var input = redeemForm.querySelector('input[name="code"]');
+            var code = input ? input.value.trim() : '';
+            if (!code) {
+              window.alert('请输入优惠码');
+              return;
+            }
+            window.alert('优惠码「' + code + '」兑换成功，已发放至「未使用」');
+            if (input) input.value = '';
+            var unusedBtn = couponRoot.querySelector('[data-coupon-filter="unused"]');
+            if (unusedBtn) unusedBtn.click();
+          });
+        }
+      }
+
+      var invoiceModal = document.getElementById('invoice-modal');
+      var invoiceForm = document.getElementById('invoice-form');
+      var invoiceOrderNo = document.getElementById('invoice-order-no');
+      var invoiceCourseName = document.getElementById('invoice-course-name');
+      var invoiceTitle = document.getElementById('invoice-title');
+      var invoiceTaxField = document.getElementById('invoice-tax-field');
+      var invoiceTax = document.getElementById('invoice-tax');
+      var invoiceEmail = document.getElementById('invoice-email');
+      var currentInvoiceItem = null;
+
+      function openInvoiceModal(item, orderNo, courseName) {
+        currentInvoiceItem = item;
+        if (invoiceOrderNo) invoiceOrderNo.textContent = orderNo;
+        if (invoiceCourseName) invoiceCourseName.textContent = courseName;
+        if (invoiceForm) invoiceForm.reset();
+        syncTaxField();
+        if (invoiceModal) {
+          invoiceModal.hidden = false;
+          document.body.style.overflow = 'hidden';
+        }
+        if (invoiceTitle) invoiceTitle.focus();
+      }
+
+      function closeInvoiceModal() {
+        if (invoiceModal) invoiceModal.hidden = true;
+        document.body.style.overflow = '';
+        currentInvoiceItem = null;
+      }
+
+      function syncTaxField() {
+        var company = invoiceForm && invoiceForm.querySelector('input[name="titleType"]:checked');
+        var isCompany = company && company.value === 'company';
+        if (invoiceTaxField) invoiceTaxField.hidden = !isCompany;
+        if (invoiceTax) {
+          invoiceTax.required = !!isCompany;
+          if (!isCompany) invoiceTax.value = '';
+        }
+      }
+
+      if (invoiceModal) {
+        invoiceModal.addEventListener('click', function (e) {
+          if (e.target.closest('[data-invoice-close]')) closeInvoiceModal();
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && invoiceModal && !invoiceModal.hidden) closeInvoiceModal();
+      });
+
+      if (invoiceForm) {
+        invoiceForm.addEventListener('change', function (e) {
+          if (e.target && e.target.name === 'titleType') syncTaxField();
+        });
+
+        invoiceForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var titleVal = invoiceTitle ? invoiceTitle.value.trim() : '';
+          var emailVal = invoiceEmail ? invoiceEmail.value.trim() : '';
+          var company = invoiceForm.querySelector('input[name="titleType"]:checked');
+          var isCompany = company && company.value === 'company';
+          var taxVal = invoiceTax ? invoiceTax.value.trim() : '';
+
+          if (!titleVal) {
+            window.alert('请填写发票抬头');
+            return;
+          }
+          if (isCompany && !taxVal) {
+            window.alert('请填写企业税号');
+            return;
+          }
+          if (!emailVal) {
+            window.alert('请填写接收邮箱');
+            return;
+          }
+
+          if (currentInvoiceItem) {
+            currentInvoiceItem.setAttribute('data-invoice', 'applied');
+            var invBtn = currentInvoiceItem.querySelector('[data-action="invoice"]');
+            if (invBtn) {
+              invBtn.textContent = '已申请开票';
+              invBtn.setAttribute('data-action', 'invoice-view');
+              invBtn.classList.add('is-disabled');
+              invBtn.disabled = true;
+            }
+          }
+
+          closeInvoiceModal();
+          window.alert('开票申请已提交，电子发票将发送至 ' + emailVal);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

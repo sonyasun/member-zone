@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>会员专区 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--member">
+    <!-- 顶栏：流式 flex，logo 使用本地 slogan 资源 -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link" href="index.html">首页</a>
+          <a class="nav-list__link" href="#">题库</a>
+          <a class="nav-list__link" href="#">交流社区</a>
+          <a class="nav-list__link" href="cert.html">职业考证</a>
+          <a class="nav-list__link is-active" href="member.html" aria-current="page">会员专区</a>
+          <a class="nav-list__link" href="#">下载专区</a>
+          <a class="nav-list__link" href="#">生态合作</a>
+          <a class="nav-list__link" href="#">企业版</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <button type="button" class="btn-login">登录/注册</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero--member">
+      <div class="page-inner hero__inner">
+        <div class="hero-banner">
+          <img
+            src="https://image-resource.mastergo.com/72061466992156/149588298644015/4e765f3e82336b69300233055ea5b0dd.jpg"
+            alt=""
+          />
+        </div>
+        <aside class="login-card">
+          <img
+            class="login-card__avatar"
+            src="assets/login-avatar.png"
+            width="160"
+            height="160"
+            alt="用户头像"
+          />
+          <h2 class="login-card__title">天行者7821</h2>
+          <div class="login-card__tags" aria-label="用户身份">
+            <span class="login-card__tag login-card__tag--vip">VIP</span>
+            <span class="login-card__tag login-card__tag--learner">行业学习者</span>
+            <span class="login-card__tag login-card__tag--enterprise">企业会员</span>
+          </div>
+          <div class="profile-card__stats">
+            <div class="stat"><div class="stat__value">290</div><div class="stat__label">学习时长(h)</div></div>
+            <div class="stat"><div class="stat__value">8</div><div class="stat__label">完成课程</div></div>
+            <div class="stat"><div class="stat__value">2</div><div class="stat__label">荣誉证书</div></div>
+          </div>
+          <a class="login-card__action" href="profile.html">前往个人中心</a>
+        </aside>
+      </div>
+      <div class="page-inner">
+        <div class="category-strip">
+          <a class="category-strip__item category-strip__item--mint" href="topic-courses.html">
+            <img class="category-strip__icon" src="assets/category-icon-topic.png" width="85" height="80" alt="" />
+            <div class="category-strip__text">
+              <h3 class="category-strip__title">专题课程</h3>
+              <p class="category-strip__subtitle">12个专题 · 86门课程</p>
+            </div>
+          </a>
+          <a class="category-strip__item category-strip__item--green" href="#">
+            <img class="category-strip__icon" src="assets/category-icon-business.png" width="85" height="80" alt="" />
+            <div class="category-strip__text">
+              <h3 class="category-strip__title">业务课程</h3>
+              <p class="category-strip__subtitle">15个方向 · 120门课程</p>
+            </div>
+          </a>
+          <a class="category-strip__item category-strip__item--coral" href="#">
+            <img class="category-strip__icon" src="assets/category-icon-software.png" width="85" height="80" alt="" />
+            <div class="category-strip__text">
+              <h3 class="category-strip__title">软件课程</h3>
+              <p class="category-strip__subtitle">10款软件 · 78门课程</p>
+            </div>
+          </a>
+          <a class="category-strip__item category-strip__item--purple" href="#exam">
+            <img class="category-strip__icon" src="assets/category-icon-exam.png" width="85" height="80" alt="" />
+            <div class="category-strip__text">
+              <h3 class="category-strip__title">考证课程</h3>
+              <p class="category-strip__subtitle">8个证类 · 96门课程</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main class="main">
+      <div class="page-inner main__grid">
+        <div class="main-column">
+          <!-- 五维科学学习法：DSL flex row + space-between + gap 12 -->
+          <section class="method-section" id="method" aria-labelledby="method-title">
+            <div class="section-heading">
+              <h2 class="section-heading__title" id="method-title">五维科学学习法</h2>
+              <p class="section-heading__desc">让成长事半功倍</p>
+            </div>
+            <div class="method-grid">
+              <img
+                class="method-grid__image"
+                src="assets/method-grid.png?v=2"
+                width="1024"
+                height="199"
+                alt="计划、测评、学习、训练、问答 — 五维科学学习法"
+              />
+            </div>
+
+            <div class="feature-row">
+              <a class="feature-card" href="#">
+                <div class="feature-card__icon-wrap">
+                  <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/f77bc642e54cf1e0c9e2b6d1c4d41f16.png" alt="" />
+                </div>
+                <div class="feature-card__body">
+                  <h3 class="feature-card__title">AI智能问答</h3>
+                  <p class="feature-card__desc">AI实时答疑，广联达+Deepseek双模型</p>
+                </div>
+              </a>
+              <a class="feature-card" href="#">
+                <div class="feature-card__icon-wrap">
+                  <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/69e5bc307da45a008817d57eb2ba7d9f.png" alt="" />
+                </div>
+                <div class="feature-card__body">
+                  <h3 class="feature-card__title">定制学习计划</h3>
+                  <p class="feature-card__desc">自由配置学习计划，学习任务清晰可见</p>
+                </div>
+              </a>
+              <a class="feature-card" href="#">
+                <div class="feature-card__icon-wrap">
+                  <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/22197524de2f4cde756a37317dd76da4.png" alt="" />
+                </div>
+                <div class="feature-card__body">
+                  <h3 class="feature-card__title">服务全程陪跑</h3>
+                  <p class="feature-card__desc">一客一群，服务不掉队、不拖延</p>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <!-- 专题课程 -->
+          <section id="topic" aria-labelledby="topic-title">
+            <div class="section-heading">
+              <h2 class="section-heading__title" id="topic-title">专题课程</h2>
+              <p class="section-heading__desc">直击痛点，高效落地</p>
+            </div>
+            <div class="filter-group" data-filter-group="topic">
+              <div class="section-tabs section-tabs--primary" role="tablist" aria-label="专题课程一级筛选">
+                <button type="button" class="section-tabs__item is-active" data-primary="housing" aria-selected="true">专业技能-房建领域</button>
+                <button type="button" class="section-tabs__item" data-primary="infra" aria-selected="false">专业技能-基建领域</button>
+                <button type="button" class="section-tabs__item" data-primary="general" aria-selected="false">通用技能</button>
+              </div>
+              <div class="section-tabs section-tabs--secondary" role="tablist" aria-label="专题课程二级筛选">
+                <div class="section-tabs__panel is-active" data-panel="housing">
+                  <button type="button" class="section-tabs__sub is-active" aria-selected="true">全部</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">土建算量</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">安装算量</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">装饰算量</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">施工组织</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">结算审计</button>
+                </div>
+                <div class="section-tabs__panel" data-panel="infra" hidden>
+                  <button type="button" class="section-tabs__sub is-active" aria-selected="true">全部</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">道路工程</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">桥梁工程</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">市政管网</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">岩土勘察</button>
+                </div>
+                <div class="section-tabs__panel" data-panel="general" hidden>
+                  <button type="button" class="section-tabs__sub is-active" aria-selected="true">全部</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">软件入门</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">行业规范</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">项目管理</button>
+                  <button type="button" class="section-tabs__sub" aria-selected="false">职业发展</button>
+                </div>
+              </div>
+            </div>
+            <div class="course-grid">
+              <a class="course-card" href="course.html">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>23</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>10</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">从零到一学会装饰算量软件建模【入门篇】</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>25</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">施工方如何积极应对结算审计</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>23</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="course-pack.html">
+                <div class="course-card__cover" style="background-image:url('assets/course-pack-cover.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">主题定制套餐课程</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>32</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>12</span><span>W人学过</span>
+                  <span class="course-card__status">限免</span></div>
+                </div>
+              </a>
+            </div>
+            <div class="section-more">
+              <a class="btn-ghost" href="topic-courses.html">查看更多</a>
+            </div>
+          </section>
+
+          <!-- 考证课程 -->
+          <section id="exam" aria-labelledby="exam-title">
+            <div class="section-heading">
+              <h2 class="section-heading__title" id="exam-title">考证课程</h2>
+              <p class="section-heading__desc">精准备考，高效通关</p>
+            </div>
+            <div class="section-tabs section-tabs--primary" role="tablist" aria-label="考证课程一级筛选">
+              <button type="button" class="section-tabs__item is-active">一级造价师</button>
+              <button type="button" class="section-tabs__item">一级建造师</button>
+            </div>
+            <div class="course-grid">
+              <a class="course-card" href="course.html">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>23</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>10</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">从零到一学会装饰算量软件建模【入门篇】</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>25</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">施工方如何积极应对结算审计</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>23</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="course-pack.html">
+                <div class="course-card__cover" style="background-image:url('assets/course-pack-cover.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">主题定制套餐课程</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>32</span><span>W人学过</span></div>
+                </div>
+              </a>
+              <a class="course-card" href="#">
+                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+                <div class="course-card__body">
+                  <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
+                  <div class="course-card__tags">
+                    <span class="tag">自研</span>
+                    <span class="tag">设计</span>
+                    <span class="tag">实用技能</span>
+                  </div>
+                  <div class="course-card__author">
+                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <span class="course-card__teacher">郭红领</span>
+                    <span class="course-card__divider" aria-hidden="true"></span>
+                    <span class="course-card__duration">共<span>2h34m</span></span>
+                  </div>
+                  <div class="course-card__meta"><span>12</span><span>W人学过</span>
+                  <span class="course-card__status">限免</span></div>
+                </div>
+              </a>
+            </div>
+            <div class="section-more">
+              <button type="button" class="btn-ghost">查看更多</button>
+            </div>
+          </section>
+
+          <!-- 岗位能力测评 -->
+          <section id="assess" aria-labelledby="assess-title">
+            <div class="section-heading">
+              <h2 class="section-heading__title" id="assess-title">岗位能力测评</h2>
+              <p class="section-heading__desc">快速高效掌握知识点，提高技能掌握程度与考试通过率</p>
+            </div>
+            <div class="assess-grid">
+              <a class="assess-card" href="#" aria-label="知识刷题">
+                <img
+                  class="assess-card__image"
+                  src="assets/assess-knowledge.png"
+                  width="213"
+                  height="174"
+                  alt="知识刷题：海量题库随刷随练，巩固专业知识基础"
+                />
+              </a>
+              <a class="assess-card" href="#" aria-label="技能实操">
+                <img
+                  class="assess-card__image"
+                  src="assets/assess-skill.png"
+                  width="213"
+                  height="174"
+                  alt="技能实操：模拟真实工作场景，提升岗位实操能力"
+                />
+              </a>
+              <a class="assess-card" href="#" aria-label="考证题库">
+                <img
+                  class="assess-card__image"
+                  src="assets/assess-exam.png"
+                  width="213"
+                  height="174"
+                  alt="考证题库：历年真题精准解析，助你高效通过考证"
+                />
+              </a>
+              <a class="assess-card" href="#" aria-label="备赛专区">
+                <img
+                  class="assess-card__image"
+                  src="assets/assess-compete.png"
+                  width="213"
+                  height="174"
+                  alt="备赛专区：全国技能大赛模拟，以赛促学以赛促练"
+                />
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- 右侧栏 -->
+        <aside class="side-column">
+          <a class="ad-card ad-card--promo" href="#" aria-label="学习季 · 推荐课程优化升级">
+            <img
+              class="ad-card__banner"
+              src="assets/ad-learning-season.png"
+              width="276"
+              height="414"
+              alt="学习季 · 推荐课程优化升级 · 精选好课效率加倍"
+            />
+          </a>
+
+          <section class="ad-card ad-card--wechat">
+            <div class="ad-card__header">
+              <h3 class="ad-card__title">扫码加微信</h3>
+              <p class="ad-card__subtitle">免费领取海量视频+课件资料</p>
+            </div>
+            <img
+              class="ad-card__qr"
+              src="https://image-resource.mastergo.com/72061466992156/149588298644015/b4c92171cedef4933d7cb5fe36c1b0d4.png"
+              alt="二维码"
+            />
+          </section>
+
+          <section class="rank-card">
+            <h2 class="rank-card__title">
+              <img
+                class="rank-card__title-img"
+                src="assets/rank-title.png"
+                width="220"
+                height="40"
+                alt="学习时长排行榜"
+              />
+            </h2>
+            <p class="rank-card__meta">共15人参与 · 我第14名 · 328小时</p>
+            <ol class="rank-list">
+              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-1)">01</span><span class="rank-item__name">李希希</span><span class="rank-item__value">328小时</span></li>
+              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-2)">02</span><span class="rank-item__name">王大宝</span><span class="rank-item__value">328小时</span></li>
+              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-3)">03</span><span class="rank-item__name">李虹猫</span><span class="rank-item__value">328小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">04</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">05</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">06</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">07</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">08</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">09</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">10</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+            </ol>
+          </section>
+
+          <section class="rank-card rank-card--cool">
+            <h2 class="rank-card__title">
+              <img
+                class="rank-card__title-img"
+                src="assets/rank-title-org.png"
+                width="220"
+                height="40"
+                alt="学习时长排行榜"
+              />
+            </h2>
+            <ol class="rank-list">
+              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-1)">01</span><span class="rank-item__name">北京城**设集团</span><span class="rank-item__value">22328小时</span></li>
+              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-2)">02</span><span class="rank-item__name">上海建**程公司</span><span class="rank-item__value">328小时</span></li>
+              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-3)">03</span><span class="rank-item__name">广州中**筑集团</span><span class="rank-item__value">328小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">04</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">05</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">06</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">07</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">08</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">09</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item"><span class="rank-item__index">10</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+            </ol>
+          </section>
+
+          <section class="hot-course-card" aria-labelledby="hot-course-title">
+            <div class="hot-course-card__inner">
+              <h2 class="hot-course-card__title" id="hot-course-title">热门课程推荐</h2>
+              <div class="hot-course-card__list">
+                <a class="hot-course-item" href="#">
+                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png" width="110" height="62" alt="" />
+                  <span class="hot-course-item__body">
+                    <span class="hot-course-item__name">土建GTJ2025新版本功能讲解合辑</span>
+                    <span class="hot-course-item__meta">23人学过</span>
+                  </span>
+                </a>
+                <a class="hot-course-item" href="course.html">
+                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png" width="110" height="62" alt="" />
+                  <span class="hot-course-item__body">
+                    <span class="hot-course-item__name">建筑施工组织（2020年10月版）</span>
+                    <span class="hot-course-item__meta">18人学过</span>
+                  </span>
+                </a>
+                <a class="hot-course-item" href="#">
+                  <img class="hot-course-item__cover" src="assets/course-pack-cover.png" width="110" height="62" alt="" />
+                  <span class="hot-course-item__body">
+                    <span class="hot-course-item__name">安装算量技巧提升系列</span>
+                    <span class="hot-course-item__meta">15人学过</span>
+                  </span>
+                </a>
+                <a class="hot-course-item" href="#">
+                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png" width="110" height="62" alt="" />
+                  <span class="hot-course-item__body">
+                    <span class="hot-course-item__name">从零到一学会装饰算量软件建模</span>
+                    <span class="hot-course-item__meta">12人学过</span>
+                  </span>
+                </a>
+                <a class="hot-course-item" href="#">
+                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png" width="110" height="62" alt="" />
+                  <span class="hot-course-item__body">
+                    <span class="hot-course-item__name">施工方如何积极应对结算审计</span>
+                    <span class="hot-course-item__meta">10人学过</span>
+                  </span>
+                </a>
+                <a class="hot-course-item" href="#">
+                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png" width="110" height="62" alt="" />
+                  <span class="hot-course-item__body">
+                    <span class="hot-course-item__name">【施工】指标神器案例实操应用</span>
+                    <span class="hot-course-item__meta">8人学过</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <div class="float-rail" aria-label="快捷入口">
+      <button type="button" class="float-rail__btn">微信</button>
+      <button type="button" class="float-rail__btn">APP</button>
+      <button type="button" class="float-rail__btn">反馈</button>
+    </div>
+    <div class="ai-fab">
+      <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/c4ee3893e7951bb56c0190c326fcfb7d.png" width="48" height="48" alt="" />
+      <span class="ai-fab__label">AI学习助手</span>
+    </div>
+
+    <!-- 公共页脚：DSL 分类[a1]=简（与首页/考证页一致） -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll("[data-filter-group]").forEach((group) => {
+      const primaryItems = group.querySelectorAll(".section-tabs--primary .section-tabs__item");
+      const panels = group.querySelectorAll(".section-tabs__panel");
+
+      primaryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const key = item.dataset.primary;
+          primaryItems.forEach((btn) => {
+            btn.classList.toggle("is-active", btn === item);
+            btn.setAttribute("aria-selected", btn === item ? "true" : "false");
+          });
+          panels.forEach((panel) => {
+            const match = panel.dataset.panel === key;
+            panel.classList.toggle("is-active", match);
+            panel.hidden = !match;
+          });
+        });
+      });
+
+      group.querySelectorAll(".section-tabs__panel").forEach((panel) => {
+        panel.addEventListener("click", (event) => {
+          const sub = event.target.closest(".section-tabs__sub");
+          if (!sub || !panel.contains(sub)) return;
+          panel.querySelectorAll(".section-tabs__sub").forEach((btn) => {
+            btn.classList.toggle("is-active", btn === sub);
+            btn.setAttribute("aria-selected", btn === sub ? "true" : "false");
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
