@@ -1,0 +1,14 @@
+---
+description: member-zone 预览发布流程
+alwaysApply: true
+---
+
+# 发布预览
+
+用户说「发布」「更新线上」「帮我发布」等时：
+
+1. 完成代码改动后，执行 `./deploy-cloudflare.sh`（或 `npm run deploy`）。脚本会依次：同步 `partials/` 壳层 → 重建 `css/styles.css` → 本地化 MasterGo 图 → 部署 Cloudflare Pages（项目名 `member-zone`）。
+2. 日常开发：改公共头尾/登录卡编辑 `partials/` 后跑 `npm run shell`；改样式编辑 `css/src/*` 后跑 `npm run css`。不要手改整份 `css/styles.css`。
+3. 优先用 Cloudflare，不要默认再用 GitHub Pages / Netlify。
+4. 正式预览：https://member-zone-6d9.pages.dev/
+5. 用户已明确要求发布时，不要再额外确认是否发布。

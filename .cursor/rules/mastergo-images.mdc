@@ -1,0 +1,32 @@
+---
+description: MasterGo MCP 图片必须本地化，禁止页面加载外链
+alwaysApply: true
+---
+
+# MasterGo 图片本地化
+
+从 MasterGo MCP（`getDsl` / `getDesignSections` / `extractSvg` 等）拿到的图片 **禁止** 直接写进 HTML/CSS/JS 外链。
+
+## 硬性要求
+
+1. 凡 `image-resource.mastergo.com`（或其它 MasterGo CDN）URL：
+   - 先下载到 `assets/mastergo/`
+   - 文件名用 URL 末段 hash（如 `8e22f52296613490c0de02cdd449cce6.png`）
+   - 代码里只写 `assets/mastergo/<filename>`
+2. **不要** 在页面里保留 MasterGo 外链（含 `src`、`srcset`、`url()`、JS 字符串）。
+3. 写完代码后自检：对改动文件搜 `image-resource.mastergo.com` / `mastergo.com/`，命中则先本地化再交付。
+4. 发布前若仍有外链，先跑 `./localize-mastergo-images.sh`，再执行发布脚本。
+
+## 下载方式
+
+```bash
+mkdir -p assets/mastergo
+curl -fsSL -o "assets/mastergo/<hash>.png" "<mastergo-image-url>"
+```
+
+或批量：`./localize-mastergo-images.sh`
+
+## 例外
+
+- `.mastergo/` 设计缓存可保留原始 URL（不进线上包，deploy 已排除）
+- 字体 CDN（如 jsDelivr OPPOSans）不在本规则范围内

@@ -1,0 +1,54 @@
+---
+description: CSS 设计 Token 与 7 天任务组件约定
+globs: css/src/**/*.css,*.html,partials/**
+alwaysApply: false
+---
+
+# 设计 Token 与样式约定
+
+## Token 来源
+
+- 全局 Token：`css/src/00-tokens-and-base.css`（`:root`）
+- 7 天任务共享：`css/src/01-learn-task-shared.css`（`.learn-task` + `.member-lt` 双选器）
+- 页面差异：仅写在 `20-page-profile.css` / `25-page-member.css`
+
+## 禁止硬编码（新代码）
+
+- 主色及衍生：用 `var(--color-primary)`、`var(--color-primary-dark/mid/light/deep)`
+- 7 天任务渐变/背景：用 `var(--lt-bg-idle)`、`var(--lt-bg-active)`、`var(--lt-gradient-progress)`
+- 任务标签/倒计时：用 `var(--lt-chip-*)`、`var(--lt-expiry-*)`（含 profile 到期横幅）
+- **全站数字**：统一 `var(--font-family-num)`（OPPOSans）；新增数字样式见 `00-tokens-and-base.css` 末尾汇总规则
+- 页面背景 `#f7f8fa`：用 `var(--color-bg-01)`
+
+改主色或任务卡视觉时，**优先改 Token 文件**，不要在页面 CSS 新增 hex 值。
+
+## 7 天任务结构
+
+| 场景 | 类名 | 说明 |
+|------|------|------|
+| 个人中心 | `.learn-task` | 宽版布局，idle 猫图+文案 |
+| 会员侧栏 | `.member-lt` | 276px 侧栏 |
+
+共享逻辑（壳层、ambient、面板切换、进度条 fill）已在 `01-learn-task-shared.css` 维护；**不要**在两份 page CSS 里重复粘贴相同规则。
+
+## 响应式断点（新标准）
+
+新 `@media` 优先只用：
+
+- `1100px`（`--bp-layout`）主栏+侧栏折叠
+- `800px`（`--bp-tablet`）内容堆叠
+- `560px`（`--bp-narrow`）窄屏
+
+旧页中的 `600/640/900/960px` 逐步迁移，新代码勿再增加断点。
+
+## 按钮类名
+
+- **推荐**：`.btn.btn--primary`、`.btn.btn--ghost`
+- **遗留兼容**：`.btn-primary`、`.btn-ghost`（勿在新 HTML 中使用）
+
+## 样式构建
+
+- 只编辑 `css/src/*`，改完跑 `npm run css`
+- 不要手改 `css/styles.css` / `css/styles-core.css`
+- 全站 bundle：`css/styles.css`（`manifest.txt`）
+- 核心 bundle（壳层+组件，无页面 CSS）：`css/styles-core.css`（`manifest-core.txt`）
