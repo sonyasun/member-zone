@@ -14,18 +14,33 @@
           <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
         </a>
         <nav class="nav-list" aria-label="主导航">
-          <a class="nav-list__link" href="index.html">首页</a>
-          <a class="nav-list__link" href="#">题库</a>
-          <a class="nav-list__link" href="#">交流社区</a>
-          <a class="nav-list__link" href="cert.html">职业考证</a>
-          <a class="nav-list__link is-active" href="member.html" aria-current="page">会员专区</a>
-          <a class="nav-list__link" href="#">下载专区</a>
-          <a class="nav-list__link" href="#">生态合作</a>
-          <a class="nav-list__link" href="#">企业版</a>
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link is-active" href="member.html" data-nav="member" aria-current="page">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
         </nav>
         <div class="header-actions">
           <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
-          <button type="button" class="btn-login">登录/注册</button>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -33,7 +48,6 @@
     <section class="topic-banner" aria-label="专题课程宣传">
       <div class="topic-banner__bg"></div>
       <div class="page-inner topic-banner__inner">
-        <p class="topic-banner__eyebrow">会员专区 · 专题课</p>
         <h1 class="topic-banner__title">专题课程</h1>
         <p class="topic-banner__desc">直击痛点，高效落地 · 12个专题 · 86门课程</p>
       </div>
@@ -107,21 +121,20 @@
               <section class="topic-tier" data-tier="hot" aria-labelledby="tier-hot-title">
                 <div class="topic-tier__head">
                   <h3 class="topic-tier__title" id="tier-hot-title">
-                    <span class="topic-tier__badge topic-tier__badge--hot">爆品</span>
                     爆品课程
                   </h3>
                   <p class="topic-tier__desc">高转化热销专题，优先推荐学习</p>
                 </div>
                 <div class="course-grid topic-panel__grid">
                   <a class="course-card" href="course.html" data-group="housing" data-cat="housing-org">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')">
                       <span class="topic-card-flag topic-card-flag--hot">爆品</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">施工组织</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">郭红领</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h34m</span></span>
@@ -137,7 +150,7 @@
                       <h3 class="course-card__title">主题定制套餐课程</h3>
                       <div class="course-card__tags"><span class="tag">套餐</span><span class="tag">装饰算量</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">郭红领</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h34m</span></span>
@@ -146,14 +159,14 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="general" data-cat="general-soft">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')">
                       <span class="topic-card-flag topic-card-flag--hot">爆品</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">广联达软件零基础入门课</h3>
                       <div class="course-card__tags"><span class="tag">通用</span><span class="tag">软件入门</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">郭红领</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>1h48m</span></span>
@@ -162,14 +175,14 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-civil">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/791588e0c2ee5260d72886aebfcfa283.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/791588e0c2ee5260d72886aebfcfa283.png')">
                       <span class="topic-card-flag topic-card-flag--hot">爆品</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">土建精算实战冲刺营</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">土建算量</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">王天来</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>3h40m</span></span>
@@ -184,21 +197,20 @@
               <section class="topic-tier" data-tier="feature" aria-labelledby="tier-feature-title">
                 <div class="topic-tier__head">
                   <h3 class="topic-tier__title" id="tier-feature-title">
-                    <span class="topic-tier__badge topic-tier__badge--feature">主推</span>
                     主推课程
                   </h3>
                   <p class="topic-tier__desc">平台精选专题，适配主流学习路径</p>
                 </div>
                 <div class="course-grid topic-panel__grid">
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-civil">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')">
                       <span class="topic-card-flag topic-card-flag--feature">主推</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">土建算量</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">郭红领</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h34m</span></span>
@@ -207,14 +219,14 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-install">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/55ef390b73de3ffab92aec7ef08ca282.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png')">
                       <span class="topic-card-flag topic-card-flag--feature">主推</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">安装算量技巧提升系列</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">安装算量</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">王天来</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>3h12m</span></span>
@@ -223,14 +235,14 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="infra" data-cat="infra-road">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e4c465f81d0002f3133fe9b0e0548782.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/e4c465f81d0002f3133fe9b0e0548782.png')">
                       <span class="topic-card-flag topic-card-flag--feature">主推</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">道路工程算量与计价实战</h3>
                       <div class="course-card__tags"><span class="tag">基建</span><span class="tag">道路工程</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">李桂婷</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>3h20m</span></span>
@@ -239,14 +251,14 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="general" data-cat="general-norm">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e4c465f81d0002f3133fe9b0e0548782.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/e4c465f81d0002f3133fe9b0e0548782.png')">
                       <span class="topic-card-flag topic-card-flag--feature">主推</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">《建设工程工程量清单计价标准》深度解读</h3>
                       <div class="course-card__tags"><span class="tag">通用</span><span class="tag">行业规范</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">李桂婷</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h06m</span></span>
@@ -255,14 +267,14 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-org">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')">
                       <span class="topic-card-flag topic-card-flag--feature">主推</span>
                     </div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">施工组织设计编制与优化</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">施工组织</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">郭红领</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h20m</span></span>
@@ -277,19 +289,18 @@
               <section class="topic-tier" data-tier="normal" aria-labelledby="tier-normal-title">
                 <div class="topic-tier__head">
                   <h3 class="topic-tier__title" id="tier-normal-title">
-                    <span class="topic-tier__badge topic-tier__badge--normal">常规</span>
                     常规课程
                   </h3>
                   <p class="topic-tier__desc">覆盖更多细分方向，按需选修</p>
                 </div>
                 <div class="course-grid topic-panel__grid">
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-audit">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png')"></div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">结算审计</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">郭红领</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h34m</span></span>
@@ -298,12 +309,12 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-civil">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/791588e0c2ee5260d72886aebfcfa283.png')"></div>
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/791588e0c2ee5260d72886aebfcfa283.png')"></div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">BIM土建计量平台-GTJ2021案例讲解</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">土建算量</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">王天来</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>4h08m</span></span>
@@ -312,12 +323,12 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="infra" data-cat="infra-bridge">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/e8ca9ce0f739df62b7cca744beb9d599.png')"></div>
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/e8ca9ce0f739df62b7cca744beb9d599.png')"></div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">桥梁工程计量计价专项提升</h3>
                       <div class="course-card__tags"><span class="tag">基建</span><span class="tag">桥梁工程</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">建筑课堂</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h50m</span></span>
@@ -326,12 +337,12 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="infra" data-cat="infra-pipe">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/55ef390b73de3ffab92aec7ef08ca282.png')"></div>
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png')"></div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">市政管网综合管廊算量精讲</h3>
                       <div class="course-card__tags"><span class="tag">基建</span><span class="tag">市政管网</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">王旭</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h15m</span></span>
@@ -340,12 +351,12 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="general" data-cat="general-pm">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"></div>
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')"></div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">工程项目管理实务与案例</h3>
                       <div class="course-card__tags"><span class="tag">通用</span><span class="tag">项目管理</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">建筑课堂</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>3h00m</span></span>
@@ -354,12 +365,12 @@
                     </div>
                   </a>
                   <a class="course-card" href="#" data-group="housing" data-cat="housing-install">
-                    <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/55ef390b73de3ffab92aec7ef08ca282.png')"></div>
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png')"></div>
                     <div class="course-card__body">
                       <h3 class="course-card__title">安装工程量清单编制实务</h3>
                       <div class="course-card__tags"><span class="tag">自研</span><span class="tag">安装算量</span></div>
                       <div class="course-card__author">
-                        <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                         <span class="course-card__teacher">王天来</span>
                         <span class="course-card__divider" aria-hidden="true"></span>
                         <span class="course-card__duration">共<span>2h55m</span></span>
@@ -399,7 +410,7 @@
         <div class="footer-bottom">
           <div class="footer-brand__logos">
             <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
-            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
           </div>
           <p class="footer-brand__copy">
             广联达教育GLodon Education www.glodonedu.com<br />
@@ -507,5 +518,6 @@
       applyFilter('housing-all');
     })();
   </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

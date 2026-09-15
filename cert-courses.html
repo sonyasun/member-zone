@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>考证课程 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--topic page--cert">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link is-active" href="member.html" data-nav="member" aria-current="page">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="topic-banner topic-banner--cert" aria-label="考证课程宣传">
+      <div class="topic-banner__bg"></div>
+      <div class="page-inner topic-banner__inner">
+        <h1 class="topic-banner__title">考证课程</h1>
+        <p class="topic-banner__desc">精准备考，高效通关 · 8个证类 · 96门课程</p>
+      </div>
+    </section>
+
+    <main class="main main--topic">
+      <div class="page-inner">
+        <nav class="course-crumb" aria-label="面包屑">
+          <a href="index.html">首页</a>
+          <span class="course-crumb__sep" aria-hidden="true"></span>
+          <a href="member.html">会员专区</a>
+          <span class="course-crumb__sep" aria-hidden="true"></span>
+          <span>考证课程</span>
+        </nav>
+
+        <div class="topic-layout">
+          <aside class="topic-tree" aria-label="考证课程分类">
+            <h2 class="topic-tree__heading">课程分类</h2>
+            <ul class="topic-tree__list" id="topic-tree">
+              <li class="topic-tree__group is-open" data-group="ce">
+                <button type="button" class="topic-tree__parent is-active" data-filter="ce" aria-expanded="true">
+                  <span class="topic-tree__toggle" aria-hidden="true"></span>
+                  <span>一级造价师</span>
+                </button>
+                <ul class="topic-tree__children">
+                  <li><button type="button" class="topic-tree__child is-active" data-filter="ce-all">全部</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="ce-mgmt">造价管理</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="ce-price">工程计价</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="ce-tech">技术与计量</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="ce-case">案例分析</button></li>
+                </ul>
+              </li>
+              <li class="topic-tree__group" data-group="c1">
+                <button type="button" class="topic-tree__parent" data-filter="c1" aria-expanded="false">
+                  <span class="topic-tree__toggle" aria-hidden="true"></span>
+                  <span>一级建造师</span>
+                </button>
+                <ul class="topic-tree__children" hidden>
+                  <li><button type="button" class="topic-tree__child" data-filter="c1-all">全部</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c1-econ">工程经济</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c1-pm">项目管理</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c1-law">法规</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c1-prac">实务</button></li>
+                </ul>
+              </li>
+              <li class="topic-tree__group" data-group="c2">
+                <button type="button" class="topic-tree__parent" data-filter="c2" aria-expanded="false">
+                  <span class="topic-tree__toggle" aria-hidden="true"></span>
+                  <span>二级建造师</span>
+                </button>
+                <ul class="topic-tree__children" hidden>
+                  <li><button type="button" class="topic-tree__child" data-filter="c2-all">全部</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c2-mgmt">施工管理</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c2-law">法规</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="c2-prac">实务</button></li>
+                </ul>
+              </li>
+              <li class="topic-tree__group" data-group="safety">
+                <button type="button" class="topic-tree__parent" data-filter="safety" aria-expanded="false">
+                  <span class="topic-tree__toggle" aria-hidden="true"></span>
+                  <span>注册安全工程师</span>
+                </button>
+                <ul class="topic-tree__children" hidden>
+                  <li><button type="button" class="topic-tree__child" data-filter="safety-all">全部</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="safety-law">安全生产法规</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="safety-mgmt">安全生产管理</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="safety-tech">安全生产技术</button></li>
+                  <li><button type="button" class="topic-tree__child" data-filter="safety-case">案例分析</button></li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+
+          <section class="topic-panel" aria-labelledby="topic-panel-title">
+            <div class="topic-panel__head">
+              <h2 class="topic-panel__title" id="topic-panel-title">一级造价师 · 全部</h2>
+              <p class="topic-panel__count">共 <b id="topic-course-count">6</b> 门课程</p>
+            </div>
+
+            <div class="topic-tiers" id="topic-course-grid">
+              <!-- 爆品 -->
+              <section class="topic-tier" data-tier="hot" aria-labelledby="tier-hot-title">
+                <div class="topic-tier__head">
+                  <h3 class="topic-tier__title" id="tier-hot-title">
+                    爆品课程
+                  </h3>
+                  <p class="topic-tier__desc">高转化热销考证课，优先推荐备考</p>
+                </div>
+                <div class="course-grid topic-panel__grid">
+                  <a class="course-card" href="course.html" data-group="ce" data-cat="ce-case">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')">
+                      <span class="topic-card-flag topic-card-flag--hot">爆品</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">一级造价师案例分析冲刺精讲</h3>
+                      <div class="course-card__tags"><span class="tag">一造</span><span class="tag">案例分析</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">郭红领</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h34m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>23</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="course-pack.html" data-group="c1" data-cat="c1-prac">
+                    <div class="course-card__cover" style="background-image:url('assets/course-pack-cover.png')">
+                      <span class="topic-card-flag topic-card-flag--hot">爆品</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">一建实务通关套餐课</h3>
+                      <div class="course-card__tags"><span class="tag">套餐</span><span class="tag">实务</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">郭红领</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h34m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>32</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="ce" data-cat="ce-price">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')">
+                      <span class="topic-card-flag topic-card-flag--hot">爆品</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">建设工程计价核心考点精讲</h3>
+                      <div class="course-card__tags"><span class="tag">一造</span><span class="tag">工程计价</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">王天来</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>1h48m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>28</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="c2" data-cat="c2-prac">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/791588e0c2ee5260d72886aebfcfa283.png')">
+                      <span class="topic-card-flag topic-card-flag--hot">爆品</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">二建实务真题精讲冲刺营</h3>
+                      <div class="course-card__tags"><span class="tag">二建</span><span class="tag">实务</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">王天来</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>3h40m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>19</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                </div>
+              </section>
+
+              <!-- 主推 -->
+              <section class="topic-tier" data-tier="feature" aria-labelledby="tier-feature-title">
+                <div class="topic-tier__head">
+                  <h3 class="topic-tier__title" id="tier-feature-title">
+                    主推课程
+                  </h3>
+                  <p class="topic-tier__desc">平台精选考证课，适配主流备考路径</p>
+                </div>
+                <div class="course-grid topic-panel__grid">
+                  <a class="course-card" href="#" data-group="ce" data-cat="ce-mgmt">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')">
+                      <span class="topic-card-flag topic-card-flag--feature">主推</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">造价管理基础与高频考点</h3>
+                      <div class="course-card__tags"><span class="tag">一造</span><span class="tag">造价管理</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">郭红领</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h34m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>10</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="ce" data-cat="ce-tech">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png')">
+                      <span class="topic-card-flag topic-card-flag--feature">主推</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">技术与计量（土建）系统精讲</h3>
+                      <div class="course-card__tags"><span class="tag">一造</span><span class="tag">技术与计量</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">王天来</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>3h12m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>18</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="c1" data-cat="c1-econ">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/e4c465f81d0002f3133fe9b0e0548782.png')">
+                      <span class="topic-card-flag topic-card-flag--feature">主推</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">一建工程经济通关精讲</h3>
+                      <div class="course-card__tags"><span class="tag">一建</span><span class="tag">工程经济</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">李桂婷</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>3h20m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>8</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="c1" data-cat="c1-law">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/e4c465f81d0002f3133fe9b0e0548782.png')">
+                      <span class="topic-card-flag topic-card-flag--feature">主推</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">一建法规高频考点速记</h3>
+                      <div class="course-card__tags"><span class="tag">一建</span><span class="tag">法规</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">李桂婷</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h06m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>21</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="safety" data-cat="safety-case">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')">
+                      <span class="topic-card-flag topic-card-flag--feature">主推</span>
+                    </div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">注安案例分析得分技巧</h3>
+                      <div class="course-card__tags"><span class="tag">注安</span><span class="tag">案例分析</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">郭红领</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h20m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>14</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                </div>
+              </section>
+
+              <!-- 常规 -->
+              <section class="topic-tier" data-tier="normal" aria-labelledby="tier-normal-title">
+                <div class="topic-tier__head">
+                  <h3 class="topic-tier__title" id="tier-normal-title">
+                    常规课程
+                  </h3>
+                  <p class="topic-tier__desc">覆盖更多科目与题型，按需选修</p>
+                </div>
+                <div class="course-grid topic-panel__grid">
+                  <a class="course-card" href="#" data-group="ce" data-cat="ce-price">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">工程计价真题精练与解析</h3>
+                      <div class="course-card__tags"><span class="tag">一造</span><span class="tag">工程计价</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">郭红领</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h34m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>12</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="c1" data-cat="c1-pm">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/791588e0c2ee5260d72886aebfcfa283.png')"></div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">一建项目管理框架梳理</h3>
+                      <div class="course-card__tags"><span class="tag">一建</span><span class="tag">项目管理</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">王天来</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>4h08m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>15</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="c2" data-cat="c2-mgmt">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/e8ca9ce0f739df62b7cca744beb9d599.png')"></div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">二建施工管理核心精讲</h3>
+                      <div class="course-card__tags"><span class="tag">二建</span><span class="tag">施工管理</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">建筑课堂</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h50m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>6</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="c2" data-cat="c2-law">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png')"></div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">二建法规要点速记课</h3>
+                      <div class="course-card__tags"><span class="tag">二建</span><span class="tag">法规</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">王旭</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h15m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>5</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="safety" data-cat="safety-law">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')"></div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">安全生产法规框架精讲</h3>
+                      <div class="course-card__tags"><span class="tag">注安</span><span class="tag">安全生产法规</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">建筑课堂</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>3h00m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>9</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                  <a class="course-card" href="#" data-group="safety" data-cat="safety-mgmt">
+                    <div class="course-card__cover" style="background-image:url('assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png')"></div>
+                    <div class="course-card__body">
+                      <h3 class="course-card__title">安全生产管理流程与实务</h3>
+                      <div class="course-card__tags"><span class="tag">注安</span><span class="tag">安全生产管理</span></div>
+                      <div class="course-card__author">
+                        <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                        <span class="course-card__teacher">王天来</span>
+                        <span class="course-card__divider" aria-hidden="true"></span>
+                        <span class="course-card__duration">共<span>2h55m</span></span>
+                      </div>
+                      <div class="course-card__meta"><span>11</span><span>W人学过</span></div>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <p class="topic-panel__empty is-hidden" id="topic-course-empty">该分类下暂无课程</p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="float-rail" aria-label="快捷入口">
+      <button type="button" class="float-rail__btn">微信公众号</button>
+      <button type="button" class="float-rail__btn">APP下载</button>
+      <button type="button" class="float-rail__btn">反馈</button>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var tree = document.getElementById('topic-tree');
+      var root = document.getElementById('topic-course-grid');
+      var countEl = document.getElementById('topic-course-count');
+      var emptyEl = document.getElementById('topic-course-empty');
+      var titleEl = document.getElementById('topic-panel-title');
+      if (!tree || !root) return;
+
+      var cards = root.querySelectorAll('.course-card');
+      var tiers = root.querySelectorAll('.topic-tier');
+      var titleMap = {
+        ce: '一级造价师',
+        'ce-all': '一级造价师 · 全部',
+        'ce-mgmt': '造价管理',
+        'ce-price': '工程计价',
+        'ce-tech': '技术与计量',
+        'ce-case': '案例分析',
+        c1: '一级建造师',
+        'c1-all': '一级建造师 · 全部',
+        'c1-econ': '工程经济',
+        'c1-pm': '项目管理',
+        'c1-law': '法规',
+        'c1-prac': '实务',
+        c2: '二级建造师',
+        'c2-all': '二级建造师 · 全部',
+        'c2-mgmt': '施工管理',
+        'c2-law': '法规',
+        'c2-prac': '实务',
+        safety: '注册安全工程师',
+        'safety-all': '注册安全工程师 · 全部',
+        'safety-law': '安全生产法规',
+        'safety-mgmt': '安全生产管理',
+        'safety-tech': '安全生产技术',
+        'safety-case': '案例分析'
+      };
+
+      function setActive(filter) {
+        tree.querySelectorAll('.topic-tree__parent, .topic-tree__child').forEach(function (btn) {
+          btn.classList.toggle('is-active', btn.getAttribute('data-filter') === filter);
+        });
+      }
+
+      function applyFilter(filter) {
+        var visible = 0;
+        cards.forEach(function (card) {
+          var group = card.getAttribute('data-group');
+          var cat = card.getAttribute('data-cat');
+          var show = filter === group || filter === group + '-all' || filter === cat;
+          card.classList.toggle('is-hidden', !show);
+          if (show) visible += 1;
+        });
+
+        tiers.forEach(function (tier) {
+          var hasVisible = tier.querySelectorAll('.course-card:not(.is-hidden)').length > 0;
+          tier.classList.toggle('is-hidden', !hasVisible);
+        });
+
+        if (countEl) countEl.textContent = String(visible);
+        if (emptyEl) emptyEl.classList.toggle('is-hidden', visible > 0);
+        if (titleEl) titleEl.textContent = titleMap[filter] || '考证课程';
+        setActive(filter);
+      }
+
+      tree.addEventListener('click', function (e) {
+        var parent = e.target.closest('.topic-tree__parent');
+        var child = e.target.closest('.topic-tree__child');
+        var toggle = e.target.closest('.topic-tree__toggle');
+
+        if (parent) {
+          var group = parent.closest('.topic-tree__group');
+          var children = group ? group.querySelector('.topic-tree__children') : null;
+          var clickingToggle = !!toggle || e.target === parent.querySelector('.topic-tree__toggle');
+
+          if (clickingToggle && group && children) {
+            var open = !group.classList.contains('is-open');
+            group.classList.toggle('is-open', open);
+            parent.setAttribute('aria-expanded', open ? 'true' : 'false');
+            children.hidden = !open;
+            e.preventDefault();
+            return;
+          }
+
+          if (group && children) {
+            group.classList.add('is-open');
+            parent.setAttribute('aria-expanded', 'true');
+            children.hidden = false;
+            var allBtn = children.querySelector('.topic-tree__child[data-filter$="-all"]');
+            applyFilter(allBtn ? allBtn.getAttribute('data-filter') : parent.getAttribute('data-filter'));
+          }
+          return;
+        }
+
+        if (child) {
+          applyFilter(child.getAttribute('data-filter'));
+        }
+      });
+
+      applyFilter('ce-all');
+    })();
+  </script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

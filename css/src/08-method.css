@@ -1,0 +1,13 @@
+/* —— Five-dimension method —— */
+.method-grid {
+  width: 100%;
+  background: transparent;
+}
+
+.method-grid__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}
+

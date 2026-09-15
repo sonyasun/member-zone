@@ -30,6 +30,11 @@
     var mins = Math.floor((totalSec % 3600) / 60);
     var secs = totalSec % 60;
 
+    // 无「天」位时：小时展示总小时数（如 30:27:50）
+    if (!dayEl && hourEl) {
+      hours = Math.floor(totalSec / 3600);
+    }
+
     if (dayEl) dayEl.textContent = pad(days);
     if (hourEl) hourEl.textContent = pad(hours);
     if (minEl) minEl.textContent = pad(mins);

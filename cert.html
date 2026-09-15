@@ -14,69 +14,86 @@
           <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
         </a>
         <nav class="nav-list" aria-label="主导航">
-          <a class="nav-list__link" href="index.html">首页</a>
-          <a class="nav-list__link" href="#">题库</a>
-          <a class="nav-list__link" href="#">交流社区</a>
-          <a class="nav-list__link is-active" href="cert.html" aria-current="page">职业考证</a>
-          <a class="nav-list__link" href="member.html">会员专区</a>
-          <a class="nav-list__link" href="#">下载专区</a>
-          <a class="nav-list__link" href="#">生态合作</a>
-          <a class="nav-list__link" href="#">企业版</a>
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link is-active" href="cert.html" data-nav="cert" aria-current="page">职业考证</a>
+          <a class="nav-list__link" href="member.html" data-nav="member">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
         </nav>
         <div class="header-actions">
           <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
-          <button type="button" class="btn-login">登录/注册</button>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- Hero：860 Banner + 320 热门问题（DSL gap 20 / radius 8） -->
+    <!-- Hero：900 Banner + 280 热门问题（DSL gap 20 / radius 8） -->
     <section class="hero hero--cert">
       <div class="page-inner hero__inner hero__inner--cert">
         <div class="hero-banner hero-banner--cert">
           <img
-            src="https://image-resource.mastergo.com/72061466992156/149588298644015/2d923b1d795b1333cb6395011b4da19b.png"
-            width="860"
+            src="assets/mastergo/2d923b1d795b1333cb6395011b4da19b.png"
+            width="900"
             height="360"
             alt=""
           />
         </div>
         <aside class="faq-card">
-          <h2 class="faq-card__title">热门问题</h2>
+          <h2 class="faq-card__title">
+            <span class="faq-card__title-accent">热门</span>问题
+          </h2>
           <ol class="faq-list">
             <li class="faq-list__item">
               <span class="faq-list__index">1</span>
-              <div>
+              <div class="faq-list__body">
                 <a class="faq-list__q" href="#">大专学历可以考一级建造师吗？</a>
-                <p class="faq-list__meta">12,340 人浏览</p>
+                <p class="faq-list__meta"><span class="faq-list__views">12,340</span> 人浏览</p>
               </div>
             </li>
             <li class="faq-list__item">
               <span class="faq-list__index">2</span>
-              <div>
+              <div class="faq-list__body">
                 <a class="faq-list__q" href="#">大专学历可以考一级建造师吗？</a>
-                <p class="faq-list__meta">12,340 人浏览</p>
+                <p class="faq-list__meta"><span class="faq-list__views">12,340</span> 人浏览</p>
               </div>
             </li>
             <li class="faq-list__item">
               <span class="faq-list__index">3</span>
-              <div>
+              <div class="faq-list__body">
                 <a class="faq-list__q" href="#">大专学历可以考一级建造师吗？</a>
-                <p class="faq-list__meta">12,340 人浏览</p>
+                <p class="faq-list__meta"><span class="faq-list__views">12,340</span> 人浏览</p>
               </div>
             </li>
             <li class="faq-list__item">
               <span class="faq-list__index">4</span>
-              <div>
+              <div class="faq-list__body">
                 <a class="faq-list__q" href="#">大专学历可以考一级建造师吗？</a>
-                <p class="faq-list__meta">12,340 人浏览</p>
+                <p class="faq-list__meta"><span class="faq-list__views">12,340</span> 人浏览</p>
               </div>
             </li>
             <li class="faq-list__item">
               <span class="faq-list__index">5</span>
-              <div>
+              <div class="faq-list__body">
                 <a class="faq-list__q" href="#">大专学历可以考一级建造师吗？</a>
-                <p class="faq-list__meta">12,340 人浏览</p>
+                <p class="faq-list__meta"><span class="faq-list__views">12,340</span> 人浏览</p>
               </div>
             </li>
           </ol>
@@ -204,7 +221,7 @@
           <div class="method-support">
             <article class="method-support__card">
               <div class="method-support__icon">
-                <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/ee4255f973d1635f96a1d0e5ccb5cad3.png" width="50" height="50" alt="" />
+                <img src="assets/mastergo/ee4255f973d1635f96a1d0e5ccb5cad3.png" width="50" height="50" alt="" />
               </div>
               <div class="method-support__body">
                 <h3 class="method-support__title">授课老师陪伴答疑</h3>
@@ -213,7 +230,7 @@
             </article>
             <article class="method-support__card">
               <div class="method-support__icon">
-                <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/f77bc642e54cf1e0c9e2b6d1c4d41f16.png" width="50" height="50" alt="" />
+                <img src="assets/mastergo/f77bc642e54cf1e0c9e2b6d1c4d41f16.png" width="50" height="50" alt="" />
               </div>
               <div class="method-support__body">
                 <h3 class="method-support__title">AI定制学习计划</h3>
@@ -222,7 +239,7 @@
             </article>
             <article class="method-support__card">
               <div class="method-support__icon">
-                <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/4f3c8ff8eb23d8fcbb53c33baafb2620.png" width="50" height="50" alt="" />
+                <img src="assets/mastergo/4f3c8ff8eb23d8fcbb53c33baafb2620.png" width="50" height="50" alt="" />
               </div>
               <div class="method-support__body">
                 <h3 class="method-support__title">督学全程陪跑</h3>
@@ -231,7 +248,7 @@
             </article>
             <article class="method-support__card">
               <div class="method-support__icon">
-                <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/5c65d4598bd4f3902710a1930281a406.png" width="50" height="50" alt="" />
+                <img src="assets/mastergo/5c65d4598bd4f3902710a1930281a406.png" width="50" height="50" alt="" />
               </div>
               <div class="method-support__body">
                 <h3 class="method-support__title">根据学习情况推荐</h3>
@@ -266,76 +283,7 @@
             <span class="section-heading__rule" aria-hidden="true"></span>
             <p class="section-heading__desc">直播回放</p>
           </div>
-          <div class="live-grid">
-            <a class="live-card" href="#">
-              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/843101fdc4bacf8c2b4c3a801434e8f8.png')">
-                <span class="live-card__badge">领军专家</span>
-              </div>
-              <div class="live-card__body">
-                <div class="live-card__author">
-                  <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/9615d64b5927d957d73ea4dcb0208a4a.jpg" width="24" height="24" alt="" />
-                  <span>王芳</span>
-                </div>
-                <h3 class="live-card__title">劳务实名制秘籍大公开</h3>
-                <p class="live-card__sub">复工后劳务实名制系统常见问题</p>
-                <div class="live-card__foot">
-                  <span class="live-card__time">6月30日 18:30</span>
-                  <span class="live-card__action">预约直播</span>
-                </div>
-              </div>
-            </a>
-            <a class="live-card" href="#">
-              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/469813e3912d582a71577bd26d44ed41.png')">
-                <span class="live-card__badge">领军专家</span>
-              </div>
-              <div class="live-card__body">
-                <div class="live-card__author">
-                  <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/1940c665359727fe9dee9c100b0ac24a.jpg" width="24" height="24" alt="" />
-                  <span>田茂鑫</span>
-                </div>
-                <h3 class="live-card__title">专家带你探究2024清单影响</h3>
-                <p class="live-card__sub">2024新清单发布后造价4大影响-GTJ算量、清单定额</p>
-                <div class="live-card__foot">
-                  <span class="live-card__time">6月30日 18:30</span>
-                  <span class="live-card__action is-done">已报名</span>
-                </div>
-              </div>
-            </a>
-            <a class="live-card" href="#">
-              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/77b0a14897aa7c527a342c34017b9a16.png')">
-                <span class="live-card__badge live-card__badge--live">直播中</span>
-              </div>
-              <div class="live-card__body">
-                <div class="live-card__author">
-                  <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/9615d64b5927d957d73ea4dcb0208a4a.jpg" width="24" height="24" alt="" />
-                  <span>刘丹</span>
-                </div>
-                <h3 class="live-card__title">拿证秘籍大公开</h3>
-                <p class="live-card__sub">新清单对一造考试的影响-拿证秘籍大公开</p>
-                <div class="live-card__foot">
-                  <span class="live-card__time">直播中…</span>
-                  <span class="live-card__action">开始听课</span>
-                </div>
-              </div>
-            </a>
-            <a class="live-card" href="#">
-              <div class="live-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/abe2509dd9f6b1835e8b07a8b6e5ca02.png')">
-                <span class="live-card__badge">领军专家</span>
-              </div>
-              <div class="live-card__body">
-                <div class="live-card__author">
-                  <img class="live-card__avatar" src="https://image-resource.mastergo.com/72061466992156/149588298644015/69dd79abc0381a30a09a3e99b88cb6f8.jpg" width="24" height="24" alt="" />
-                  <span>王海</span>
-                </div>
-                <h3 class="live-card__title">攻克管网造价难题</h3>
-                <p class="live-card__sub">两小时听懂市政结算审计争议全解析-攻克管网造价难题</p>
-                <div class="live-card__foot">
-                  <span class="live-card__time">2月19日14:00 · 限时观看：2025-0-31</span>
-                  <span class="live-card__action">观看回放</span>
-                </div>
-              </div>
-            </a>
-          </div>
+          <div class="live-grid" data-live-cards></div>
           <div class="section-more">
             <button type="button" class="btn-ghost">查看更多</button>
           </div>
@@ -524,7 +472,7 @@
           </div>
           <div class="course-grid">
             <a class="course-card" href="course.html">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"></div>
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
                 <div class="course-card__tags">
@@ -534,8 +482,8 @@
                 <div class="course-card__meta"><span>23</span><span>W人学过</span></div>
               </div>
             </a>
-            <a class="course-card course-card--free" href="#">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')"></div>
+            <a class="course-card course-card--free" href="course.html?free=1">
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
                 <div class="course-card__tags">
@@ -545,8 +493,8 @@
                 <div class="course-card__meta"><span>10</span><span>W人学过</span><span class="tag tag--free">免费</span></div>
               </div>
             </a>
-            <a class="course-card course-card--free" href="#">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
+            <a class="course-card course-card--free" href="course.html?free=1">
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">从零到一学会装饰算量软件建模【入门篇】</h3>
                 <div class="course-card__tags">
@@ -556,8 +504,8 @@
                 <div class="course-card__meta"><span>25</span><span>W人学过</span><span class="tag tag--free">免费</span></div>
               </div>
             </a>
-            <a class="course-card course-card--free" href="#">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/24ff67f929902232aebb2a379a1a3ab4.png')"></div>
+            <a class="course-card course-card--free" href="course.html?free=1">
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/24ff67f929902232aebb2a379a1a3ab4.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">【墙面提效】功能优化新版本讲解</h3>
                 <div class="course-card__tags">
@@ -567,8 +515,8 @@
                 <div class="course-card__meta"><span>23</span><span>W人学过</span><span class="tag tag--free">免费</span></div>
               </div>
             </a>
-            <a class="course-card course-card--free" href="#">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png')"></div>
+            <a class="course-card course-card--free" href="course.html?free=1">
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/f02046bc849d7444fde8e18dacf05976.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">施工方如何积极应对结算审计</h3>
                 <div class="course-card__tags">
@@ -590,7 +538,7 @@
               </div>
             </a>
             <a class="course-card" href="#">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
                 <div class="course-card__tags">
@@ -600,8 +548,8 @@
                 <div class="course-card__meta"><span>12</span><span>W人学过</span><span class="tag tag--free">限免</span></div>
               </div>
             </a>
-            <a class="course-card course-card--free" href="#">
-              <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/24ff67f929902232aebb2a379a1a3ab4.png')"></div>
+            <a class="course-card course-card--free" href="course.html?free=1">
+              <div class="course-card__cover" style="background-image:url('assets/mastergo/24ff67f929902232aebb2a379a1a3ab4.png')"></div>
               <div class="course-card__body">
                 <h3 class="course-card__title">【墙面提效】功能优化新版本讲解</h3>
                 <div class="course-card__tags">
@@ -896,7 +844,7 @@
           </div>
           <div class="teacher-grid">
             <a class="teacher-card" href="#">
-              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/da23dae40b6faf87eb5057769ff3b065.jpg')"></div>
+              <div class="teacher-card__cover" style="background-image:url('assets/mastergo/da23dae40b6faf87eb5057769ff3b065.jpg')"></div>
               <div class="teacher-card__info">
                 <h3 class="teacher-card__name">付静</h3>
                 <p class="teacher-card__role">造价BIM工程师</p>
@@ -916,7 +864,7 @@
               </div>
             </a>
             <a class="teacher-card" href="#">
-              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/4b4f49e041e7d9fed87827a46cdc08e6.jpeg')"></div>
+              <div class="teacher-card__cover" style="background-image:url('assets/mastergo/4b4f49e041e7d9fed87827a46cdc08e6.jpeg')"></div>
               <div class="teacher-card__info">
                 <h3 class="teacher-card__name">金彪</h3>
                 <p class="teacher-card__role">BIM规划工程师</p>
@@ -936,7 +884,7 @@
               </div>
             </a>
             <a class="teacher-card" href="#">
-              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/da7532c598f60b662b1f91cfc58b167d.png')"></div>
+              <div class="teacher-card__cover" style="background-image:url('assets/mastergo/da7532c598f60b662b1f91cfc58b167d.png')"></div>
               <div class="teacher-card__info">
                 <h3 class="teacher-card__name">李桂婷</h3>
                 <p class="teacher-card__role">高级经济师/一级造价工程师</p>
@@ -956,7 +904,7 @@
               </div>
             </a>
             <a class="teacher-card" href="#">
-              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/4906d020824a003982f66f109ced7341.jpg')"></div>
+              <div class="teacher-card__cover" style="background-image:url('assets/mastergo/4906d020824a003982f66f109ced7341.jpg')"></div>
               <div class="teacher-card__info">
                 <h3 class="teacher-card__name">李英杰</h3>
                 <p class="teacher-card__role">广联达生态合作讲师</p>
@@ -976,7 +924,7 @@
               </div>
             </a>
             <a class="teacher-card" href="#">
-              <div class="teacher-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/3b170d60cbcdea0aec084edbed5ea086.png')"></div>
+              <div class="teacher-card__cover" style="background-image:url('assets/mastergo/3b170d60cbcdea0aec084edbed5ea086.png')"></div>
               <div class="teacher-card__info">
                 <h3 class="teacher-card__name">李晓红</h3>
                 <p class="teacher-card__role">行业知名专家</p>
@@ -1029,7 +977,7 @@
       <button type="button" class="float-rail__btn">反馈</button>
     </div>
     <div class="ai-fab">
-      <img src="https://image-resource.mastergo.com/72061466992156/136931372500587/c5b97e2dc1f2045d826eab807c2d7926.png" width="48" height="48" alt="" />
+      <img src="assets/mastergo/c5b97e2dc1f2045d826eab807c2d7926.png" width="48" height="48" alt="" />
       <span class="ai-fab__label">AI学习助手</span>
     </div>
 
@@ -1050,7 +998,7 @@
         <div class="footer-bottom">
           <div class="footer-brand__logos">
             <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
-            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
           </div>
           <p class="footer-brand__copy">
             广联达教育GLodon Education www.glodonedu.com<br />
@@ -1060,6 +1008,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/components/live-cards.js" defer></script>
   <script>
     document.querySelectorAll("[data-news-tabs]").forEach((root) => {
       const tabs = root.querySelectorAll("[data-news-tab]");
@@ -1082,5 +1031,6 @@
       });
     });
   </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+/* —— Section heading —— */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  margin-bottom: 0;
+}
+
+.section-heading + * {
+  margin-top: 0;
+}
+
+.section-heading__title {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-24);
+  line-height: var(--line-height-24);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main-33);
+}
+
+.section-heading__desc {
+  margin: 0;
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-14);
+  color: var(--color-text-muted-99);
+}
+
+.section-heading__extra {
+  margin-left: auto;
+}
+
+/* 栏目标题：名称 + 分隔线 + 介绍（考证页 DSL） */
+.section-heading--inline {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: var(--space-heading);
+}
+
+.section-heading__rule {
+  display: inline-block;
+  width: 1px;
+  height: 0.875rem;
+  background: var(--color-border-dd);
+  flex-shrink: 0;
+}
+
+.section-heading--inline .section-heading__desc {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+}
+
+.section-tabs--primary {
+  justify-content: center;
+  padding: 6px;
+  border-radius: 100px;
+  background: transparent;
+}
+
+/* 精选好课 / 赛事专课：一级筛选 → 内容间距 20px */
+.featured-section > .section-tabs--primary,
+.contest-section > .section-tabs--primary {
+  margin-bottom: 1.25rem;
+}
+
+.section-tabs--secondary {
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.section-tabs__panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.section-tabs__panel[hidden] {
+  display: none;
+}
+
+.section-tabs__item {
+  padding: 8px 24px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  background: #f5f6f8;
+  cursor: pointer;
+  transition: var(--card-transition);
+}
+
+.section-tabs__item:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-hover);
+}
+
+.section-tabs__item.is-active {
+  color: #fff;
+  font-weight: 500;
+  background: var(--color-brand);
+}
+
+.section-tabs__item:focus-visible {
+  outline: none;
+  box-shadow: var(--btn-focus-ring);
+}
+
+.section-tabs__sub {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: var(--font-size-14);
+  line-height: 1.43;
+  color: var(--color-text-quaternary);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--card-transition);
+}
+
+.section-tabs__sub:hover {
+  color: var(--color-brand);
+}
+
+.section-tabs__sub.is-active {
+  color: var(--color-brand);
+  font-weight: 500;
+  background: rgba(19, 150, 134, 0.1);
+}
+
+.section-tabs__sub:focus-visible {
+  outline: none;
+  box-shadow: var(--btn-focus-ring);
+}
+

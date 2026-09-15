@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 72" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="talent-general-badge-grad" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#725FFF"/>
+      <stop offset="1" stop-color="#9940FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M0,0L41.082943,50.062386C52.479546,63.949928,69.499413,72,87.464569,72L291.29196,72C309.9805,72,327.60184,63.291851,338.95398,48.446297L376,0L0,0Z" fill="url(#talent-general-badge-grad)"/>
+</svg>

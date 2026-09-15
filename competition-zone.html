@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>赛区专区 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css?v=competition-zone-15" />
+</head>
+<body>
+  <div class="page page--competition-zone">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link" href="member.html" data-nav="member">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link is-active" href="competition-zone.html" data-nav="enterprise" aria-current="page">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="competition-hero" aria-labelledby="competition-hero-title">
+      <div class="page-inner competition-hero__inner">
+        <div class="competition-hero__head">
+       
+          <h1 class="competition-hero__title" id="competition-hero-title">
+            <span class="competition-hero__title-main">汇聚全国建筑类赛事资源</span>
+            <span class="competition-hero__title-sub">为参赛学生提供一站式备赛服务</span>
+          </h1>
+        </div>
+        <dl class="competition-hero__stats">
+          <div class="competition-hero__stat">
+            <dt class="competition-hero__stat-label">地方省赛/选拔赛</dt>
+            <dd class="competition-hero__stat-value"><strong>128</strong><span class="competition-hero__stat-unit">场</span></dd>
+          </div>
+          <div class="competition-hero__stat">
+            <dt class="competition-hero__stat-label">国家级赛事</dt>
+            <dd class="competition-hero__stat-value"><strong>36</strong><span class="competition-hero__stat-unit">项</span></dd>
+          </div>
+          <div class="competition-hero__stat">
+            <dt class="competition-hero__stat-label">经验分享帖</dt>
+            <dd class="competition-hero__stat-value"><strong>2,480</strong><span class="competition-hero__stat-unit">篇</span></dd>
+          </div>
+          <div class="competition-hero__stat">
+            <dt class="competition-hero__stat-label">备赛资料</dt>
+            <dd class="competition-hero__stat-value"><strong>860</strong><span class="competition-hero__stat-unit">份</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <main class="main main--competition-zone">
+      <div class="page-inner">
+        <section class="competition-filter" aria-label="赛事筛选">
+          <div class="competition-filter__tabs" role="tablist" aria-label="赛事分类">
+            <button
+              type="button"
+              class="competition-filter__tab is-active"
+              role="tab"
+              id="competition-tab-local"
+              aria-selected="true"
+              aria-controls="competition-panel-local"
+            >
+              全国各地地方省赛国赛选拔赛
+              <span class="competition-filter__tab-badge">25场</span>
+            </button>
+            <button
+              type="button"
+              class="competition-filter__tab"
+              role="tab"
+              id="competition-tab-bishe"
+              aria-selected="false"
+              aria-controls="competition-panel-bishe"
+            >
+              “广联达杯”BIM毕业设计创新大赛
+            </button>
+            <button
+              type="button"
+              class="competition-filter__tab"
+              role="tab"
+              id="competition-tab-innovation"
+              aria-selected="false"
+              aria-controls="competition-panel-innovation"
+            >
+              全国数字建筑创新应用大赛
+            </button>
+          </div>
+        </section>
+
+        <div class="competition-panels">
+          <div class="competition-panel competition-panel--local" id="competition-panel-local" role="tabpanel" aria-labelledby="competition-tab-local">
+            <div class="competition-filter__panel">
+              <form class="competition-filter__search" role="search">
+                <span class="competition-filter__search-label">找到你的比赛：</span>
+                <input
+                  class="competition-filter__input"
+                  type="search"
+                  name="q"
+                  placeholder="输入省份、学校或比赛名称"
+                  autocomplete="off"
+                />
+                <label class="competition-filter__select-wrap">
+                  <span class="sr-only">赛项</span>
+                  <select class="competition-filter__select" name="event">
+                    <option value="">全部赛项</option>
+                    <option value="bim">BIM 应用</option>
+                    <option value="cost">工程计价</option>
+                    <option value="design">建筑设计</option>
+                  </select>
+                </label>
+                <label class="competition-filter__select-wrap">
+                  <span class="sr-only">状态</span>
+                  <select class="competition-filter__select" name="status">
+                    <option value="">全部状态</option>
+                    <option value="open">报名中</option>
+                    <option value="running">进行中</option>
+                    <option value="ended">已结束</option>
+                  </select>
+                </label>
+                <button type="submit" class="btn btn--primary competition-filter__submit">搜索</button>
+              </form>
+
+              <div class="competition-filter__divider" aria-hidden="true"></div>
+
+              <div class="competition-filter__regions" role="group" aria-label="省份筛选">
+                <button type="button" class="competition-filter__region is-active" aria-pressed="true">全部</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">江苏</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">浙江</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">广东</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">湖北</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">山东</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">四川</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">湖南</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">安徽</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">福建</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">河北</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">河南</button>
+                <button type="button" class="competition-filter__region" aria-pressed="false">更多省份</button>
+              </div>
+            </div>
+
+            <section class="competition-events">
+          <ul class="competition-events__grid">
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--open">报名中</span>
+                <h3 class="competition-event-card__title">江苏省 BIM 数维设计建模大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">8月20日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">江苏省住建厅</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料5份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频8讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--open">报名中</span>
+                <h3 class="competition-event-card__title">浙江省「品茗」杯 BIM 应用技能大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">10月8日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">浙江省建筑业协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">4人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料4份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频6讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--soon">即将开始</span>
+                <h3 class="competition-event-card__title">广东省大学生结构设计竞赛选拔赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">10月15日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">广东省土木建筑学会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料3份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频5讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--open">报名中</span>
+                <h3 class="competition-event-card__title">湖北省大学生工程计价挑战赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">9月28日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">湖北省建设工程造价管理协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料6份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频7讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--soon">即将开始</span>
+                <h3 class="competition-event-card__title">山东省「鲁班」杯 BIM 建模大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">11月5日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">山东省建筑学会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">4人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料5份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频9讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--open">报名中</span>
+                <h3 class="competition-event-card__title">四川省大学生智能建造创新大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">10月22日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">四川省建筑业协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料4份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频6讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--open">报名中</span>
+                <h3 class="competition-event-card__title">北京市 BIM 创新应用大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">11月18日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">北京市建筑业联合会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料5份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频7讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--soon">即将开始</span>
+                <h3 class="competition-event-card__title">上海市建设工程计量计价大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">12月6日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">上海市建设工程咨询行业协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">2人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料4份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频6讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--open">报名中</span>
+                <h3 class="competition-event-card__title">天津市数字建造技能竞赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">10月30日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">天津市建筑业协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">4人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料3份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频5讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--ended">已结束</span>
+                <h3 class="competition-event-card__title">云南省大学生 BIM 设计大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">6月15日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">云南省建设教育协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料4份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频6讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--ended">已结束</span>
+                <h3 class="competition-event-card__title">广西壮族自治区智能建造大赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">5月28日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">广西土木建筑学会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">3人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料5份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频8讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="competition-event-card">
+                <span class="competition-event-card__status competition-event-card__status--ended">已结束</span>
+                <h3 class="competition-event-card__title">陕西省工程计价挑战赛</h3>
+                <ul class="competition-event-card__meta">
+                  <li><span class="competition-event-card__meta-key">报名截止</span><span class="competition-event-card__meta-val">4月20日</span></li>
+                  <li><span class="competition-event-card__meta-key">主办单位</span><span class="competition-event-card__meta-val">陕西省建设工程造价管理协会</span></li>
+                  <li><span class="competition-event-card__meta-key">赛事规则</span><span class="competition-event-card__meta-val">2人团体赛</span></li>
+                </ul>
+                <div class="competition-event-card__foot">
+                  <div class="competition-event-card__tags">
+                    <a class="competition-event-card__tag" href="#" data-competition-materials-open>资料3份</a>
+                    <a class="competition-event-card__tag" href="#" data-competition-videos-open>视频4讲</a>
+                  </div>
+                  <a class="competition-event-card__link" href="#">进入专区</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+            </section>
+          </div>
+
+          <div class="competition-panel" id="competition-panel-bishe" role="tabpanel" aria-labelledby="competition-tab-bishe" hidden>
+            <section class="competition-feature competition-feature--bishe" aria-labelledby="competition-feature-title">
+              <div class="competition-feature__hero">
+                <header class="competition-feature__intro">
+                  <h2 class="competition-feature__title" id="competition-feature-title">
+                    <span class="competition-feature__edition">第13届</span>
+                    <span class="competition-feature__title-text">“广联达杯”BIM毕业设计创新大赛</span>
+                  </h2>
+                  <p class="competition-feature__desc">
+                    面向全日制高等院校建筑类及相关专业在校大学生，以培养 BIM 应用型人才为目标，推动 BIM 技术在建筑全生命周期的深度应用与创新实践。大赛涵盖工程设计、施工管理、造价管控等多个方向，助力学生将所学知识转化为实际工程能力。
+                  </p>
+                </header>
+
+                <a class="competition-website-card" href="#" target="_blank" rel="noopener noreferrer">
+                  <span class="competition-website-card__text">
+                    <strong class="competition-website-card__label">大赛官网</strong>
+                    <span class="competition-website-card__hint">报名、赛题、成绩公示均在官网</span>
+                  </span>
+                  <span class="competition-website-card__action">进入官网</span>
+                </a>
+              </div>
+
+              <section class="competition-sharing" aria-labelledby="competition-sharing-title">
+                <header class="competition-sharing__head">
+                  <h3 class="competition-sharing__title" id="competition-sharing-title">往届获奖经验分享</h3>
+                  <span class="competition-sharing__meta">精选 3 篇</span>
+                </header>
+                <ul class="competition-sharing__grid">
+                  <li>
+                    <a class="competition-share-card competition-share-card--green" href="#">
+                      <span class="competition-share-card__badge">BIM毕业设计 · 一等奖</span>
+                      <div class="competition-share-card__body">
+                        <h4 class="competition-share-card__title">从零开始做BIM毕设：我们团队踩过的坑和学到的东西</h4>
+                      </div>
+                      <footer class="competition-share-card__foot">
+                        <span class="competition-share-card__author-row">
+                          <img class="competition-share-card__avatar" src="assets/rank-avatar-01.png" width="24" height="24" alt="" />
+                          <span class="competition-share-card__author">王同学</span>
+                          <span class="competition-share-card__school">同济大学</span>
+                        </span>
+                        <time class="competition-share-card__date" datetime="2025-06">2025.6</time>
+                      </footer>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="competition-share-card competition-share-card--blue" href="#">
+                      <span class="competition-share-card__badge">BIM毕业设计 · 一等奖</span>
+                      <div class="competition-share-card__body">
+                        <h4 class="competition-share-card__title">三个月冲刺BIM毕设，模型深化和应用落地怎么做</h4>
+                      </div>
+                      <footer class="competition-share-card__foot">
+                        <span class="competition-share-card__author-row">
+                          <img class="competition-share-card__avatar" src="assets/rank-avatar-02.png" width="24" height="24" alt="" />
+                          <span class="competition-share-card__author">张同学</span>
+                          <span class="competition-share-card__school">东南大学</span>
+                        </span>
+                        <time class="competition-share-card__date" datetime="2025-06">2025.6</time>
+                      </footer>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="competition-share-card competition-share-card--orange" href="#">
+                      <span class="competition-share-card__badge">BIM毕业设计 · 二等奖</span>
+                      <div class="competition-share-card__body">
+                        <h4 class="competition-share-card__title">答辩环节怎么准备：评委最关注的5个问题</h4>
+                      </div>
+                      <footer class="competition-share-card__foot">
+                        <span class="competition-share-card__author-row">
+                          <img class="competition-share-card__avatar" src="assets/rank-avatar-03.png" width="24" height="24" alt="" />
+                          <span class="competition-share-card__author">李同学</span>
+                          <span class="competition-share-card__school">浙江大学</span>
+                        </span>
+                        <time class="competition-share-card__date" datetime="2025-05">2025.5</time>
+                      </footer>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </section>
+          </div>
+
+          <div class="competition-panel" id="competition-panel-innovation" role="tabpanel" aria-labelledby="competition-tab-innovation" hidden>
+            <section class="competition-feature competition-feature--bishe" aria-labelledby="competition-innovation-title">
+              <div class="competition-feature__hero">
+                <header class="competition-feature__intro">
+                  <h2 class="competition-feature__title" id="competition-innovation-title">
+                    <span class="competition-feature__edition">2026年第18届</span>
+                    <span class="competition-feature__title-text">全国数字建筑创新应用大赛</span>
+                  </h2>
+                  <p class="competition-feature__desc">
+                    大赛由中国建设教育协会主办、广联达科技股份有限公司承办，设数维设计建模、建设工程计量与计价、数字施工三大赛项，面向高职院校与本科院校全日制在校学生，推动建筑类专业数字化人才培养与产学研深度融合。
+                  </p>
+                </header>
+
+                <a class="competition-website-card" href="#" target="_blank" rel="noopener noreferrer">
+                  <span class="competition-website-card__text">
+                    <strong class="competition-website-card__label">大赛官网</strong>
+                    <span class="competition-website-card__hint">报名、规程、成绩公示均在官网</span>
+                  </span>
+                  <span class="competition-website-card__action">进入官网</span>
+                </a>
+              </div>
+
+              <section class="competition-sharing" aria-labelledby="competition-innovation-sharing-title">
+                <header class="competition-sharing__head">
+                  <h3 class="competition-sharing__title" id="competition-innovation-sharing-title">往届获奖经验分享</h3>
+                  <span class="competition-sharing__meta">精选 3 篇</span>
+                </header>
+                <ul class="competition-sharing__grid">
+                  <li>
+                    <a class="competition-share-card competition-share-card--green" href="#">
+                      <span class="competition-share-card__badge">数维建模 · 一等奖</span>
+                      <div class="competition-share-card__body">
+                        <h4 class="competition-share-card__title">选拔赛前一个月，一等奖团队在干什么</h4>
+                      </div>
+                      <footer class="competition-share-card__foot">
+                        <span class="competition-share-card__author-row">
+                          <img class="competition-share-card__avatar" src="assets/rank-avatar-04.png" width="24" height="24" alt="" />
+                          <span class="competition-share-card__author">陈同学</span>
+                          <span class="competition-share-card__school">南京工业大学</span>
+                        </span>
+                        <time class="competition-share-card__date" datetime="2025-09">2025.9</time>
+                      </footer>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="competition-share-card competition-share-card--blue" href="#">
+                      <span class="competition-share-card__badge">计量计价 · 一等奖</span>
+                      <div class="competition-share-card__body">
+                        <h4 class="competition-share-card__title">180分钟怎么分配时间：公建和住宅的得分策略</h4>
+                      </div>
+                      <footer class="competition-share-card__foot">
+                        <span class="competition-share-card__author-row">
+                          <img class="competition-share-card__avatar" src="assets/rank-avatar-05.png" width="24" height="24" alt="" />
+                          <span class="competition-share-card__author">刘同学</span>
+                          <span class="competition-share-card__school">重庆大学</span>
+                        </span>
+                        <time class="competition-share-card__date" datetime="2025-09">2025.9</time>
+                      </footer>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="competition-share-card competition-share-card--orange" href="#">
+                      <span class="competition-share-card__badge">数字施工 · 二等奖</span>
+                      <div class="competition-share-card__body">
+                        <h4 class="competition-share-card__title">数字施工赛项备赛笔记：从不会软件到拿奖</h4>
+                      </div>
+                      <footer class="competition-share-card__foot">
+                        <span class="competition-share-card__author-row">
+                          <img class="competition-share-card__avatar" src="assets/rank-avatar-06.png" width="24" height="24" alt="" />
+                          <span class="competition-share-card__author">赵同学</span>
+                          <span class="competition-share-card__school">华南理工</span>
+                        </span>
+                        <time class="competition-share-card__date" datetime="2025-08">2025.8</time>
+                      </footer>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="competition-materials-modal" id="competition-materials-modal" hidden>
+    <div class="competition-materials-modal__mask" data-competition-materials-close></div>
+    <div
+      class="competition-materials-modal__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="competition-materials-modal-title"
+    >
+      <div class="competition-materials-modal__head">
+        <div class="competition-materials-modal__head-text">
+          <h2 class="competition-materials-modal__title" id="competition-materials-modal-title">备赛资料</h2>
+          <p class="competition-materials-modal__subtitle" data-competition-materials-subtitle></p>
+        </div>
+        <button type="button" class="competition-materials-modal__close" data-competition-materials-close aria-label="关闭">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="competition-materials-modal__body">
+        <ul class="competition-materials-modal__list" data-competition-materials-list></ul>
+        <p class="competition-materials-modal__note">资料仅供参赛学习使用，请勿外传。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="competition-videos-modal" id="competition-videos-modal" hidden>
+    <div class="competition-videos-modal__mask" data-competition-videos-close></div>
+    <div
+      class="competition-videos-modal__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="competition-videos-modal-title"
+    >
+      <div class="competition-videos-modal__head">
+        <div class="competition-videos-modal__head-text">
+          <h2 class="competition-videos-modal__title" id="competition-videos-modal-title">备赛视频</h2>
+          <p class="competition-videos-modal__subtitle" data-competition-videos-subtitle></p>
+        </div>
+        <button type="button" class="competition-videos-modal__close" data-competition-videos-close aria-label="关闭">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="competition-videos-modal__body">
+        <div class="competition-videos-modal__main">
+          <div class="competition-videos-modal__player-wrap">
+            <video
+              class="competition-videos-modal__player"
+              controls
+              playsinline
+              preload="metadata"
+              data-competition-videos-player
+            ></video>
+          </div>
+          <p class="competition-videos-modal__now-playing" data-competition-videos-player-title>请选择视频播放</p>
+        </div>
+        <aside class="competition-videos-modal__sidebar" aria-label="视频列表">
+          <p class="competition-videos-modal__sidebar-head">讲次列表</p>
+          <ul class="competition-videos-modal__list" data-competition-videos-list></ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/competition-zone.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

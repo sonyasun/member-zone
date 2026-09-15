@@ -1,0 +1,160 @@
+    <div class="course-review-modal" id="course-review-modal" hidden>
+      <div class="course-review-modal__mask" data-course-review-close></div>
+      <div
+        class="course-review-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="course-review-modal-title"
+      >
+        <div class="course-review-modal__head">
+          <div class="course-review-modal__head-text">
+            <h2 class="course-review-modal__title" id="course-review-modal-title">评价课程</h2>
+            <p class="course-review-modal__subtitle">请对专门课程进行评价，帮助我们持续优化课程内容</p>
+          </div>
+          <button type="button" class="course-review-modal__close" data-course-review-close aria-label="关闭">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <form class="course-review-modal__form" id="course-review-form" data-course-review-form novalidate>
+          <section class="course-review-modal__section course-review-modal__section--overall">
+            <div class="course-review-modal__overall-card" data-review-field="overall">
+              <div class="course-review-modal__overall-head">
+                <h3 class="course-review-modal__overall-title">整体评分 <span class="course-review-modal__required" aria-hidden="true">*</span></h3>
+                <p class="course-review-modal__overall-desc">对专门课程的总体评价</p>
+              </div>
+              <div class="course-review-modal__overall-rate">
+                <div class="course-reviews__star-input course-reviews__star-input--lg" data-review-star-group="overall" role="radiogroup" aria-label="整体评分">
+                  <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                </div>
+                <span class="course-reviews__star-tip course-reviews__star-tip--overall" data-review-star-tip="overall">请评分</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--dims">
+            <div class="course-review-modal__dims-panel">
+              <div class="course-review-modal__section-head">
+                <h3 class="course-review-modal__section-title">维度评分 <span class="course-review-modal__required" aria-hidden="true">*</span></h3>
+                <p class="course-review-modal__section-desc">从以下方面细化评价</p>
+              </div>
+            <div class="course-review-modal__dims">
+              <div class="course-review-modal__dim" data-review-field="accuracy">
+                <span class="course-review-modal__dim-label">内容准确性 <span class="course-review-modal__required" aria-hidden="true">*</span></span>
+                <div class="course-review-modal__rate-row">
+                  <div class="course-reviews__star-input" data-review-star-group="accuracy" role="radiogroup" aria-label="内容准确性">
+                    <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                  </div>
+                  <span class="course-reviews__star-tip" data-review-star-tip="accuracy">请评分</span>
+                </div>
+              </div>
+              <div class="course-review-modal__dim" data-review-field="satisfaction">
+                <span class="course-review-modal__dim-label">课程满意度 <span class="course-review-modal__required" aria-hidden="true">*</span></span>
+                <div class="course-review-modal__rate-row">
+                  <div class="course-reviews__star-input" data-review-star-group="satisfaction" role="radiogroup" aria-label="课程满意度">
+                    <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                  </div>
+                  <span class="course-reviews__star-tip" data-review-star-tip="satisfaction">请评分</span>
+                </div>
+              </div>
+              <div class="course-review-modal__dim" data-review-field="clarity">
+                <span class="course-review-modal__dim-label">讲解清晰 <span class="course-review-modal__required" aria-hidden="true">*</span></span>
+                <div class="course-review-modal__rate-row">
+                  <div class="course-reviews__star-input" data-review-star-group="clarity" role="radiogroup" aria-label="讲解清晰">
+                    <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                  </div>
+                  <span class="course-reviews__star-tip" data-review-star-tip="clarity">请评分</span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--split course-review-modal__section--divider">
+            <div class="course-review-modal__section-head">
+              <h3 class="course-review-modal__section-title">推荐意愿 <span class="course-review-modal__required" aria-hidden="true">*</span></h3>
+              <p class="course-review-modal__section-desc">您有多大意愿推荐这门课程给您朋友？</p>
+            </div>
+            <div class="course-review-modal__rate-row" data-review-field="recommend">
+              <div class="course-reviews__star-input" data-review-star-group="recommend" role="radiogroup" aria-label="推荐意愿">
+                <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+              </div>
+              <span class="course-reviews__star-tip" data-review-star-tip="recommend">请评分</span>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--split course-review-modal__section--divider">
+            <div class="course-review-modal__section-head">
+              <h3 class="course-review-modal__section-title">难度</h3>
+              <p class="course-review-modal__section-desc">课程内容的难易程度</p>
+            </div>
+            <div class="course-review-modal__pills" data-course-review-difficulty>
+              <button type="button" class="course-review-modal__pill" data-difficulty="偏简单">偏简单</button>
+              <button type="button" class="course-review-modal__pill" data-difficulty="合适">合适</button>
+              <button type="button" class="course-review-modal__pill" data-difficulty="偏难">偏难</button>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--block course-review-modal__section--divider">
+            <div class="course-review-modal__section-head course-review-modal__section-head--split">
+              <div>
+                <h3 class="course-review-modal__section-title">标签 <span class="course-review-modal__optional">（最多选择 5 个）</span></h3>
+                <p class="course-review-modal__section-desc">请选择符合课程的特色的标签</p>
+              </div>
+              <span class="course-review-modal__tags-hint">最多可选 5 个</span>
+            </div>
+            <div class="course-review-modal__tags" data-course-review-tags>
+              <button type="button" class="course-review-modal__tag" data-review-tag>讲解清晰</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>案例实用</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>资料完整</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>版本过旧</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>节奏太快</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>缺少实操</button>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--block course-review-modal__section--last">
+            <div class="course-review-modal__section-head">
+              <h3 class="course-review-modal__section-title">文字建议 <span class="course-review-modal__optional">（选填）</span></h3>
+              <p class="course-review-modal__section-desc">说说这门课程最有帮助、最需要改进的地方</p>
+            </div>
+            <div class="course-review-modal__field">
+              <textarea
+                id="course-review-text"
+                class="course-review-modal__textarea"
+                rows="4"
+                maxlength="300"
+                placeholder="请输入您的建议，帮助我们做得更好（最多300字）"
+                data-course-review-text
+              ></textarea>
+              <span class="course-review-modal__char-count"><b data-review-char-count>0</b> / 300</span>
+            </div>
+          </section>
+        </form>
+        <div class="course-review-modal__actions">
+          <button type="button" class="course-review-modal__cancel" data-course-review-close>取消</button>
+          <button type="submit" class="course-review-modal__submit" form="course-review-form">提交评价</button>
+        </div>
+      </div>
+    </div>

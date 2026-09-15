@@ -1,0 +1,42 @@
+/* —— Assess strip —— */
+.assess-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 13.3125rem); /* 213px */
+  gap: var(--gap-md);
+  justify-content: start;
+}
+
+.assess-card {
+  display: block;
+  width: 13.3125rem; /* 213px */
+  height: 10.875rem; /* 174px */
+  padding: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--card-transition);
+}
+
+.assess-card:hover {
+  transform: var(--card-hover-lift);
+  box-shadow: var(--color-shadow-hover);
+}
+
+.assess-card:focus-visible {
+  outline: none;
+  box-shadow: var(--btn-focus-ring);
+}
+
+.assess-card__image {
+  display: block;
+  width: 13.3125rem; /* 213px */
+  height: 10.875rem; /* 174px */
+  object-fit: cover;
+  transition: filter 0.2s ease;
+}
+
+.assess-card:hover .assess-card__image {
+  filter: brightness(1.03);
+}
+

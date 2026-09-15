@@ -1,0 +1,439 @@
+/* —— 确认订单页 —— */
+.page--order {
+  background: linear-gradient(180deg, #e4f6e8 5%, #f7f8fa 30%);
+}
+
+.main--order {
+  padding-block: 1rem 3rem;
+  min-height: 60vh;
+}
+
+.order-page__title {
+  margin: 0 0 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20rem; /* 320 */
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.order-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.order-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem; /* 8px */
+  background: var(--color-bg-white);
+  box-sizing: border-box;
+}
+
+.order-card__heading {
+  margin: 0 0 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.order-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.order-card__row .order-card__heading {
+  margin: 0;
+}
+
+.order-course {
+  display: grid;
+  grid-template-columns: 11.25rem minmax(0, 1fr) auto; /* 180 */
+  gap: 1rem;
+  align-items: start;
+}
+
+.order-course__cover {
+  display: block;
+  width: 11.25rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  background: #eef2f5 center / cover no-repeat;
+}
+
+.order-course__title {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.order-course__title a {
+  color: var(--color-text-primary);
+}
+
+.order-course__title a:hover {
+  color: var(--color-primary);
+}
+
+.order-course__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.order-course__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.75rem;
+}
+
+.order-course__price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.order-course__sale {
+  color: #ff2f49;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.order-course__sale i {
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.order-course__origin {
+  color: #999;
+  font-size: var(--font-size-14);
+  text-decoration: line-through;
+}
+
+/* 订单页：套餐包含的多门课程 */
+.order-pack-list {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.order-pack-list__title {
+  margin: 0 0 0.75rem;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.order-pack-list__items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-pack-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.order-pack-item:hover {
+  background: #f7f8fa;
+}
+
+.order-pack-item:hover .order-pack-item__name {
+  color: var(--color-primary);
+}
+
+.order-pack-item__cover {
+  flex-shrink: 0;
+  width: 5.5rem; /* 88px */
+  aspect-ratio: 16 / 9;
+  border-radius: 0.25rem;
+  background: #eef2f5 center / cover no-repeat;
+}
+
+.order-pack-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.order-pack-item__name {
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-pack-item__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.order-pack-item__origin {
+  color: #999;
+  font-size: var(--font-size-12);
+  line-height: 1rem;
+  text-decoration: line-through;
+}
+
+.order-pack-item__sale {
+  color: #ff2f49;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.order-coupon-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #999;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+
+.order-coupon-trigger.has-coupon {
+  color: var(--color-text-primary);
+}
+
+.order-coupon-trigger.has-coupon .order-coupon-trigger__value {
+  color: #ff2f49;
+  font-weight: 600;
+}
+
+.order-coupon-trigger:hover {
+  color: var(--color-primary);
+}
+
+.order-coupon-trigger.has-coupon:hover .order-coupon-trigger__value {
+  color: #ff2f49;
+}
+
+.order-pay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.order-pay__item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 10rem;
+  height: 3rem;
+  padding: 0 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  background: var(--color-bg-white);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.order-pay__item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.order-pay__item.is-active {
+  border-color: var(--color-primary);
+  background: rgba(19, 150, 134, 0.04);
+}
+
+.order-pay__radio {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.order-pay__item.is-active .order-pay__radio {
+  border-color: var(--color-primary);
+  background:
+    radial-gradient(circle at center, var(--color-primary) 0 0.25rem, transparent 0.28rem),
+    var(--color-bg-white);
+}
+
+.order-pay__icon {
+  width: 1.5rem; /* 24px */
+  height: 1.5rem;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.order-pay__name {
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  color: var(--color-text-primary);
+}
+
+.order-summary {
+  position: sticky;
+  top: calc(var(--nav-height) + 1rem);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--color-bg-white);
+  box-sizing: border-box;
+}
+
+.order-summary__heading {
+  margin: 0 0 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.order-summary__list {
+  margin: 0;
+  padding: 0;
+}
+
+.order-summary__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.order-summary__row dd {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.order-summary__row .is-discount {
+  color: #ff2f49;
+}
+
+.order-summary__total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  font-size: var(--font-size-14);
+  color: var(--color-text-primary);
+}
+
+.order-summary__total strong {
+  color: #ff2f49;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.order-summary__total strong i {
+  font-style: normal;
+  font-size: 1rem;
+  margin-right: 0.125rem;
+}
+
+.order-summary__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.875rem;
+  margin-top: 1.25rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #fc4755;
+  color: var(--color-bg-white);
+  font-size: var(--font-size-16);
+  cursor: pointer;
+  transition: var(--btn-transition);
+}
+
+.order-summary__submit:hover {
+  background: color-mix(in srgb, #fc4755 88%, #000);
+}
+
+.order-summary__tip {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-size: var(--font-size-12);
+  line-height: 1.25rem;
+  color: #999;
+}
+
+.order-summary__tip a {
+  color: var(--color-primary);
+}
+
+@media (max-width: 1100px) {
+  .order-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 800px) {
+  .order-course {
+    grid-template-columns: 1fr;
+  }
+
+  .order-course__price {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .order-pack-list__items {
+    grid-template-columns: 1fr;
+  }
+}
+

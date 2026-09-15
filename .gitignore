@@ -4,3 +4,7 @@
 *.log
 .idea/
 .vscode/
+.publish/
+.netlify/
+.wrangler/
+.tmp-*

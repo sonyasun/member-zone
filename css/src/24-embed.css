@@ -1,0 +1,15 @@
+/* App 内嵌：隐藏站点顶栏 / 底栏 / 浮层等壳层 */
+html.is-embed .site-header,
+html.is-embed .site-footer,
+html.is-embed .float-rail,
+html.is-embed .course-crumb {
+  display: none !important;
+}
+
+html.is-embed .page {
+  min-height: auto;
+}
+
+html.is-embed .main {
+  padding-top: 0;
+}

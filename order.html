@@ -14,18 +14,33 @@
           <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
         </a>
         <nav class="nav-list" aria-label="主导航">
-          <a class="nav-list__link" href="index.html">首页</a>
-          <a class="nav-list__link" href="#">题库</a>
-          <a class="nav-list__link" href="#">交流社区</a>
-          <a class="nav-list__link" href="cert.html">职业考证</a>
-          <a class="nav-list__link" href="member.html">会员专区</a>
-          <a class="nav-list__link" href="#">下载专区</a>
-          <a class="nav-list__link" href="#">生态合作</a>
-          <a class="nav-list__link" href="#">企业版</a>
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link" href="member.html" data-nav="member">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
         </nav>
         <div class="header-actions">
           <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
-          <button type="button" class="btn-login">登录/注册</button>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -48,7 +63,7 @@
             <section class="order-card" aria-labelledby="order-course-heading">
               <h2 class="order-card__heading" id="order-course-heading">课程信息</h2>
               <div class="order-course">
-                <a class="order-course__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')" aria-label="查看课程详情"></a>
+                <a class="order-course__cover" href="course.html" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')" aria-label="查看课程详情"></a>
                 <div class="order-course__body">
                   <h3 class="order-course__title">
                     <a href="course.html">建筑施工组织（2020年10月版）</a>
@@ -146,7 +161,7 @@
         <div class="footer-bottom">
           <div class="footer-brand__logos">
             <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
-            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
           </div>
           <p class="footer-brand__copy">
             广联达教育GLodon Education www.glodonedu.com<br />
@@ -165,5 +180,6 @@
       });
     });
   </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

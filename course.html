@@ -4,7 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>建筑施工组织（2020年10月版） - 建筑云课</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.get("embed") === "1" || sessionStorage.getItem("mz-embed") === "1") {
+          document.documentElement.classList.add("is-embed");
+          sessionStorage.setItem("mz-embed", "1");
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <div class="page page--course">
@@ -14,18 +25,33 @@
           <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
         </a>
         <nav class="nav-list" aria-label="主导航">
-          <a class="nav-list__link" href="index.html">首页</a>
-          <a class="nav-list__link" href="#">题库</a>
-          <a class="nav-list__link" href="#">交流社区</a>
-          <a class="nav-list__link" href="cert.html">职业考证</a>
-          <a class="nav-list__link" href="member.html">会员专区</a>
-          <a class="nav-list__link" href="#">下载专区</a>
-          <a class="nav-list__link" href="#">生态合作</a>
-          <a class="nav-list__link" href="#">企业版</a>
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link" href="member.html" data-nav="member">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
         </nav>
         <div class="header-actions">
           <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
-          <button type="button" class="btn-login">登录/注册</button>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -42,7 +68,7 @@
         <section class="course-hero" aria-labelledby="course-title">
           <div
             class="course-hero__cover"
-            style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"
+            style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')"
             role="img"
             aria-label=""
           ></div>
@@ -91,13 +117,13 @@
           <div class="course-main">
             <div class="course-panel">
               <div class="course-tabs" role="tablist" aria-label="课程详情切换">
-                <button type="button" class="course-tabs__item is-active" role="tab" aria-selected="true">课程介绍</button>
-                <button type="button" class="course-tabs__item" role="tab" aria-selected="false">课程目录</button>
-                <button type="button" class="course-tabs__item" role="tab" aria-selected="false">课程资料</button>
-                <button type="button" class="course-tabs__item" role="tab" aria-selected="false">评价</button>
+                <button type="button" class="course-tabs__item is-active" role="tab" aria-selected="true" data-course-tab="intro" aria-controls="course-panel-intro">课程介绍</button>
+                <button type="button" class="course-tabs__item" role="tab" aria-selected="false" data-course-tab="catalog" aria-controls="course-panel-catalog">课程目录</button>
+                <button type="button" class="course-tabs__item" role="tab" aria-selected="false" data-course-tab="materials" aria-controls="course-panel-materials">课程资料</button>
+                <button type="button" class="course-tabs__item" role="tab" aria-selected="false" data-course-tab="reviews" aria-controls="course-panel-reviews">评价</button>
               </div>
 
-              <div class="course-intro">
+              <div class="course-tab-panel course-intro" id="course-panel-intro" data-course-panel="intro" role="tabpanel">
                 <section class="course-intro__block">
                   <h2 class="course-intro__heading">课程简介</h2>
                   <p class="course-intro__text">建筑施工组织是建筑工程施工前和施工过程中重要的工作内容，直接决定建设项目施工进度、质量和费用等目标的实现。建筑施工组织是指导现场施工的纲领性文件，其核心内容“一案、一图、一表”。通过本课程的学习我们将具备编制施工方案的能力，能够准确绘制进度计划，能够布置合理的施工平面图。<br />同时本课程是建造师、造价师、监理工程师等执业资格考试的必考内容。</p>
@@ -120,12 +146,209 @@
                 </section>
                 <div class="course-intro__figure">
                   <img
-                    src="https://image-resource.mastergo.com/72061466992156/149588298644015/4084c755bd25ea2df15da3fe5cf5e7f7.png"
+                    src="assets/mastergo/4084c755bd25ea2df15da3fe5cf5e7f7.png"
                     width="826"
                     height="292"
                     alt=""
                   />
                 </div>
+              </div>
+
+              <div class="course-tab-panel course-catalog is-hidden" id="course-panel-catalog" data-course-panel="catalog" role="tabpanel" hidden>
+                <details class="course-catalog__chapter" open>
+                  <summary class="course-catalog__summary">第一章 施工组织概述 <span class="course-catalog__meta">3 节 · 28 分钟</span></summary>
+                  <ul class="course-catalog__lessons">
+                    <li class="course-catalog__lesson course-catalog__lesson--trial">1.1 施工组织设计简介 <span class="course-catalog__trial-tag">试看</span><time>08:12</time></li>
+                    <li class="course-catalog__lesson">1.2 施工组织设计的作用与分类<time>09:36</time></li>
+                    <li class="course-catalog__lesson">1.3 施工组织设计编制依据<time>10:18</time></li>
+                  </ul>
+                </details>
+                <details class="course-catalog__chapter">
+                  <summary class="course-catalog__summary">第二章 施工部署与进度计划 <span class="course-catalog__meta">4 节 · 42 分钟</span></summary>
+                  <ul class="course-catalog__lessons">
+                    <li class="course-catalog__lesson">2.1 施工部署原则<time>11:05</time></li>
+                    <li class="course-catalog__lesson">2.2 流水施工组织<time>10:42</time></li>
+                    <li class="course-catalog__lesson">2.3 网络计划技术<time>12:08</time></li>
+                    <li class="course-catalog__lesson">2.4 进度计划优化<time>08:15</time></li>
+                  </ul>
+                </details>
+                <details class="course-catalog__chapter">
+                  <summary class="course-catalog__summary">第三章 施工现场平面布置 <span class="course-catalog__meta">3 节 · 36 分钟</span></summary>
+                  <ul class="course-catalog__lessons">
+                    <li class="course-catalog__lesson">3.1 平面布置原则<time>12:20</time></li>
+                    <li class="course-catalog__lesson">3.2 临时设施布置<time>11:48</time></li>
+                    <li class="course-catalog__lesson">3.3 案例分析与实操<time>12:04</time></li>
+                  </ul>
+                </details>
+              </div>
+
+              <div class="course-tab-panel course-materials is-hidden" id="course-panel-materials" data-course-panel="materials" role="tabpanel" hidden>
+                <ul class="course-materials__list">
+                  <li class="course-materials__item">
+                    <a class="course-materials__link" href="#">建筑施工组织课程课件.pdf</a>
+                    <span class="course-materials__size">2.4 MB</span>
+                  </li>
+                  <li class="course-materials__item">
+                    <a class="course-materials__link" href="#">第一章 学习讲义.docx</a>
+                    <span class="course-materials__size">860 KB</span>
+                  </li>
+                  <li class="course-materials__item">
+                    <a class="course-materials__link" href="#">进度计划模板.xlsx</a>
+                    <span class="course-materials__size">320 KB</span>
+                  </li>
+                </ul>
+                <p class="course-materials__note">购买课程后可在「我的学习」中下载全部资料。</p>
+              </div>
+
+              <div class="course-tab-panel course-reviews-panel is-hidden" id="course-panel-reviews" data-course-panel="reviews" role="tabpanel" hidden>
+                                                                                                                                                                                                    <div class="course-reviews" data-course-reviews>
+                <div class="course-reviews__stats">
+                  <div class="course-reviews__stat course-reviews__stat--primary">
+                    <span class="course-reviews__stat-label">综合评分</span>
+                    <p class="course-reviews__stat-value">4.8 <small>/ 5.0</small></p>
+                    <div class="course-stars course-stars--sm course-reviews__stat-stars" aria-hidden="true">
+                      <span class="course-stars__track"></span>
+                      <span class="course-stars__fill" style="width:96%"></span>
+                    </div>
+                  </div>
+                  <div class="course-reviews__metrics">
+                    <div class="course-reviews__stat">
+                      <span class="course-reviews__stat-label">好评率</span>
+                      <p class="course-reviews__stat-value">96<small>%</small></p>
+                    </div>
+                    <div class="course-reviews__stat">
+                      <span class="course-reviews__stat-label">评价数</span>
+                      <p class="course-reviews__stat-value">204</p>
+                    </div>
+                  </div>
+                  <div class="course-reviews__cta">
+                    <p class="course-reviews__cta-tip">学习进度达 30% 可评价</p>
+                    <button type="button" class="course-reviews__cta-btn" data-course-review-open>我要评价</button>
+                  </div>
+                </div>
+
+                <div class="course-reviews__filters" role="tablist" aria-label="评价筛选">
+                  <button type="button" class="course-reviews__filter is-active" data-review-filter="all" aria-selected="true">全部 <span>204</span></button>
+                  <button type="button" class="course-reviews__filter" data-review-filter="good" aria-selected="false">好评 <span>196</span></button>
+                  <button type="button" class="course-reviews__filter" data-review-filter="mid" aria-selected="false">中评 <span>6</span></button>
+                  <button type="button" class="course-reviews__filter" data-review-filter="bad" aria-selected="false">差评 <span>2</span></button>
+                </div>
+
+                <ul class="course-reviews__list" data-course-review-list>
+                  <li class="course-review" data-rating="5" >
+                    <article class="course-review__card">
+                      <div class="course-review__top">
+                        <div class="course-review__user">
+                          <span class="course-review__avatar course-review__avatar--letter" style="--avatar-bg:#ff9a3c" aria-hidden="true">陈</span>
+                          <div class="course-review__who">
+                            <span class="course-review__name">陈溪坤 同志</span>
+                            <time class="course-review__time" datetime="2026-07-15">2026-07-15</time>
+                          </div>
+                        </div>
+                        <div class="course-review__rating">
+                          <div class="course-stars course-stars--sm" aria-hidden="true">
+                            <span class="course-stars__track"></span>
+                            <span class="course-stars__fill" style="width:100%"></span>
+                          </div>
+                          <span class="course-review__score">5.0</span>
+                        </div>
+                      </div>
+                      <p class="course-review__meta">课程难易度 <strong>偏简单</strong></p>
+                      <p class="course-review__text">广联达软件功能很强大，但是有的功能隐藏太深，本课程结合实际业务案例，将零散的知识点串联起来，通过实例演示，将广联达软件常用功能操作方法呈现给我们，让我们快速掌握算量技巧，提升工作效率。</p>
+                    </article>
+                  </li>
+                  <li class="course-review" data-rating="5" >
+                    <article class="course-review__card">
+                      <div class="course-review__top">
+                        <div class="course-review__user">
+                          <span class="course-review__avatar course-review__avatar--letter" style="--avatar-bg:#5b8def" aria-hidden="true">3</span>
+                          <div class="course-review__who">
+                            <span class="course-review__name">321212</span>
+                            <time class="course-review__time" datetime="2026-07-15">2026-07-15</time>
+                          </div>
+                        </div>
+                        <div class="course-review__rating">
+                          <div class="course-stars course-stars--sm" aria-hidden="true">
+                            <span class="course-stars__track"></span>
+                            <span class="course-stars__fill" style="width:100%"></span>
+                          </div>
+                          <span class="course-review__score">5.0</span>
+                        </div>
+                      </div>
+                      <p class="course-review__meta">课程难易度 <strong>偏简单</strong></p>
+                      <p class="course-review__text">课程不错，对小白很友好，容易上手，希望能出更多类似的课程</p>
+                    </article>
+                  </li>
+                  <li class="course-review" data-rating="4" >
+                    <article class="course-review__card">
+                      <div class="course-review__top">
+                        <div class="course-review__user">
+                          <span class="course-review__avatar course-review__avatar--letter" style="--avatar-bg:#22b34a" aria-hidden="true">工</span>
+                          <div class="course-review__who">
+                            <span class="course-review__name">工地老张</span>
+                            <time class="course-review__time" datetime="2026-02-15">2026-02-15</time>
+                          </div>
+                        </div>
+                        <div class="course-review__rating">
+                          <div class="course-stars course-stars--sm" aria-hidden="true">
+                            <span class="course-stars__track"></span>
+                            <span class="course-stars__fill" style="width:80%"></span>
+                          </div>
+                          <span class="course-review__score">4.0</span>
+                        </div>
+                      </div>
+                      <p class="course-review__meta">课程难易度 <strong>适中</strong></p>
+                      <p class="course-review__text">整体不错，平面布置图绘制部分希望再多一些现场案例，其他章节质量都很高。</p>
+                    </article>
+                  </li>
+                  <li class="course-review" data-rating="3">
+                    <article class="course-review__card">
+                      <div class="course-review__top">
+                        <div class="course-review__user">
+                          <span class="course-review__avatar course-review__avatar--letter" style="--avatar-bg:#8c66f9" aria-hidden="true">新</span>
+                          <div class="course-review__who">
+                            <span class="course-review__name">土木新人</span>
+                            <time class="course-review__time" datetime="2026-01-30">2026-01-30</time>
+                          </div>
+                        </div>
+                        <div class="course-review__rating">
+                          <div class="course-stars course-stars--sm" aria-hidden="true">
+                            <span class="course-stars__track"></span>
+                            <span class="course-stars__fill" style="width:60%"></span>
+                          </div>
+                          <span class="course-review__score">3.0</span>
+                        </div>
+                      </div>
+                      <p class="course-review__meta">课程难易度 <strong>偏难</strong></p>
+                      <p class="course-review__text">部分术语解释偏快。</p>
+                    </article>
+                  </li>
+                  <li class="course-review" data-rating="2">
+                    <article class="course-review__card">
+                      <div class="course-review__top">
+                        <div class="course-review__user">
+                          <span class="course-review__avatar course-review__avatar--letter" style="--avatar-bg:#999" aria-hidden="true">夜</span>
+                          <div class="course-review__who">
+                            <span class="course-review__name">夜猫子学员</span>
+                            <time class="course-review__time" datetime="2026-01-08">2026-01-08</time>
+                          </div>
+                        </div>
+                        <div class="course-review__rating">
+                          <div class="course-stars course-stars--sm" aria-hidden="true">
+                            <span class="course-stars__track"></span>
+                            <span class="course-stars__fill" style="width:40%"></span>
+                          </div>
+                          <span class="course-review__score">2.0</span>
+                        </div>
+                      </div>
+                      <p class="course-review__meta">课程难易度 <strong>适中</strong></p>
+                      <p class="course-review__text">个别章节节奏略慢。</p>
+                    </article>
+                  </li>
+                </ul>
+
+                <p class="course-reviews__empty" data-course-review-empty hidden>暂无符合条件的评价</p>
+              </div>
               </div>
             </div>
           </div>
@@ -138,7 +361,7 @@
                 <div class="teacher-card__avatar-wrap">
                   <img
                     class="teacher-card__avatar"
-                    src="https://image-resource.mastergo.com/72061466992156/149588298644015/2573cfb2b79eed6056e8d447db5befec.png"
+                    src="assets/mastergo/2573cfb2b79eed6056e8d447db5befec.png"
                     width="48"
                     height="48"
                     alt=""
@@ -159,7 +382,7 @@
               <ul class="recommend-list">
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/55ef390b73de3ffab92aec7ef08ca282.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">钢筋精算节流落地实操——用BIMMAKE做好钢筋内控</span>
                       <span class="recommend-item__meta">王旭 · 2334人学过</span>
@@ -168,7 +391,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/791588e0c2ee5260d72886aebfcfa283.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/791588e0c2ee5260d72886aebfcfa283.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">BIM土建计量平台-GTJ2021案例讲解</span>
                       <span class="recommend-item__meta">王天来 · 2334人学过</span>
@@ -177,7 +400,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e4c465f81d0002f3133fe9b0e0548782.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/e4c465f81d0002f3133fe9b0e0548782.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">TOP地产成本经理手把手带你成本实操</span>
                       <span class="recommend-item__meta">鱼丸 · 4334人学过</span>
@@ -186,7 +409,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/c5255e15a3d9b8201b91d23df83d1f7c.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/c5255e15a3d9b8201b91d23df83d1f7c.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">新建更新一体化整体解决方案</span>
                       <span class="recommend-item__meta">韩丹 · 143人学过</span>
@@ -195,7 +418,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/36e38f5b506f9d0b4201e4b3258c49a7.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/36e38f5b506f9d0b4201e4b3258c49a7.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">工具数据一体化助力造价编审提质增效</span>
                       <span class="recommend-item__meta">武翠艳 · 4334人学过</span>
@@ -204,7 +427,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/79770e2412780b647a8f77a00976303d.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/79770e2412780b647a8f77a00976303d.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">《建设工程工程量清单计价标准》深度解读</span>
                       <span class="recommend-item__meta">李桂婷 · 2334人学过</span>
@@ -213,7 +436,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e8ca9ce0f739df62b7cca744beb9d599.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/e8ca9ce0f739df62b7cca744beb9d599.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">专家权威解读24新清单八大变化点</span>
                       <span class="recommend-item__meta">建筑课堂 · 6434人学过</span>
@@ -249,7 +472,7 @@
         <div class="footer-bottom">
           <div class="footer-brand__logos">
             <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
-            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
           </div>
           <p class="footer-brand__copy">
             广联达教育GLodon Education www.glodonedu.com<br />
@@ -259,5 +482,169 @@
       </div>
     </footer>
   </div>
+
+    <div class="course-review-modal" id="course-review-modal" hidden>
+      <div class="course-review-modal__mask" data-course-review-close></div>
+      <div
+        class="course-review-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="course-review-modal-title"
+      >
+        <div class="course-review-modal__head">
+          <div class="course-review-modal__head-text">
+            <h2 class="course-review-modal__title" id="course-review-modal-title">评价课程</h2>
+            <p class="course-review-modal__subtitle">请对专门课程进行评价，帮助我们持续优化课程内容</p>
+          </div>
+          <button type="button" class="course-review-modal__close" data-course-review-close aria-label="关闭">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <form class="course-review-modal__form" id="course-review-form" data-course-review-form novalidate>
+          <section class="course-review-modal__section course-review-modal__section--overall">
+            <div class="course-review-modal__overall-card" data-review-field="overall">
+              <div class="course-review-modal__overall-head">
+                <h3 class="course-review-modal__overall-title">整体评分 <span class="course-review-modal__required" aria-hidden="true">*</span></h3>
+                <p class="course-review-modal__overall-desc">对专门课程的总体评价</p>
+              </div>
+              <div class="course-review-modal__overall-rate">
+                <div class="course-reviews__star-input course-reviews__star-input--lg" data-review-star-group="overall" role="radiogroup" aria-label="整体评分">
+                  <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                  <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                </div>
+                <span class="course-reviews__star-tip course-reviews__star-tip--overall" data-review-star-tip="overall">请评分</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--dims">
+            <div class="course-review-modal__dims-panel">
+              <div class="course-review-modal__section-head">
+                <h3 class="course-review-modal__section-title">维度评分 <span class="course-review-modal__required" aria-hidden="true">*</span></h3>
+                <p class="course-review-modal__section-desc">从以下方面细化评价</p>
+              </div>
+            <div class="course-review-modal__dims">
+              <div class="course-review-modal__dim" data-review-field="accuracy">
+                <span class="course-review-modal__dim-label">内容准确性 <span class="course-review-modal__required" aria-hidden="true">*</span></span>
+                <div class="course-review-modal__rate-row">
+                  <div class="course-reviews__star-input" data-review-star-group="accuracy" role="radiogroup" aria-label="内容准确性">
+                    <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                  </div>
+                  <span class="course-reviews__star-tip" data-review-star-tip="accuracy">请评分</span>
+                </div>
+              </div>
+              <div class="course-review-modal__dim" data-review-field="satisfaction">
+                <span class="course-review-modal__dim-label">课程满意度 <span class="course-review-modal__required" aria-hidden="true">*</span></span>
+                <div class="course-review-modal__rate-row">
+                  <div class="course-reviews__star-input" data-review-star-group="satisfaction" role="radiogroup" aria-label="课程满意度">
+                    <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                  </div>
+                  <span class="course-reviews__star-tip" data-review-star-tip="satisfaction">请评分</span>
+                </div>
+              </div>
+              <div class="course-review-modal__dim" data-review-field="clarity">
+                <span class="course-review-modal__dim-label">讲解清晰 <span class="course-review-modal__required" aria-hidden="true">*</span></span>
+                <div class="course-review-modal__rate-row">
+                  <div class="course-reviews__star-input" data-review-star-group="clarity" role="radiogroup" aria-label="讲解清晰">
+                    <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                    <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+                  </div>
+                  <span class="course-reviews__star-tip" data-review-star-tip="clarity">请评分</span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--split course-review-modal__section--divider">
+            <div class="course-review-modal__section-head">
+              <h3 class="course-review-modal__section-title">推荐意愿 <span class="course-review-modal__required" aria-hidden="true">*</span></h3>
+              <p class="course-review-modal__section-desc">您有多大意愿推荐这门课程给您朋友？</p>
+            </div>
+            <div class="course-review-modal__rate-row" data-review-field="recommend">
+              <div class="course-reviews__star-input" data-review-star-group="recommend" role="radiogroup" aria-label="推荐意愿">
+                <button type="button" class="course-reviews__star-btn" data-review-star="1" aria-label="1 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="2" aria-label="2 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="3" aria-label="3 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="4" aria-label="4 星"></button>
+                <button type="button" class="course-reviews__star-btn" data-review-star="5" aria-label="5 星"></button>
+              </div>
+              <span class="course-reviews__star-tip" data-review-star-tip="recommend">请评分</span>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--split course-review-modal__section--divider">
+            <div class="course-review-modal__section-head">
+              <h3 class="course-review-modal__section-title">难度</h3>
+              <p class="course-review-modal__section-desc">课程内容的难易程度</p>
+            </div>
+            <div class="course-review-modal__pills" data-course-review-difficulty>
+              <button type="button" class="course-review-modal__pill" data-difficulty="偏简单">偏简单</button>
+              <button type="button" class="course-review-modal__pill" data-difficulty="合适">合适</button>
+              <button type="button" class="course-review-modal__pill" data-difficulty="偏难">偏难</button>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--block course-review-modal__section--divider">
+            <div class="course-review-modal__section-head course-review-modal__section-head--split">
+              <div>
+                <h3 class="course-review-modal__section-title">标签 <span class="course-review-modal__optional">（最多选择 5 个）</span></h3>
+                <p class="course-review-modal__section-desc">请选择符合课程的特色的标签</p>
+              </div>
+              <span class="course-review-modal__tags-hint">最多可选 5 个</span>
+            </div>
+            <div class="course-review-modal__tags" data-course-review-tags>
+              <button type="button" class="course-review-modal__tag" data-review-tag>讲解清晰</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>案例实用</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>资料完整</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>版本过旧</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>节奏太快</button>
+              <button type="button" class="course-review-modal__tag" data-review-tag>缺少实操</button>
+            </div>
+          </section>
+
+          <section class="course-review-modal__section course-review-modal__section--block course-review-modal__section--last">
+            <div class="course-review-modal__section-head">
+              <h3 class="course-review-modal__section-title">文字建议 <span class="course-review-modal__optional">（选填）</span></h3>
+              <p class="course-review-modal__section-desc">说说这门课程最有帮助、最需要改进的地方</p>
+            </div>
+            <div class="course-review-modal__field">
+              <textarea
+                id="course-review-text"
+                class="course-review-modal__textarea"
+                rows="4"
+                maxlength="300"
+                placeholder="请输入您的建议，帮助我们做得更好（最多300字）"
+                data-course-review-text
+              ></textarea>
+              <span class="course-review-modal__char-count"><b data-review-char-count>0</b> / 300</span>
+            </div>
+          </section>
+        </form>
+        <div class="course-review-modal__actions">
+          <button type="button" class="course-review-modal__cancel" data-course-review-close>取消</button>
+          <button type="submit" class="course-review-modal__submit" form="course-review-form">提交评价</button>
+        </div>
+      </div>
+    </div>
+
+  <script src="js/course-detail.js?v=7" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

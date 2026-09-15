@@ -15,18 +15,33 @@
           <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
         </a>
         <nav class="nav-list" aria-label="主导航">
-          <a class="nav-list__link" href="index.html">首页</a>
-          <a class="nav-list__link" href="#">题库</a>
-          <a class="nav-list__link" href="#">交流社区</a>
-          <a class="nav-list__link" href="cert.html">职业考证</a>
-          <a class="nav-list__link is-active" href="member.html" aria-current="page">会员专区</a>
-          <a class="nav-list__link" href="#">下载专区</a>
-          <a class="nav-list__link" href="#">生态合作</a>
-          <a class="nav-list__link" href="#">企业版</a>
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link is-active" href="member.html" data-nav="member" aria-current="page">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
         </nav>
         <div class="header-actions">
           <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
-          <button type="button" class="btn-login">登录/注册</button>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -35,32 +50,46 @@
       <div class="page-inner hero__inner">
         <div class="hero-banner">
           <img
-            src="https://image-resource.mastergo.com/72061466992156/149588298644015/4e765f3e82336b69300233055ea5b0dd.jpg"
+            src="assets/mastergo/4e765f3e82336b69300233055ea5b0dd.jpg"
+            width="900"
+            height="360"
             alt=""
           />
         </div>
-        <aside class="login-card">
-          <img
-            class="login-card__avatar"
-            src="assets/login-avatar.png"
-            width="160"
-            height="160"
-            alt="用户头像"
-          />
-          <h2 class="login-card__title">天行者7821</h2>
-          <div class="login-card__tags" aria-label="用户身份">
-            <span class="login-card__tag login-card__tag--vip">VIP</span>
-            <span class="login-card__tag login-card__tag--learner">行业学习者</span>
-            <span class="login-card__tag login-card__tag--enterprise">企业会员</span>
+        <aside class="login-card login-card--member">
+          <div class="login-card__profile">
+            <img
+              class="login-card__avatar"
+              src="assets/login-avatar.png"
+              width="80"
+              height="80"
+              alt="用户头像"
+            />
+            <div class="login-card__identity">
+              <h2 class="login-card__title">天行者7821</h2>
+              <div class="login-card__tags" aria-label="用户身份">
+                <span class="login-card__tag login-card__tag--vip">VIP</span>
+                <span class="login-card__tag login-card__tag--learner">行业学习者</span>
+                <span class="login-card__tag login-card__tag--enterprise">企业会员</span>
+              </div>
+            </div>
           </div>
-          <div class="profile-card__stats">
-            <div class="stat"><div class="stat__value">290</div><div class="stat__label">学习时长(h)</div></div>
-            <div class="stat"><div class="stat__value">8</div><div class="stat__label">完成课程</div></div>
-            <div class="stat"><div class="stat__value">2</div><div class="stat__label">荣誉证书</div></div>
+          <div class="login-card__stats">
+            <div class="login-card__stat">
+              <div class="login-card__stat-value">290</div>
+              <div class="login-card__stat-label">学习时长(h)</div>
+            </div>
+            <div class="login-card__stat">
+              <div class="login-card__stat-value">8</div>
+              <div class="login-card__stat-label">完成课程</div>
+            </div>
+            <div class="login-card__stat">
+              <div class="login-card__stat-value">2</div>
+              <div class="login-card__stat-label">荣誉证书</div>
+            </div>
           </div>
           <a class="login-card__action" href="profile.html">前往个人中心</a>
-        </aside>
-      </div>
+        </aside></div>
       <div class="page-inner">
         <div class="category-strip">
           <a class="category-strip__item category-strip__item--mint" href="topic-courses.html">
@@ -84,7 +113,7 @@
               <p class="category-strip__subtitle">10款软件 · 78门课程</p>
             </div>
           </a>
-          <a class="category-strip__item category-strip__item--purple" href="#exam">
+          <a class="category-strip__item category-strip__item--purple" href="cert-courses.html">
             <img class="category-strip__icon" src="assets/category-icon-exam.png" width="85" height="80" alt="" />
             <div class="category-strip__text">
               <h3 class="category-strip__title">考证课程</h3>
@@ -117,7 +146,7 @@
             <div class="feature-row">
               <a class="feature-card" href="#">
                 <div class="feature-card__icon-wrap">
-                  <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/f77bc642e54cf1e0c9e2b6d1c4d41f16.png" alt="" />
+                  <img src="assets/mastergo/f77bc642e54cf1e0c9e2b6d1c4d41f16.png" alt="" />
                 </div>
                 <div class="feature-card__body">
                   <h3 class="feature-card__title">AI智能问答</h3>
@@ -126,7 +155,7 @@
               </a>
               <a class="feature-card" href="#">
                 <div class="feature-card__icon-wrap">
-                  <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/69e5bc307da45a008817d57eb2ba7d9f.png" alt="" />
+                  <img src="assets/mastergo/69e5bc307da45a008817d57eb2ba7d9f.png" alt="" />
                 </div>
                 <div class="feature-card__body">
                   <h3 class="feature-card__title">定制学习计划</h3>
@@ -135,7 +164,7 @@
               </a>
               <a class="feature-card" href="#">
                 <div class="feature-card__icon-wrap">
-                  <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/22197524de2f4cde756a37317dd76da4.png" alt="" />
+                  <img src="assets/mastergo/22197524de2f4cde756a37317dd76da4.png" alt="" />
                 </div>
                 <div class="feature-card__body">
                   <h3 class="feature-card__title">服务全程陪跑</h3>
@@ -184,7 +213,7 @@
             </div>
             <div class="course-grid">
               <a class="course-card" href="course.html">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
                   <div class="course-card__tags">
@@ -193,7 +222,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -202,7 +231,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
                   <div class="course-card__tags">
@@ -211,7 +240,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -220,7 +249,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">从零到一学会装饰算量软件建模【入门篇】</h3>
                   <div class="course-card__tags">
@@ -229,7 +258,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -238,7 +267,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/f02046bc849d7444fde8e18dacf05976.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">施工方如何积极应对结算审计</h3>
                   <div class="course-card__tags">
@@ -247,7 +276,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -265,7 +294,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -274,7 +303,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
                   <div class="course-card__tags">
@@ -283,7 +312,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -310,7 +339,7 @@
             </div>
             <div class="course-grid">
               <a class="course-card" href="course.html">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">建筑施工组织（2020年10月版）</h3>
                   <div class="course-card__tags">
@@ -319,7 +348,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -328,7 +357,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">土建GTJ2025新版本功能讲解合辑</h3>
                   <div class="course-card__tags">
@@ -337,7 +366,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -346,7 +375,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/1a9bff42faf050fa1d02792ab9b1e527.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">从零到一学会装饰算量软件建模【入门篇】</h3>
                   <div class="course-card__tags">
@@ -355,7 +384,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -364,7 +393,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/f02046bc849d7444fde8e18dacf05976.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">施工方如何积极应对结算审计</h3>
                   <div class="course-card__tags">
@@ -373,7 +402,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -391,7 +420,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -400,7 +429,7 @@
                 </div>
               </a>
               <a class="course-card" href="#">
-                <div class="course-card__cover" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')"></div>
+                <div class="course-card__cover" style="background-image:url('assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png')"></div>
                 <div class="course-card__body">
                   <h3 class="course-card__title">【施工】指标神器案例实操应用</h3>
                   <div class="course-card__tags">
@@ -409,7 +438,7 @@
                     <span class="tag">实用技能</span>
                   </div>
                   <div class="course-card__author">
-                    <img class="course-card__avatar" src="https://image-resource.mastergo.com/94527030903501/94527030903503/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
+                    <img class="course-card__avatar" src="assets/mastergo/b5fe4b850bc05bf60540b7a39a7a30dc.png" width="24" height="24" alt="" />
                     <span class="course-card__teacher">郭红领</span>
                     <span class="course-card__divider" aria-hidden="true"></span>
                     <span class="course-card__duration">共<span>2h34m</span></span>
@@ -420,7 +449,7 @@
               </a>
             </div>
             <div class="section-more">
-              <button type="button" class="btn-ghost">查看更多</button>
+              <a class="btn-ghost" href="cert-courses.html">查看更多</a>
             </div>
           </section>
 
@@ -473,6 +502,200 @@
 
         <!-- 右侧栏 -->
         <aside class="side-column">
+          <section
+            class="member-lt"
+            data-state="idle"
+            data-member-lt-main
+            data-member-lt-required-days="7"
+            aria-labelledby="member-lt-heading"
+          >
+            <!-- 未开始 -->
+            <div class="member-lt__panel member-lt__panel--idle">
+              <div class="member-lt__ambient" aria-hidden="true">
+                <span class="member-lt__ambient-orb member-lt__ambient-orb--1"></span>
+                <span class="member-lt__ambient-orb member-lt__ambient-orb--2"></span>
+              </div>
+              <div class="member-lt__inner">
+                <div class="member-lt__head">
+                  <div class="member-lt__head-main">
+                    <span class="member-lt__mark-wrap">
+                      <img class="member-lt__mark" src="assets/learn-task-icon.png" width="32" height="32" alt="" />
+                    </span>
+                    <h2 class="member-lt__title" id="member-lt-heading">
+                      和阿瓜一起 <em>7 天</em> 完成挑战
+                    </h2>
+                  </div>
+                </div>
+                <p class="member-lt__intro">
+                  每天学习任意课程 <b>10</b> 分钟，一个月内完成<b>7</b>天即可领取阿瓜限量周边
+                </p>
+                <div class="member-lt__week" aria-label="学习进度">
+                  <div class="member-lt__week-head">
+                    <p class="member-lt__week-label">学习进度</p>
+                    <span class="member-lt__week-summary"><b>0</b> / <b>7</b> 天</span>
+                  </div>
+                  <div
+                    class="member-lt__week-progress"
+                    role="progressbar"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="7"
+                    aria-label="本周完成天数"
+                  >
+                    <span class="member-lt__week-progress-fill" style="width:0%"></span>
+                  </div>
+                  <div class="member-lt__days">
+                    <span class="member-lt__day" aria-label="Day 1">D1</span>
+                    <span class="member-lt__day" aria-label="Day 2">D2</span>
+                    <span class="member-lt__day" aria-label="Day 3">D3</span>
+                    <span class="member-lt__day" aria-label="Day 4">D4</span>
+                    <span class="member-lt__day" aria-label="Day 5">D5</span>
+                    <span class="member-lt__day" aria-label="Day 6">D6</span>
+                    <span class="member-lt__day" aria-label="Day 7">D7</span>
+                  </div>
+                </div>
+                <button type="button" class="member-lt__cta" data-learn-task-start-open>
+                  开始任务
+                  <span class="member-lt__cta-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 进行中 -->
+            <div class="member-lt__panel member-lt__panel--active">
+              <div class="member-lt__ambient" aria-hidden="true">
+                <span class="member-lt__ambient-orb member-lt__ambient-orb--1"></span>
+                <span class="member-lt__ambient-orb member-lt__ambient-orb--2"></span>
+              </div>
+              <div class="member-lt__inner">
+                <div class="member-lt__head">
+                  <div class="member-lt__head-main">
+                    <span class="member-lt__mark-wrap">
+                      <img class="member-lt__mark" src="assets/learn-task-icon.png" width="32" height="32" alt="" />
+                    </span>
+                    <h2 class="member-lt__title"><em>7 天</em>学习任务</h2>
+                  </div>
+                </div>
+                <div class="member-lt__week" aria-label="学习进度">
+                  <div class="member-lt__expiry-banner" data-member-lt-expiry-alert hidden role="status">
+                    <p class="learn-task__expiry-banner-text">
+                      <span class="learn-task__expiry-banner-prefix">
+                        活动到期提醒，
+                      </span>
+                      <span class="learn-task__expiry-banner-main">
+                        活动将于 <em data-member-lt-expiry-date>8 月 20 日</em>到期，还差
+                        <em data-member-lt-expiry-remain>4</em> 天任务
+                      </span>
+                    </p>
+                  </div>
+                  <div class="member-lt__week-head">
+                    <p class="member-lt__week-label">学习进度</p>
+                    <span class="member-lt__week-summary"><b>3</b> / <b>7</b> 天</span>
+                  </div>
+                  <div
+                    class="member-lt__week-progress"
+                    role="progressbar"
+                    aria-valuenow="3"
+                    aria-valuemin="0"
+                    aria-valuemax="7"
+                    aria-label="本周完成天数"
+                  >
+                    <span class="member-lt__week-progress-fill" style="width:42.86%"></span>
+                  </div>
+                  <div class="member-lt__days">
+                    <span class="member-lt__day is-done" aria-label="Day 1">D1</span>
+                    <span class="member-lt__day is-done" aria-label="Day 2">D2</span>
+                    <span class="member-lt__day is-current" aria-current="step" aria-label="Day 3">D3</span>
+                    <span class="member-lt__day" aria-label="Day 4">D4</span>
+                    <span class="member-lt__day" aria-label="Day 5">D5</span>
+                    <span class="member-lt__day" aria-label="Day 6">D6</span>
+                    <span class="member-lt__day" aria-label="Day 7">D7</span>
+                  </div>
+                </div>
+                <div class="member-lt__daily">
+                  <div class="member-lt__daily-head">
+                    <span class="member-lt__daily-label">今日学习目标</span>
+                    <span class="member-lt__daily-time"><b>0</b> / <b>10</b> 分钟</span>
+                  </div>
+                  <div
+                    class="member-lt__daily-bar"
+                    role="progressbar"
+                    aria-valuenow="0"
+                    aria-valuemin="0"
+                    aria-valuemax="10"
+                    aria-label="今日学习时长"
+                  >
+                    <span class="member-lt__daily-fill" style="width:0%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="member-lt member-lt--completed" data-state="completed" aria-label="7 天学习任务已完成">
+            <div class="member-lt__panel member-lt__panel--completed">
+              <div class="member-lt__celebrate" aria-hidden="true">
+                <span class="member-lt__spark member-lt__spark--1"></span>
+                <span class="member-lt__spark member-lt__spark--2"></span>
+                <span class="member-lt__spark member-lt__spark--3"></span>
+              </div>
+              <div class="member-lt__inner">
+                <div class="member-lt__success">
+                  <div class="member-lt__success-hero">
+                    <span class="member-lt__mark-wrap member-lt__mark-wrap--complete">
+                      <img
+                          class="member-lt__mark member-lt__mark--complete"
+                          src="assets/learn-task-complete.png"
+                          width="52"
+                          height="52"
+                          alt=""
+                        />
+                    </span>
+                    <div class="member-lt__success-copy">
+                      <h2 class="member-lt__success-title">挑战完成！</h2>
+                      <p class="member-lt__success-desc">
+                        你坚持完成了全部挑战，扫码添加<strong>阿瓜</strong>领取限量周边
+                      </p>
+                    </div>
+                  </div>
+                  <div class="member-lt__stats">
+                    <span class="member-lt__stat">累计 <b>120</b> min</span>
+                    <span class="member-lt__stat">连续 <b>7</b> 天</span>
+                  </div>
+                </div>
+                <div class="member-lt__week member-lt__week--success" aria-label="学习进度">
+                  <div class="member-lt__week-head">
+                    <p class="member-lt__week-label">学习进度</p>
+                    <span class="member-lt__week-summary member-lt__week-summary--success"><b>7</b> / <b>7</b> 天</span>
+                  </div>
+                  <div class="member-lt__days">
+                    <span class="member-lt__day is-done" aria-label="Day 1">D1</span>
+                    <span class="member-lt__day is-done" aria-label="Day 2">D2</span>
+                    <span class="member-lt__day is-done" aria-label="Day 3">D3</span>
+                    <span class="member-lt__day is-done" aria-label="Day 4">D4</span>
+                    <span class="member-lt__day is-done" aria-label="Day 5">D5</span>
+                    <span class="member-lt__day is-done" aria-label="Day 6">D6</span>
+                    <span class="member-lt__day is-done is-current" aria-current="step" aria-label="Day 7">D7</span>
+                  </div>
+                </div>
+                <button type="button" class="member-lt__cta member-lt__cta--reward" data-learn-task-reward-open>
+                  <span class="member-lt__cta-gift" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" fill="currentColor" fill-opacity="0.16"/>
+                      <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+                      <path d="M9 7.75v8.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                      <path d="M3.5 10.75h11" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                      <path d="M9 7.75c-1.45-2.15-3.55-2.45-3.55-1.05 0 .95 1.15 1.35 3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 7.75c1.45-2.15 3.55-2.45 3.55-1.05 0 .95-1.15 1.35-3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 7.75V6.1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  领取任务奖励
+                </button>
+              </div>
+            </div>
+          </section>
+
           <a class="ad-card ad-card--promo" href="#" aria-label="学习季 · 推荐课程优化升级">
             <img
               class="ad-card__banner"
@@ -490,7 +713,7 @@
             </div>
             <img
               class="ad-card__qr"
-              src="https://image-resource.mastergo.com/72061466992156/149588298644015/b4c92171cedef4933d7cb5fe36c1b0d4.png"
+              src="assets/mastergo/b4c92171cedef4933d7cb5fe36c1b0d4.png"
               alt="二维码"
             />
           </section>
@@ -505,19 +728,120 @@
                 alt="学习时长排行榜"
               />
             </h2>
-            <p class="rank-card__meta">共15人参与 · 我第14名 · 328小时</p>
             <ol class="rank-list">
-              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-1)">01</span><span class="rank-item__name">李希希</span><span class="rank-item__value">328小时</span></li>
-              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-2)">02</span><span class="rank-item__name">王大宝</span><span class="rank-item__value">328小时</span></li>
-              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-3)">03</span><span class="rank-item__name">李虹猫</span><span class="rank-item__value">328小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">04</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">05</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">06</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">07</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">08</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">09</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">10</span><span class="rank-item__name">刘晓梅</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">01</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-01.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">李希希</span>
+                </span>
+                <span class="rank-item__value">328小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">02</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-02.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">王大宝</span>
+                </span>
+                <span class="rank-item__value">328小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">03</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-03.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">李虹猫</span>
+                </span>
+                <span class="rank-item__value">328小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">04</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-04.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">05</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-05.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">06</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-06.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">07</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-07.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">08</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-08.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">09</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-09.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">10</span>
+                    <img class="rank-item__avatar" src="assets/rank-avatar-10.png" width="40" height="40" alt="" />
+                  </span>
+                  <span class="rank-item__name">刘晓梅</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
             </ol>
+            <p class="rank-card__meta">共15人参与</p>
+            <div class="rank-card__me">
+              <img
+                class="rank-card__me-avatar"
+                src="assets/login-avatar.png"
+                width="40"
+                height="40"
+                alt=""
+              />
+              <span class="rank-card__me-rank">我第14名</span>
+              <span class="rank-card__me-hours">328小时</span>
+            </div>
           </section>
 
           <section class="rank-card rank-card--cool">
@@ -531,16 +855,96 @@
               />
             </h2>
             <ol class="rank-list">
-              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-1)">01</span><span class="rank-item__name">北京城**设集团</span><span class="rank-item__value">22328小时</span></li>
-              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-2)">02</span><span class="rank-item__name">上海建**程公司</span><span class="rank-item__value">328小时</span></li>
-              <li class="rank-item"><span class="rank-item__index" style="color:var(--color-rank-3)">03</span><span class="rank-item__name">广州中**筑集团</span><span class="rank-item__value">328小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">04</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">05</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">06</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">07</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">08</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">09</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
-              <li class="rank-item"><span class="rank-item__index">10</span><span class="rank-item__name">深圳华**计院</span><span class="rank-item__value">120小时</span></li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">01</span>
+                  </span>
+                  <span class="rank-item__name">北京城**设集团</span>
+                </span>
+                <span class="rank-item__value">22328小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">02</span>
+                  </span>
+                  <span class="rank-item__name">上海建**程公司</span>
+                </span>
+                <span class="rank-item__value">328小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">03</span>
+                  </span>
+                  <span class="rank-item__name">广州中**筑集团</span>
+                </span>
+                <span class="rank-item__value">328小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">04</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">05</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">06</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">07</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">08</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">09</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
+              <li class="rank-item">
+                <span class="rank-item__main">
+                  <span class="rank-item__lead">
+                    <span class="rank-item__index">10</span>
+                  </span>
+                  <span class="rank-item__name">深圳华**计院</span>
+                </span>
+                <span class="rank-item__value">120小时</span>
+              </li>
             </ol>
           </section>
 
@@ -549,14 +953,14 @@
               <h2 class="hot-course-card__title" id="hot-course-title">热门课程推荐</h2>
               <div class="hot-course-card__list">
                 <a class="hot-course-item" href="#">
-                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png" width="110" height="62" alt="" />
+                  <img class="hot-course-item__cover" src="assets/mastergo/9c282ac101433b20561df1a225700d46.png" width="110" height="62" alt="" />
                   <span class="hot-course-item__body">
                     <span class="hot-course-item__name">土建GTJ2025新版本功能讲解合辑</span>
                     <span class="hot-course-item__meta">23人学过</span>
                   </span>
                 </a>
                 <a class="hot-course-item" href="course.html">
-                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png" width="110" height="62" alt="" />
+                  <img class="hot-course-item__cover" src="assets/mastergo/8e22f52296613490c0de02cdd449cce6.png" width="110" height="62" alt="" />
                   <span class="hot-course-item__body">
                     <span class="hot-course-item__name">建筑施工组织（2020年10月版）</span>
                     <span class="hot-course-item__meta">18人学过</span>
@@ -570,21 +974,21 @@
                   </span>
                 </a>
                 <a class="hot-course-item" href="#">
-                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/1a9bff42faf050fa1d02792ab9b1e527.png" width="110" height="62" alt="" />
+                  <img class="hot-course-item__cover" src="assets/mastergo/1a9bff42faf050fa1d02792ab9b1e527.png" width="110" height="62" alt="" />
                   <span class="hot-course-item__body">
                     <span class="hot-course-item__name">从零到一学会装饰算量软件建模</span>
                     <span class="hot-course-item__meta">12人学过</span>
                   </span>
                 </a>
                 <a class="hot-course-item" href="#">
-                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/f02046bc849d7444fde8e18dacf05976.png" width="110" height="62" alt="" />
+                  <img class="hot-course-item__cover" src="assets/mastergo/f02046bc849d7444fde8e18dacf05976.png" width="110" height="62" alt="" />
                   <span class="hot-course-item__body">
                     <span class="hot-course-item__name">施工方如何积极应对结算审计</span>
                     <span class="hot-course-item__meta">10人学过</span>
                   </span>
                 </a>
                 <a class="hot-course-item" href="#">
-                  <img class="hot-course-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png" width="110" height="62" alt="" />
+                  <img class="hot-course-item__cover" src="assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png" width="110" height="62" alt="" />
                   <span class="hot-course-item__body">
                     <span class="hot-course-item__name">【施工】指标神器案例实操应用</span>
                     <span class="hot-course-item__meta">8人学过</span>
@@ -603,7 +1007,7 @@
       <button type="button" class="float-rail__btn">反馈</button>
     </div>
     <div class="ai-fab">
-      <img src="https://image-resource.mastergo.com/72061466992156/149588298644015/c4ee3893e7951bb56c0190c326fcfb7d.png" width="48" height="48" alt="" />
+      <img src="assets/mastergo/c4ee3893e7951bb56c0190c326fcfb7d.png" width="48" height="48" alt="" />
       <span class="ai-fab__label">AI学习助手</span>
     </div>
 
@@ -624,7 +1028,7 @@
         <div class="footer-bottom">
           <div class="footer-brand__logos">
             <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
-            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
           </div>
           <p class="footer-brand__copy">
             广联达教育GLodon Education www.glodonedu.com<br />
@@ -633,6 +1037,114 @@
         </div>
       </div>
     </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="learn-task-start-modal" id="learn-task-start-modal" hidden>
+      <div class="learn-task-start-modal__mask" data-learn-task-start-close></div>
+      <div
+        class="learn-task-start-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="learn-task-start-modal-title"
+      >
+        <button type="button" class="learn-task-start-modal__close" data-learn-task-start-close aria-label="关闭">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="learn-task-start-modal__hero" aria-hidden="true">
+          <img
+            class="learn-task-start-modal__cat"
+            src="assets/learn-task-start-cat.png"
+            width="96"
+            height="128"
+            alt=""
+          />
+        </div>
+        <div class="learn-task-start-modal__body">
+          <h2 class="learn-task-start-modal__title" id="learn-task-start-modal-title">开始你的 <b>7</b> 天学习任务</h2>
+          <p class="learn-task-start-modal__desc">
+            您可以选择任意一门有权益的课程开始学习，每天学习 <b>10</b> 分钟即可完成当日任务
+          </p>
+        </div>
+        <div class="learn-task-start-modal__actions">
+          <button type="button" class="learn-task-start-modal__btn learn-task-start-modal__btn--ghost" data-learn-task-start-close>
+            我再看看
+          </button>
+          <button type="button" class="learn-task-start-modal__btn learn-task-start-modal__btn--primary" data-learn-task-start-go>
+            去学习
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="learn-task-reward-modal" id="learn-task-reward-modal" hidden>
+      <div class="learn-task-reward-modal__mask" data-learn-task-reward-close></div>
+      <div
+        class="learn-task-reward-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="learn-task-reward-modal-title"
+      >
+        <div class="learn-task-reward-modal__head">
+          <h2 class="learn-task-reward-modal__title" id="learn-task-reward-modal-title">
+            <span class="learn-task-reward-modal__title-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" fill="currentColor" fill-opacity="0.18"/>
+                <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+                <path d="M9 7.75v8.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                <path d="M3.5 10.75h11" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                <path d="M9 7.75c-1.45-2.15-3.55-2.45-3.55-1.05 0 .95 1.15 1.35 3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 7.75c1.45-2.15 3.55-2.45 3.55-1.05 0 .95-1.15 1.35-3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 7.75V6.1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+              </svg>
+            </span>
+            领取任务奖励
+          </h2>
+          <button type="button" class="learn-task-reward-modal__close" data-learn-task-reward-close aria-label="关闭">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="learn-task-reward-modal__body">
+          <div class="learn-task-reward-modal__qr-shell">
+            <div class="learn-task-reward-modal__qr-wrap">
+              <img
+                class="learn-task-reward-modal__qr"
+                src="assets/mastergo/b4c92171cedef4933d7cb5fe36c1b0d4.png"
+                width="200"
+                height="200"
+                alt="阿瓜企业微信二维码"
+              />
+            </div>
+          </div>
+          <div class="learn-task-reward-modal__copy">
+            <p class="learn-task-reward-modal__desc">微信扫一扫 · 添加阿瓜企业微信号</p>
+            <p class="learn-task-reward-modal__tip">
+              添加后回复<em class="learn-task-reward-modal__keyword">「学习达人」</em>领取你的专属礼品
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script>
     document.querySelectorAll("[data-filter-group]").forEach((group) => {
@@ -666,5 +1178,9 @@
       });
     });
   </script>
+  <script src="js/learn-task-start-modal.js?v=2" defer></script>
+  <script src="js/learn-task-reward-modal.js?v=1" defer></script>
+  <script src="js/member-learn-task.js?v=7" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

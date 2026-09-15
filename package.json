@@ -1,0 +1,15 @@
+{
+  "name": "member-zone",
+  "private": true,
+  "description": "建筑云课静态多页站点（Cloudflare Pages）",
+  "scripts": {
+    "shell": "python3 scripts/apply-shell.py",
+    "shell:check": "python3 scripts/apply-shell.py --check",
+    "css:split": "python3 scripts/build-css.py --split",
+    "css": "python3 scripts/build-css.py",
+    "css:check": "python3 scripts/build-css.py --check",
+    "localize": "./localize-mastergo-images.sh",
+    "build": "npm run shell && npm run css && npm run localize",
+    "deploy": "./deploy-cloudflare.sh"
+  }
+}

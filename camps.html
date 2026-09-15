@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>训练营 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--camps">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-logo" href="index.html" aria-label="建筑云课">
+          <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
+        </a>
+        <nav class="nav-list" aria-label="主导航">
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link" href="member.html" data-nav="member">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main main--camps">
+      <div class="page-inner">
+        <div data-camp-offer-list></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-friends">
+          <span class="footer-friends__label">友情链接</span>
+          <nav class="footer-friends__links" aria-label="友情链接">
+            <a href="#">广联达</a>
+            <a href="#">数字高校</a>
+            <a href="#">斑马进度</a>
+            <a href="#">中国数字建筑峰会</a>
+            <a href="#">中国建筑峰会</a>
+          </nav>
+        </div>
+        <hr class="footer-divider" />
+        <div class="footer-bottom">
+          <div class="footer-brand__logos">
+            <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+          </div>
+          <p class="footer-brand__copy">
+            广联达教育GLodon Education www.glodonedu.com<br />
+            Glodon 1998-2020 广联达科技股份有限公司 京ICP备10021606号-13 京公网安备11010802021391号
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.CAMP_OFFER_SECTIONS = [
+      {
+        id: "install",
+        title: "安装",
+        cards: [
+          {
+            title: "安装造价实战训练营——从入门到提升",
+            cover: "assets/course-pack-cover.png",
+            href: "course-pack.html",
+            buyHref: "order-pack.html",
+            region: "全国",
+            form: "录播",
+            level: "初阶/中阶学习",
+            validity: "730天",
+            duration: "181小时 3分钟",
+            price: "1699.00",
+            origin: "3299.00"
+          }
+        ]
+      },
+      {
+        id: "advanced",
+        title: "进阶",
+        cards: [
+          {
+            title: "土建造价进阶训练营——从入门到提升",
+            cover: "assets/mastergo/8e22f52296613490c0de02cdd449cce6.png",
+            href: "course-pack.html",
+            buyHref: "order-pack.html",
+            region: "全国",
+            form: "录播",
+            level: "初阶/中阶学习",
+            validity: "730天",
+            duration: "181小时 3分钟",
+            price: "1699.00",
+            origin: "3299.00"
+          }
+        ]
+      },
+      {
+        id: "exam",
+        title: "考证",
+        cards: [
+          {
+            title: "二级建造师全科通关营——系统备考不过退费",
+            cover: "assets/mastergo/e962723d970aceb5b867523ac72aae77.png",
+            href: "course-pack.html",
+            buyHref: "order-pack.html",
+            region: "全国",
+            form: "直播+录播",
+            level: "中阶学习",
+            validity: "365天",
+            duration: "120小时",
+            price: "890.00",
+            origin: "1850.00"
+          }
+        ]
+      }
+    ];
+  </script>
+  <script src="js/components/camp-offer-cards.js" defer></script>
+  <script src="js/course-countdown.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>

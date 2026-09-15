@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>模考作答 - 建筑云课</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page page--ai-exam-take">
+    <header class="ai-exam-take-header" data-ai-exam-take-toolbar>
+      <a class="ai-exam-take-header__back" href="ai-exam.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M10 3.5 5.5 8 10 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        返回模考大赛
+      </a>
+      <div class="ai-exam-take-header__main">
+        <div class="ai-exam-take-header__title-row">
+          <h1 class="ai-exam-take-header__title" data-ai-exam-take-title>模考作答</h1>
+          <span class="ai-exam-take-attempt" data-ai-exam-take-attempt hidden>第 1 次模考</span>
+        </div>
+        <p class="ai-exam-take-header__meta" data-ai-exam-take-meta>60单选+20多选 · 150分钟</p>
+      </div>
+      <div class="ai-exam-take-header__timer-block" data-ai-exam-take-timer hidden>
+        <div class="ai-exam-take-header__timer" aria-live="polite">
+          <span class="ai-exam-take-header__timer-label" data-ai-exam-timer-label>剩余</span>
+          <span class="ai-exam-take-header__timer-value" data-ai-exam-take-timer-value>02:30:00</span>
+        </div>
+        <p class="ai-exam-take-header__timer-hint">限时150分钟（暂停与离开不计时）</p>
+      </div>
+      <div class="ai-exam-take-header__actions" data-ai-exam-take-actions hidden>
+        <button type="button" class="btn btn--ghost" data-ai-exam-action="toggle-pause" data-ai-exam-pause-btn aria-pressed="false">暂停</button>
+        <button type="button" class="btn btn--ghost" data-ai-exam-action="save">保存并离开</button>
+        <button type="button" class="btn btn--primary" data-ai-exam-action="submit">交卷</button>
+      </div>
+    </header>
+
+    <main class="ai-exam-take-main">
+      <div class="ai-exam-take-layout" data-ai-exam-take-layout>
+        <section class="ai-exam-take-panel ai-exam-take-panel--exam">
+          <header class="ai-exam-take-panel__head ai-exam-take-panel__head--exam">
+            <h2 class="ai-exam-take-panel__title">
+              第 <span data-ai-exam-take-current>1</span> 题
+              <span class="ai-exam-take-panel__type" data-ai-exam-take-qtype>单选题</span>
+            </h2>
+          </header>
+          <div class="ai-exam-take-panel__body">
+            <article class="ai-exam-take-question">
+              <p class="ai-exam-take-question__stem" data-ai-exam-take-stem>
+                某建设项目总投资包含工程费用、工程建设其他费用与预备费。下列费用中，应计入工程建设其他费用的是（ ）。
+              </p>
+              <ul class="ai-exam-take-options" data-ai-exam-take-options>
+                <li class="ai-exam-take-option is-selected" data-option="A">
+                  <span class="ai-exam-take-option__key">A</span>
+                  <p class="ai-exam-take-option__text">建设单位管理费</p>
+                </li>
+                <li class="ai-exam-take-option" data-option="B">
+                  <span class="ai-exam-take-option__key">B</span>
+                  <p class="ai-exam-take-option__text">建筑安装工程费</p>
+                </li>
+                <li class="ai-exam-take-option" data-option="C">
+                  <span class="ai-exam-take-option__key">C</span>
+                  <p class="ai-exam-take-option__text">基本预备费</p>
+                </li>
+                <li class="ai-exam-take-option" data-option="D">
+                  <span class="ai-exam-take-option__key">D</span>
+                  <p class="ai-exam-take-option__text">涨价预备费</p>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <footer class="ai-exam-take-panel__foot">
+            <button type="button" class="btn btn--ghost" data-ai-exam-nav="prev" disabled>上一题</button>
+            <button type="button" class="btn btn--primary" data-ai-exam-nav="next">下一题</button>
+          </footer>
+        </section>
+
+        <aside class="ai-exam-take-sidebar" aria-label="答题卡">
+          <header class="ai-exam-take-sidebar__head">
+            <h2 class="ai-exam-take-sidebar__title">答题卡</h2>
+            <p class="ai-exam-take-sidebar__stat">已答 <b data-ai-exam-sidebar-done>1</b> / 80</p>
+          </header>
+          <div class="ai-exam-take-sidebar__body">
+            <section class="ai-exam-take-sidebar__section">
+              <h3 class="ai-exam-take-sidebar__section-title">
+                单选题
+                <span>1–60</span>
+              </h3>
+              <div class="ai-exam-take-sheet ai-exam-take-sheet--compact" data-ai-exam-sheet-single aria-label="单选题号"></div>
+            </section>
+            <section class="ai-exam-take-sidebar__section">
+              <h3 class="ai-exam-take-sidebar__section-title">
+                多选题
+                <span>61–80</span>
+              </h3>
+              <div class="ai-exam-take-sheet ai-exam-take-sheet--compact" data-ai-exam-sheet-multi aria-label="多选题号"></div>
+            </section>
+          </div>
+          <p class="ai-exam-take-sidebar__note">点击题号可快速跳转；交卷后生成 AI 报告并计入排行榜。</p>
+        </aside>
+      </div>
+
+      <section class="ai-exam-take-panel ai-exam-take-panel--standalone" data-ai-exam-take-view="sheet" hidden>
+        <header class="ai-exam-take-panel__head ai-exam-take-panel__head--sheet">
+          <div>
+            <p class="ai-exam-take-panel__label">答题卡</p>
+            <h2 class="ai-exam-take-panel__title">用户作答记录</h2>
+            <p class="ai-exam-take-sheet-summary" data-ai-exam-sheet-summary>
+              土建计量 · 最近一次交卷 · 得分 83 分 · 抽检 5 题作答记录（完整 80 题见 AI 报告）
+            </p>
+          </div>
+        </header>
+        <div class="ai-exam-take-panel__body">
+          <ul class="ai-exam-take-record__list" data-ai-exam-sheet-records></ul>
+          <p class="ai-exam-take-note">以上为抽检题目作答记录</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="ai-exam-submit-confirm" id="ai-exam-submit-confirm" hidden>
+    <div class="ai-exam-submit-confirm__mask" data-ai-exam-submit-confirm-cancel></div>
+    <div
+      class="ai-exam-submit-confirm__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="ai-exam-submit-confirm-title"
+    >
+      <h2 class="ai-exam-submit-confirm__title" id="ai-exam-submit-confirm-title">确认交卷</h2>
+      <p class="ai-exam-submit-confirm__desc">交卷后将无法继续作答，确定要交卷吗？</p>
+      <p class="ai-exam-submit-confirm__stat" data-ai-exam-submit-confirm-stat hidden></p>
+      <div class="ai-exam-submit-confirm__actions">
+        <button type="button" class="btn btn--ghost" data-ai-exam-submit-confirm-cancel>取消</button>
+        <button type="button" class="btn btn--primary" data-ai-exam-submit-confirm-ok>确认交卷</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/ai-exam-take.js" defer></script>
+</body>
+</html>

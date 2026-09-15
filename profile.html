@@ -14,20 +14,33 @@
           <img src="assets/jianzhuyunke-logo-slogan.png" width="145" height="34" alt="建筑云课 · 行业终身学习平台" />
         </a>
         <nav class="nav-list" aria-label="主导航">
-          <a class="nav-list__link" href="index.html">首页</a>
-          <a class="nav-list__link" href="#">题库</a>
-          <a class="nav-list__link" href="#">交流社区</a>
-          <a class="nav-list__link" href="cert.html">职业考证</a>
-          <a class="nav-list__link" href="member.html">会员专区</a>
-          <a class="nav-list__link" href="#">下载专区</a>
-          <a class="nav-list__link" href="#">生态合作</a>
-          <a class="nav-list__link" href="#">企业版</a>
+          <a class="nav-list__link" href="index.html" data-nav="home">首页</a>
+          <a class="nav-list__link" href="#" data-nav="exam">题库</a>
+          <a class="nav-list__link" href="#" data-nav="community">交流社区</a>
+          <a class="nav-list__link" href="cert.html" data-nav="cert">职业考证</a>
+          <a class="nav-list__link" href="member.html" data-nav="member">会员专区</a>
+          <a class="nav-list__link" href="#" data-nav="download">下载专区</a>
+          <a class="nav-list__link" href="#" data-nav="eco">生态合作</a>
+          <a class="nav-list__link" href="competition-zone.html" data-nav="enterprise">赛事专区</a>
+          <a class="nav-list__link" href="ai-exam.html" data-nav="ai-exam">AI模考大赛</a>
         </nav>
         <div class="header-actions">
           <div class="search-field" role="search">搜索课程<span class="search-field__ai">AI</span></div>
-          <a class="profile-header-avatar" href="profile.html" aria-label="个人中心">
-            <img src="https://image-resource.mastergo.com/94527030903502/134301271742364/28c7416fdd4c7cc86d1201ca8a05fde5.jpg" width="40" height="40" alt="" />
-          </a>
+          <div class="header-user-menu">
+            <button
+              type="button"
+              class="header-user-menu__trigger profile-header-avatar"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="header-user-menu-panel"
+              aria-label="用户菜单"
+            >
+              <img src="assets/login-avatar.png" width="40" height="40" alt="" />
+            </button>
+            <div class="header-user-menu__panel" id="header-user-menu-panel" role="menu" hidden>
+              <a class="header-user-menu__item" href="profile.html" role="menuitem">个人中心</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -35,7 +48,7 @@
     <div class="profile-banner" aria-hidden="true">
       <div
         class="profile-banner__img"
-        style="background-image:url('https://image-resource.mastergo.com/94527030903502/134301271742364/aee9ea18d04fc87c4ed729ee9aa22dc6.jpg')"
+        style="background-image:url('assets/mastergo/aee9ea18d04fc87c4ed729ee9aa22dc6.jpg')"
       ></div>
       <div class="profile-banner__mask"></div>
     </div>
@@ -47,13 +60,13 @@
             <div class="profile-panel__avatar-wrap">
               <img
                 class="profile-panel__avatar"
-                src="https://image-resource.mastergo.com/94527030903502/134301271742364/28c7416fdd4c7cc86d1201ca8a05fde5.jpg"
+                src="assets/login-avatar.png"
                 width="80"
                 height="80"
                 alt=""
               />
             </div>
-            <h1 class="profile-panel__name" id="profile-name">天行者7821</h1>
+            <h1 class="profile-panel__name" id="profile-name">寿寿核桃瓜子</h1>
             <ul class="profile-panel__stats">
               <li>
                 <span class="profile-panel__stat-label">今日学习时长</span>
@@ -68,6 +81,277 @@
                 <span class="profile-panel__stat-value"><b>29</b>h</span>
               </li>
             </ul>
+          </section>
+
+          <section
+            class="learn-task"
+            data-state="idle"
+            data-learn-task-main
+            data-learn-task-required-days="7"
+            aria-labelledby="learn-task-heading"
+          >
+            <!-- 未开始：图1 内容，现有左右布局 -->
+            <div class="learn-task__panel learn-task__panel--idle">
+              <div class="learn-task__ambient" aria-hidden="true">
+                <span class="learn-task__ambient-orb learn-task__ambient-orb--1"></span>
+                <span class="learn-task__ambient-orb learn-task__ambient-orb--2"></span>
+              </div>
+              <div class="learn-task__inner">
+                <div class="learn-task__left learn-task__left--idle">
+                  <div class="learn-task__idle-illu-wrap" aria-hidden="true">
+                    <div class="learn-task__idle-illu-deco">
+                      <span class="learn-task__idle-halo"></span>
+                      <span class="learn-task__idle-glow"></span>
+                      <span class="learn-task__idle-glow learn-task__idle-glow--core"></span>
+                      <span class="learn-task__idle-rays"></span>
+                      <span class="learn-task__idle-ring"></span>
+                      <span class="learn-task__idle-pedestal"></span>
+                      <span class="learn-task__idle-spark learn-task__idle-spark--1"></span>
+                      <span class="learn-task__idle-spark learn-task__idle-spark--2"></span>
+                      <span class="learn-task__idle-dot learn-task__idle-dot--1"></span>
+                      <span class="learn-task__idle-dot learn-task__idle-dot--2"></span>
+                      <span class="learn-task__idle-dot learn-task__idle-dot--3"></span>
+                    </div>
+                    <div class="learn-task__idle-illu-figure">
+                      <img
+                        class="learn-task__idle-illu"
+                        src="assets/learn-task-start-cat.png"
+                        width="120"
+                        height="157"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="learn-task__idle-copy">
+                    <h2 class="learn-task__title learn-task__title--idle" id="learn-task-heading">
+                      和阿瓜一起 <em>7 天</em> 完成挑战
+                    </h2>
+                    <p class="learn-task__idle-desc">
+                      每天学习任意课程 <b>10</b> 分钟，一个月内完成<b>7</b>天即可领取阿瓜限量周边
+                    </p>
+                    <div class="learn-task__idle-perks" aria-hidden="true">
+                      <span class="learn-task__idle-perk">每日 <b>10</b> 分钟</span>
+                      <span class="learn-task__idle-perk">限量周边</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="learn-task__right">
+                  <div class="learn-task__week" aria-label="学习进度">
+                    <div class="learn-task__week-head">
+                      <p class="learn-task__week-label">学习进度</p>
+                      <span class="learn-task__week-summary"><b>0</b> / <b>7</b> 天已完成</span>
+                    </div>
+                    <div
+                      class="learn-task__week-progress"
+                      role="progressbar"
+                      aria-valuenow="0"
+                      aria-valuemin="0"
+                      aria-valuemax="7"
+                      aria-label="本周完成天数"
+                    >
+                      <span class="learn-task__week-progress-fill" style="width:0%"></span>
+                    </div>
+                    <div class="learn-task__days">
+                      <span class="learn-task__day">Day1</span>
+                      <span class="learn-task__day">Day2</span>
+                      <span class="learn-task__day">Day3</span>
+                      <span class="learn-task__day">Day4</span>
+                      <span class="learn-task__day">Day5</span>
+                      <span class="learn-task__day">Day6</span>
+                      <span class="learn-task__day">Day7</span>
+                    </div>
+                  </div>
+                  <button type="button" class="learn-task__cta" data-learn-task-start-open>
+                    开始任务
+                    <span class="learn-task__cta-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 学习中：当前内容 -->
+            <div class="learn-task__panel learn-task__panel--active">
+              <div class="learn-task__ambient" aria-hidden="true">
+                <span class="learn-task__ambient-orb learn-task__ambient-orb--1"></span>
+                <span class="learn-task__ambient-orb learn-task__ambient-orb--2"></span>
+              </div>
+              <div class="learn-task__inner">
+                <div class="learn-task__head">
+                  <div class="learn-task__head-main">
+                    <span class="learn-task__mark-wrap">
+                      <img class="learn-task__mark" src="assets/learn-task-icon.png" width="38" height="38" alt="" />
+                    </span>
+                    <h2 class="learn-task__title"><em>7 天</em>学习任务</h2>
+                  </div>
+                </div>
+                <div class="learn-task__left">
+                  <div class="learn-task__course">
+                    <div class="learn-task__expiry-banner" data-learn-task-expiry-alert hidden role="status">
+                      <p class="learn-task__expiry-banner-text">
+                        <span class="learn-task__expiry-banner-prefix">
+                          活动到期提醒，
+                        </span>
+                        <span class="learn-task__expiry-banner-main">
+                          活动将于 <em data-learn-task-expiry-date>8 月 20 日</em>到期，还差
+                          <em data-learn-task-expiry-remain>4</em> 天任务
+                        </span>
+                      </p>
+                    </div>
+                    <a class="learn-task__course-title" href="course.html">《全过程造价成本管理》第 3 章 · 限额设计</a>
+                    <div class="learn-task__course-progress">
+                      <div class="learn-task__course-progress-head">
+                        <span class="learn-task__course-progress-label">已完成</span>
+                        <span class="learn-task__course-progress-text"><b>12</b> / <b>12</b> 节 · <em>100%</em></span>
+                      </div>
+                      <div
+                        class="learn-task__course-bar"
+                        role="progressbar"
+                        aria-valuenow="100"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-label="当前章节学习进度"
+                      >
+                        <span class="learn-task__course-fill" style="width:100%"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="learn-task__right">
+                  <div class="learn-task__week" aria-label="学习进度">
+                    <div class="learn-task__week-head">
+                      <p class="learn-task__week-label">学习进度</p>
+                      <span class="learn-task__week-summary"><b>3</b> / <b>7</b> 天已完成</span>
+                    </div>
+                    <div
+                      class="learn-task__week-progress"
+                      role="progressbar"
+                      aria-valuenow="3"
+                      aria-valuemin="0"
+                      aria-valuemax="7"
+                      aria-label="本周完成天数"
+                    >
+                      <span class="learn-task__week-progress-fill" style="width:42.86%"></span>
+                    </div>
+                    <div class="learn-task__days">
+                      <span class="learn-task__day is-done">Day1</span>
+                      <span class="learn-task__day is-done">Day2</span>
+                      <span class="learn-task__day is-current" aria-current="step">Day3</span>
+                      <span class="learn-task__day">Day4</span>
+                      <span class="learn-task__day">Day5</span>
+                      <span class="learn-task__day">Day6</span>
+                      <span class="learn-task__day">Day7</span>
+                    </div>
+                  </div>
+                  <div class="learn-task__daily">
+                    <div class="learn-task__daily-head">
+                      <span class="learn-task__daily-label">今日学习目标</span>
+                      <span class="learn-task__daily-time"><b>0</b> / <b>10</b> 分钟</span>
+                    </div>
+                    <div
+                      class="learn-task__daily-bar"
+                      role="progressbar"
+                      aria-valuenow="0"
+                      aria-valuemin="0"
+                      aria-valuemax="10"
+                      aria-label="今日学习时长"
+                    >
+                      <span class="learn-task__daily-fill" style="width:0%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="learn-task" data-state="completed" aria-label="7 天学习任务已完成">
+            <!-- 已完成：固定展示在默认态下方 -->
+            <div class="learn-task__panel learn-task__panel--completed">
+              <div class="learn-task__celebrate" aria-hidden="true">
+                <span class="learn-task__spark learn-task__spark--1"></span>
+                <span class="learn-task__spark learn-task__spark--2"></span>
+                <span class="learn-task__spark learn-task__spark--3"></span>
+                <span class="learn-task__spark learn-task__spark--4"></span>
+              </div>
+              <div class="learn-task__inner">
+                <div class="learn-task__left learn-task__left--completed">
+                  <div class="learn-task__complete-illu-wrap" aria-hidden="true">
+                    <div class="learn-task__complete-illu-deco">
+                      <span class="learn-task__complete-halo"></span>
+                      <span class="learn-task__complete-glow"></span>
+                      <span class="learn-task__complete-glow learn-task__complete-glow--core"></span>
+                      <span class="learn-task__complete-rays"></span>
+                      <span class="learn-task__complete-ring"></span>
+                      <span class="learn-task__complete-ring learn-task__complete-ring--inner"></span>
+                      <span class="learn-task__complete-pedestal"></span>
+                      <span class="learn-task__complete-flare learn-task__complete-flare--1"></span>
+                      <span class="learn-task__complete-flare learn-task__complete-flare--2"></span>
+                      <span class="learn-task__complete-star learn-task__complete-star--1"></span>
+                      <span class="learn-task__complete-star learn-task__complete-star--2"></span>
+                      <span class="learn-task__complete-star learn-task__complete-star--3"></span>
+                      <span class="learn-task__complete-star learn-task__complete-star--4"></span>
+                      <span class="learn-task__complete-dot learn-task__complete-dot--1"></span>
+                      <span class="learn-task__complete-dot learn-task__complete-dot--2"></span>
+                      <span class="learn-task__complete-dot learn-task__complete-dot--3"></span>
+                      <span class="learn-task__complete-confetti learn-task__complete-confetti--1"></span>
+                      <span class="learn-task__complete-confetti learn-task__complete-confetti--2"></span>
+                      <span class="learn-task__complete-confetti learn-task__complete-confetti--3"></span>
+                      <span class="learn-task__complete-confetti learn-task__complete-confetti--4"></span>
+                      <span class="learn-task__complete-confetti learn-task__complete-confetti--5"></span>
+                    </div>
+                    <div class="learn-task__complete-illu-figure">
+                      <img
+                        class="learn-task__complete-illu"
+                        src="assets/learn-task-complete.png"
+                        width="148"
+                        height="148"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="learn-task__success-copy">
+                    <h2 class="learn-task__success-title">恭喜你完成<b>7</b>天学习任务挑战！</h2>
+                    <p class="learn-task__course-title learn-task__course-title--plain learn-task__course-title--success">
+                      你坚持完成了全部挑战！扫码添加<strong>阿瓜</strong>，领取限量周边
+                    </p>
+                    <p class="learn-task__course-foot learn-task__course-foot--success">
+                      <span class="learn-task__stat-chip learn-task__stat-chip--success">累计学习 <b>120</b> min</span>
+                      <span class="learn-task__stat-chip learn-task__stat-chip--success">连续打卡 <b>7</b> 天</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="learn-task__right">
+                  <div class="learn-task__week learn-task__week--success" aria-label="学习进度">
+                    <div class="learn-task__week-head">
+                      <p class="learn-task__week-label">学习进度</p>
+                      <span class="learn-task__week-summary learn-task__week-summary--success"><b>7</b> / <b>7</b> 天全完成</span>
+                    </div>
+                    <div class="learn-task__days">
+                      <span class="learn-task__day is-done">Day1</span>
+                      <span class="learn-task__day is-done">Day2</span>
+                      <span class="learn-task__day is-done">Day3</span>
+                      <span class="learn-task__day is-done">Day4</span>
+                      <span class="learn-task__day is-done">Day5</span>
+                      <span class="learn-task__day is-done">Day6</span>
+                      <span class="learn-task__day is-done is-current" aria-current="step">Day7</span>
+                    </div>
+                  </div>
+                  <button type="button" class="learn-task__cta learn-task__cta--reward" data-learn-task-reward-open>
+                    <span class="learn-task__cta-gift" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" fill="currentColor" fill-opacity="0.16"/>
+                        <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+                        <path d="M9 7.75v8.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                        <path d="M3.5 10.75h11" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                        <path d="M9 7.75c-1.45-2.15-3.55-2.45-3.55-1.05 0 .95 1.15 1.35 3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 7.75c1.45-2.15 3.55-2.45 3.55-1.05 0 .95-1.15 1.35-3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 7.75V6.1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                    领取任务奖励
+                  </button>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
 
@@ -126,7 +410,7 @@
                         <span class="order-manage__status is-paid">已完成</span>
                       </div>
                       <div class="order-manage__body">
-                        <a class="order-manage__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/8e22f52296613490c0de02cdd449cce6.png')" aria-hidden="true"></a>
+                        <a class="order-manage__cover" href="course.html" style="background-image:url('assets/mastergo/8e22f52296613490c0de02cdd449cce6.png')" aria-hidden="true"></a>
                         <div class="order-manage__info">
                           <a class="order-manage__title" href="course.html">建筑施工组织（2020年10月版）</a>
                           <p class="order-manage__meta">单课程 · 录播 · 有效期365天</p>
@@ -139,7 +423,6 @@
                       <div class="order-manage__actions">
                         <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="invoice">申请开票</button>
                         <a class="order-manage__btn order-manage__btn--ghost" href="course.html">继续学习</a>
-                        <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="detail">订单详情</button>
                       </div>
                     </li>
 
@@ -150,7 +433,7 @@
                         <span class="order-manage__status is-paid">已完成</span>
                       </div>
                       <div class="order-manage__body">
-                        <a class="order-manage__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/9c282ac101433b20561df1a225700d46.png')" aria-hidden="true"></a>
+                        <a class="order-manage__cover" href="course.html" style="background-image:url('assets/mastergo/9c282ac101433b20561df1a225700d46.png')" aria-hidden="true"></a>
                         <div class="order-manage__info">
                           <a class="order-manage__title" href="course.html">土建GTJ2025新版本功能讲解合辑</a>
                           <p class="order-manage__meta">单课程 · 录播 · 有效期365天</p>
@@ -163,7 +446,6 @@
                       <div class="order-manage__actions">
                         <button type="button" class="order-manage__btn order-manage__btn--ghost is-disabled" data-action="invoice-view" disabled>已申请开票</button>
                         <a class="order-manage__btn order-manage__btn--ghost" href="course.html">继续学习</a>
-                        <button type="button" class="order-manage__btn order-manage__btn--ghost" data-action="detail">订单详情</button>
                       </div>
                     </li>
 
@@ -174,7 +456,7 @@
                         <span class="order-manage__status is-cancelled">已取消</span>
                       </div>
                       <div class="order-manage__body">
-                        <a class="order-manage__cover" href="course.html" style="background-image:url('https://image-resource.mastergo.com/72061466992156/149588298644015/944d6a362a85c5743606dcfeab620ebb.png')" aria-hidden="true"></a>
+                        <a class="order-manage__cover" href="course.html" style="background-image:url('assets/mastergo/944d6a362a85c5743606dcfeab620ebb.png')" aria-hidden="true"></a>
                         <div class="order-manage__info">
                           <a class="order-manage__title" href="course.html">【施工】指标神器案例实操应用</a>
                           <p class="order-manage__meta">单课程 · 录播 · 有效期365天</p>
@@ -207,7 +489,6 @@
                         <input class="coupon-redeem__input" type="text" name="code" placeholder="输入优惠码" maxlength="32" aria-label="优惠码" />
                         <button type="submit" class="order-manage__btn order-manage__btn--primary coupon-redeem__btn">兑换</button>
                       </form>
-                      <a class="coupon-manage__claim-link" href="coupon-claim.html">去领券</a>
                     </div>
                   </div>
 
@@ -300,7 +581,7 @@
               <ul class="recommend-list">
                 <li>
                   <a class="recommend-item" href="course.html">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/55ef390b73de3ffab92aec7ef08ca282.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/55ef390b73de3ffab92aec7ef08ca282.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">钢筋精算节流落地实操——用BIMMAKE做好钢筋内控</span>
                       <span class="recommend-item__meta">王旭 · 2334人学过</span>
@@ -309,7 +590,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/791588e0c2ee5260d72886aebfcfa283.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/791588e0c2ee5260d72886aebfcfa283.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">BIM土建计量平台-GTJ2021案例讲解</span>
                       <span class="recommend-item__meta">王天来 · 2334人学过</span>
@@ -318,7 +599,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e4c465f81d0002f3133fe9b0e0548782.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/e4c465f81d0002f3133fe9b0e0548782.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">TOP地产成本经理手把手带你成本实操</span>
                       <span class="recommend-item__meta">鱼丸 · 4334人学过</span>
@@ -327,7 +608,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/c5255e15a3d9b8201b91d23df83d1f7c.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/c5255e15a3d9b8201b91d23df83d1f7c.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">新建更新一体化整体解决方案</span>
                       <span class="recommend-item__meta">韩丹 · 143人学过</span>
@@ -336,7 +617,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/36e38f5b506f9d0b4201e4b3258c49a7.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/36e38f5b506f9d0b4201e4b3258c49a7.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">工具数据一体化助力造价编审提质增效</span>
                       <span class="recommend-item__meta">武翠艳 · 4334人学过</span>
@@ -345,7 +626,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/79770e2412780b647a8f77a00976303d.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/79770e2412780b647a8f77a00976303d.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">《建设工程工程量清单计价标准》深度解读</span>
                       <span class="recommend-item__meta">李桂婷 · 2334人学过</span>
@@ -354,7 +635,7 @@
                 </li>
                 <li>
                   <a class="recommend-item" href="#">
-                    <img class="recommend-item__cover" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e8ca9ce0f739df62b7cca744beb9d599.png" width="100" height="56" alt="" />
+                    <img class="recommend-item__cover" src="assets/mastergo/e8ca9ce0f739df62b7cca744beb9d599.png" width="100" height="56" alt="" />
                     <span class="recommend-item__body">
                       <span class="recommend-item__title">专家权威解读24新清单八大变化点</span>
                       <span class="recommend-item__meta">建筑课堂 · 6434人学过</span>
@@ -367,6 +648,114 @@
         </div>
       </div>
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="learn-task-start-modal" id="learn-task-start-modal" hidden>
+      <div class="learn-task-start-modal__mask" data-learn-task-start-close></div>
+      <div
+        class="learn-task-start-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="learn-task-start-modal-title"
+      >
+        <button type="button" class="learn-task-start-modal__close" data-learn-task-start-close aria-label="关闭">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="learn-task-start-modal__hero" aria-hidden="true">
+          <img
+            class="learn-task-start-modal__cat"
+            src="assets/learn-task-start-cat.png"
+            width="96"
+            height="128"
+            alt=""
+          />
+        </div>
+        <div class="learn-task-start-modal__body">
+          <h2 class="learn-task-start-modal__title" id="learn-task-start-modal-title">开始你的 <b>7</b> 天学习任务</h2>
+          <p class="learn-task-start-modal__desc">
+            您可以选择任意一门有权益的课程开始学习，每天学习 <b>10</b> 分钟即可完成当日任务
+          </p>
+        </div>
+        <div class="learn-task-start-modal__actions">
+          <button type="button" class="learn-task-start-modal__btn learn-task-start-modal__btn--ghost" data-learn-task-start-close>
+            我再看看
+          </button>
+          <button type="button" class="learn-task-start-modal__btn learn-task-start-modal__btn--primary" data-learn-task-start-go>
+            去学习
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="learn-task-reward-modal" id="learn-task-reward-modal" hidden>
+      <div class="learn-task-reward-modal__mask" data-learn-task-reward-close></div>
+      <div
+        class="learn-task-reward-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="learn-task-reward-modal-title"
+      >
+        <div class="learn-task-reward-modal__head">
+          <h2 class="learn-task-reward-modal__title" id="learn-task-reward-modal-title">
+            <span class="learn-task-reward-modal__title-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" fill="currentColor" fill-opacity="0.18"/>
+                <path d="M3.5 7.75h11v7.25a1.25 1.25 0 0 1-1.25 1.25H4.75A1.25 1.25 0 0 1 3.5 15V7.75Z" stroke="currentColor" stroke-width="1.15" stroke-linejoin="round"/>
+                <path d="M9 7.75v8.5" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                <path d="M3.5 10.75h11" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+                <path d="M9 7.75c-1.45-2.15-3.55-2.45-3.55-1.05 0 .95 1.15 1.35 3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 7.75c1.45-2.15 3.55-2.45 3.55-1.05 0 .95-1.15 1.35-3.55.45" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 7.75V6.1" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+              </svg>
+            </span>
+            领取任务奖励
+          </h2>
+          <button type="button" class="learn-task-reward-modal__close" data-learn-task-reward-close aria-label="关闭">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="learn-task-reward-modal__body">
+          <div class="learn-task-reward-modal__qr-shell">
+            <div class="learn-task-reward-modal__qr-wrap">
+              <img
+                class="learn-task-reward-modal__qr"
+                src="assets/mastergo/b4c92171cedef4933d7cb5fe36c1b0d4.png"
+                width="200"
+                height="200"
+                alt="阿瓜企业微信二维码"
+              />
+            </div>
+          </div>
+          <div class="learn-task-reward-modal__copy">
+            <p class="learn-task-reward-modal__desc">微信扫一扫 · 添加阿瓜企业微信号</p>
+            <p class="learn-task-reward-modal__tip">
+              添加后回复<em class="learn-task-reward-modal__keyword">「学习达人」</em>领取你的专属礼品
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="invoice-modal" id="invoice-modal" hidden>
       <div class="invoice-modal__mask" data-invoice-close></div>
@@ -445,7 +834,7 @@
         <div class="footer-bottom">
           <div class="footer-brand__logos">
             <img class="footer-brand__logo footer-brand__logo--glodon" src="assets/footer-glodon-logo.png" width="200" height="36" alt="广联达" />
-            <img class="footer-brand__logo footer-brand__logo--yunke" src="https://image-resource.mastergo.com/72061466992156/149588298644015/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
+            <img class="footer-brand__logo footer-brand__logo--yunke" src="assets/mastergo/e5dccb6e1b2b0d968775ac17586791a3.png" width="136" height="36" alt="建筑云课" />
           </div>
           <p class="footer-brand__copy">
             广联达教育GLodon Education www.glodonedu.com<br />
@@ -526,11 +915,6 @@
             }
             var activeFilter = root.querySelector('.order-manage__filter.is-active');
             applyFilter(activeFilter ? activeFilter.getAttribute('data-filter') : 'all');
-            return;
-          }
-
-          if (action === 'detail') {
-            window.alert('订单详情\n订单号：' + orderNo + '\n课程：' + courseName);
             return;
           }
 
@@ -683,5 +1067,9 @@
       }
     })();
   </script>
+  <script src="js/learn-task-start-modal.js?v=2" defer></script>
+  <script src="js/learn-task-reward-modal.js?v=1" defer></script>
+  <script src="js/learn-task.js?v=9" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

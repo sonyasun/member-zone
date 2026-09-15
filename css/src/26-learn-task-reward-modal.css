@@ -1,0 +1,232 @@
+/* 领取任务奖励 · 企业微信二维码弹窗（个人中心 / 会员专区共用） */
+.learn-task-reward-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.learn-task-reward-modal[hidden] {
+  display: none;
+}
+
+.learn-task-reward-modal__mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 12, 0, 0.58);
+  backdrop-filter: blur(4px);
+}
+
+.learn-task-reward-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 23.75rem;
+  padding: 1.5rem 1.625rem 1.625rem;
+  border-radius: 1rem;
+  background:
+    radial-gradient(ellipse 88% 56% at 50% 0%, rgba(255, 236, 170, 0.42) 0%, transparent 62%),
+    linear-gradient(180deg, #fffef9 0%, #fff 38%, #fffdf8 100%);
+  border: 1px solid rgba(212, 168, 58, 0.32);
+  box-shadow:
+    0 1.25rem 3rem rgba(120, 82, 8, 0.24),
+    0 0.25rem 0.75rem rgba(120, 82, 8, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.learn-task-reward-modal__dialog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 9rem;
+  height: 0.1875rem;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, transparent 0%, #e4b840 50%, transparent 100%);
+  transform: translateX(-50%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.learn-task-reward-modal__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.875rem;
+  margin-bottom: 1.125rem;
+  padding-right: 2.125rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid rgba(212, 168, 58, 0.14);
+}
+
+.learn-task-reward-modal__title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4375rem;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #6b4608;
+}
+
+.learn-task-reward-modal__title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fff6dc 0%, #ffeaa8 100%);
+  color: #c89420;
+  box-shadow:
+    0 0.125rem 0.375rem rgba(200, 148, 32, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.learn-task-reward-modal__title-icon svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.learn-task-reward-modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(212, 168, 58, 0.08);
+  color: #b8892a;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.learn-task-reward-modal__close svg {
+  display: block;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.learn-task-reward-modal__close:hover {
+  color: #6b4608;
+  background: rgba(212, 168, 58, 0.18);
+}
+
+.learn-task-reward-modal__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.learn-task-reward-modal__qr-shell {
+  position: relative;
+  padding: 0.4375rem;
+  margin-bottom: 1rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(145deg, rgba(255, 248, 220, 0.9) 0%, rgba(255, 255, 255, 0.96) 100%);
+  box-shadow:
+    0 0.5rem 1.25rem rgba(120, 82, 8, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+
+.learn-task-reward-modal__qr-shell::before,
+.learn-task-reward-modal__qr-shell::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(212, 168, 58, 0.45);
+  pointer-events: none;
+}
+
+.learn-task-reward-modal__qr-shell::before {
+  top: 0.625rem;
+  left: 0.625rem;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 0.25rem 0 0 0;
+}
+
+.learn-task-reward-modal__qr-shell::after {
+  right: 0.625rem;
+  bottom: 0.625rem;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 0.25rem 0;
+}
+
+.learn-task-reward-modal__qr-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 11.25rem;
+  height: 11.25rem;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  border: 1px solid rgba(212, 168, 58, 0.16);
+  box-sizing: border-box;
+}
+
+.learn-task-reward-modal__qr {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.learn-task-reward-modal__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.learn-task-reward-modal__desc {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.4375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #4a3a1a;
+}
+
+.learn-task-reward-modal__tip {
+  margin: 0;
+  padding: 0.4375rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 248, 230, 0.96) 0%, rgba(255, 240, 205, 0.88) 100%);
+  border: 1px solid rgba(212, 168, 58, 0.18);
+  font-size: var(--font-size-12);
+  line-height: 1.375rem;
+  color: #8a7340;
+  text-align: center;
+}
+
+.learn-task-reward-modal__keyword {
+  font-style: normal;
+  font-weight: 700;
+  color: #b87a10;
+  letter-spacing: 0.02em;
+}

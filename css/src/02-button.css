@@ -1,0 +1,137 @@
+/* —— Button（Default/Hover/Active/Disabled → 伪类，单 DOM） —— */
+/* 推荐新代码：.btn.btn--primary / .btn.btn--ghost（BEM）
+   遗留兼容：.btn-primary / .btn-ghost / .btn-login — 勿在新 HTML 中使用 */
+.btn,
+.btn-login,
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid transparent; /* 占位，防止 hover 改边框抖动 */
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  line-height: var(--line-height-14);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-base);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus,
+.btn-login:focus,
+.btn-primary:focus,
+.btn-ghost:focus {
+  outline: none;
+}
+
+.btn:focus-visible,
+.btn-login:focus-visible,
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible {
+  box-shadow: var(--btn-focus-ring);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"],
+.btn-login:disabled,
+.btn-login[aria-disabled="true"],
+.btn-primary:disabled,
+.btn-primary[aria-disabled="true"],
+.btn-ghost:disabled,
+.btn-ghost[aria-disabled="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Primary · 登录/注册等 */
+.btn--primary,
+.btn-login,
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  border-color: var(--btn-primary-bg);
+  color: var(--btn-primary-fg);
+}
+
+.btn--primary:hover,
+.btn-login:hover,
+.btn-primary:hover {
+  background-color: var(--btn-primary-bg-hover);
+  border-color: var(--btn-primary-bg-hover);
+  color: var(--btn-primary-fg);
+}
+
+.btn--primary:active,
+.btn-login:active,
+.btn-primary:active {
+  background-color: var(--btn-primary-bg-active);
+  border-color: var(--btn-primary-bg-active);
+  transition-duration: 0.08s; /* active 允许更快 */
+}
+
+.btn--primary:disabled,
+.btn--primary[aria-disabled="true"],
+.btn-login:disabled,
+.btn-login[aria-disabled="true"],
+.btn-primary:disabled,
+.btn-primary[aria-disabled="true"] {
+  background-color: var(--btn-primary-bg-disabled);
+  border-color: var(--btn-primary-bg-disabled);
+  color: var(--btn-primary-fg);
+  opacity: 1;
+}
+
+.btn-login {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-16);
+  border-radius: 0.5rem; /* 8px */
+}
+
+.btn-primary {
+  padding: 0.625rem 1.5rem;
+}
+
+/* Ghost · 默认描边按钮（非「查看更多」场景） */
+.btn--ghost,
+.btn-ghost {
+  background-color: var(--btn-ghost-bg);
+  border-color: var(--btn-ghost-border);
+  color: var(--btn-ghost-fg);
+}
+
+.btn--ghost:hover,
+.btn-ghost:hover {
+  background-color: var(--btn-ghost-bg-hover);
+  border-color: var(--btn-ghost-border);
+  color: var(--btn-ghost-fg);
+}
+
+.btn--ghost:active,
+.btn-ghost:active {
+  background-color: var(--btn-ghost-bg-active);
+  border-color: var(--btn-ghost-border);
+  transition-duration: 0.08s;
+}
+
+.btn--ghost:disabled,
+.btn--ghost[aria-disabled="true"],
+.btn-ghost:disabled,
+.btn-ghost[aria-disabled="true"] {
+  background-color: transparent;
+  border-color: var(--color-border-dd);
+  color: var(--color-text-quaternary);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,13 @@
+/* —— Page shell —— */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg-white);
+}
+
+.page-inner {
+  width: min(100% - 2rem, var(--page-max));
+  margin-inline: auto;
+}
+

@@ -1,0 +1,359 @@
+/* —— 专题课程列表页 —— */
+.page--topic {
+  background: #f7f8fa;
+}
+
+.topic-banner {
+  position: relative;
+  width: 100%;
+  height: 12.5rem; /* 200px，对齐背景图 */
+  overflow: hidden;
+}
+
+.topic-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-color: #d9efe9;
+  background-image: url("../assets/topic-courses-banner.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.topic-banner--cert .topic-banner__bg {
+  background-color: #e8f3fb;
+  background-image: url("../assets/cert-courses-banner.png");
+}
+
+.topic-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: #1a1a1a;
+}
+
+.topic-banner__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  color: #139686;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.topic-banner__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
+}
+
+.topic-banner__desc {
+  margin: 0;
+  font-size: var(--font-size-14);
+  line-height: 1.5rem;
+  color: #333;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
+}
+
+.main--topic {
+  padding: 1.25rem 0 3rem;
+}
+
+.main--topic .course-crumb {
+  margin-bottom: 1.25rem;
+}
+
+.topic-layout {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.topic-tree {
+  position: sticky;
+  top: calc(var(--nav-height) + 1rem);
+  padding: 1.25rem 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0 1.875rem 0 rgba(32, 56, 100, 0.06);
+  box-sizing: border-box;
+}
+
+.topic-tree__heading {
+  margin: 0 0 1rem;
+  padding: 0 0.5rem;
+  font-size: var(--font-size-16);
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.topic-tree__list,
+.topic-tree__children {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-tree__group + .topic-tree__group {
+  margin-top: 0.25rem;
+}
+
+.topic-tree__parent,
+.topic-tree__child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem 0.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: #666;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.topic-tree__parent {
+  font-weight: 500;
+  color: #333;
+}
+
+.topic-tree__parent:hover,
+.topic-tree__child:hover {
+  color: #139686;
+  background: rgba(19, 150, 134, 0.06);
+}
+
+.topic-tree__parent.is-active,
+.topic-tree__child.is-active {
+  color: #139686;
+  background: rgba(19, 150, 134, 0.1);
+  font-weight: 600;
+}
+
+.topic-tree__toggle {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+  background: center / contain no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M4.5 3L7.5 6L4.5 9' stroke='%23999' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  transition: transform 0.2s ease;
+}
+
+.topic-tree__group.is-open > .topic-tree__parent .topic-tree__toggle {
+  transform: rotate(90deg);
+}
+
+.topic-tree__children {
+  padding: 0.125rem 0 0.375rem 1.25rem;
+}
+
+.topic-tree__child {
+  padding: 0.5rem 0.5rem;
+  font-weight: 400;
+}
+
+.topic-panel {
+  min-width: 0;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0 1.875rem 0 rgba(32, 56, 100, 0.06);
+  box-sizing: border-box;
+}
+
+.topic-panel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.topic-panel__title {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.topic-panel__count {
+  margin: 0;
+  font-size: var(--font-size-14);
+  line-height: 1.25rem;
+  color: #999;
+}
+
+.topic-panel__count b {
+  color: #139686;
+  font-weight: 600;
+}
+
+.topic-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap-xl) 1.3125rem;
+}
+
+/* 考证课程列表：右侧固定一行 3 张，避免被通用 course-grid 断点改成 2 列 */
+.page--cert .topic-panel .topic-panel__grid.course-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.topic-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.topic-tier.is-hidden {
+  display: none;
+}
+
+.topic-tier__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.topic-tier__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.topic-tier__desc {
+  margin: 0;
+  font-size: var(--font-size-12);
+  line-height: 1.125rem;
+  color: #999;
+}
+
+.topic-tier__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.25rem;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  font-size: var(--font-size-12);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.topic-tier__badge--hot {
+  background: linear-gradient(90deg, #ff6b4a 0%, #fc4755 100%);
+  color: #fff;
+}
+
+.topic-tier__badge--feature {
+  background: rgba(19, 150, 134, 0.12);
+  color: #139686;
+}
+
+.topic-tier__badge--normal {
+  background: #f0f1f3;
+  color: #666;
+}
+
+.topic-card-flag {
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 1.25rem;
+  padding: 0 0.5rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #fff;
+  font-size: var(--font-size-12);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.topic-card-flag--hot {
+  background: linear-gradient(90deg, #ff6b4a 0%, #fc4755 100%);
+}
+
+.topic-card-flag--feature {
+  background: #139686;
+}
+
+.topic-panel__grid .course-card.is-hidden {
+  display: none;
+}
+
+.topic-panel__empty {
+  margin: 0;
+  padding: 3rem 0;
+  text-align: center;
+  color: #999;
+  font-size: var(--font-size-14);
+}
+
+.topic-panel__empty.is-hidden {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .topic-panel__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .topic-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-tree {
+    position: static;
+  }
+
+  .topic-panel__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .page--topic .topic-panel__grid.course-grid,
+  .page--topic .topic-panel__grid,
+  .page--cert .topic-panel .topic-panel__grid.course-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .topic-banner {
+    height: 9rem;
+  }
+
+  .topic-banner__title {
+    font-size: 1.375rem;
+  }
+
+  .page--topic .topic-panel__grid.course-grid,
+  .page--topic .topic-panel__grid,
+  .page--cert .topic-panel .topic-panel__grid.course-grid {
+    grid-template-columns: 1fr;
+  }
+}
